@@ -1,0 +1,93 @@
+@font-face {
+    src: url('./../font.general/Oregano-Regular.ttf');
+    font-family: Oregano;
+}
+
+@font-face {
+    src: url('./../font.general/Nunito-Regular.ttf');
+    font-family: nunito;
+}
+
+:root {
+    --color1: #4575c9;
+    --color1-contrast1: #ffffff;
+    --color2: rgba(69, 117, 201, 0.71);
+    --color2-contrast1: #ffffff;
+    --color3: #ffffff;
+    --color3-contrast1: #5e88fc;
+    --color3-contrast2: #8790af;
+    --color3-contrast3: #62b7f4;
+    
+    --color4: linear-gradient(80deg, #4d41c6, #66b2ea);
+    --color4-contrast1: #ffffff;
+    --color4-contrast2: #5e88fc;
+    --color4-contrast3: #e1e1e1;
+    
+    --color5: #192229;
+    --color5-contrast1: #ffffff;
+    --color5-contrast2: #b3b3b3;
+    
+    
+    
+    --max-width: 1200px;
+    --padding: 50px;
+    --header-height: 90px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: nunito, sans-serif;
+/*    user-select: none;*/
+    outline: none;
+    border-style: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 60px;
+}
+
+img {
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+    * {
+        --padding: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        --padding: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        --padding: 5px;
+    }
+}
+
+/* _____________ SCROLL _ STYLES ________________ */
+.scroll-style::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb {
+    background: var(--primary_background);
+    border-radius: 7px;
+}
+
+.scroll-style::-webkit-scrollbar-thumb:hover {
+    background: var(--primary_background_hover);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-style::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
