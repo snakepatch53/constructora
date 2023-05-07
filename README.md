@@ -3,32 +3,20 @@
 ## 📋 DATOS GENERALES
 
 <ul>
-    <li><b>Cliente:</b> ✅ Moronanet</li>
-    <li><b>Estado:</b> 🎉 En producción</li>
+    <li><b>Cliente:</b> ✅ Constructora Erazo Brother's</li>
+    <li><b>Estado:</b> 🚧 En desarrollo</li>
     <li><b>Version:</b> 🚀 1.0.0</li>
-    <li><b>Nombre:</b> 😎 Landing Page para la APP 'Clientes Moronanet'</li>
+    <li><b>Nombre:</b> 😎 Constructora Erazo Brother's</li>
 </ul>
 
 ## 📋 DESCRIPCION
 
 <p>
-    👋 ¡Bienvenido a nuestra aplicación! 👋
+    Esta es una pagina web para la constructora Erazo Brother's, la cual se encarga de la construccion de casas y edificios en USA.
     <br><br>
-    ¿Te has sentido frustrado alguna vez por no poder encontrar tus facturas, contrato o tickets de soporte técnico de tu proveedor de internet? ¡No te preocupes más! Con nuestra aplicación, tendrás acceso fácil y rápido a toda la información de tus servicios de internet con Moronanet.
+    Esta desarrollada bajo las tecnologias web principales: <b>HTML5, CSS3, JS, PHP, MYSQL</b>
     <br><br>
-    📱💻 Accede desde cualquier dispositivo 📱💻
-    <br><br>
-    ¡Ya no tendrás que estar buscando tus documentos en una pila de papeles o en una carpeta de tu ordenador! Con nuestra aplicación, podrás acceder a toda la información desde tu móvil, tablet o computadora.
-    <br><br>
-    🔒🛡️ Tu información está segura con nosotros 🔒🛡️
-    <br><br>
-    Nuestra aplicación no recopila información adicional, solo te permite acceder a la información que ya proporcionaste a Moronanet. Además, cualquier información que se recoja para los tickets de soporte técnico se manejará con la más estricta confidencialidad y solo será utilizada para solucionar tus problemas.
-    <br><br>
-    🙅‍♀️ No te preocupes por la eliminación de información 🙅‍♀️
-    <br><br>
-    No necesitarás solicitar la eliminación de información, ya que la información se almacenará solo mientras sea necesario para atender tus solicitudes de soporte técnico. Si deseas eliminar tus datos personales, deberás dejar de usar nuestros servicios.
-    <br><br>
-    ¡Gracias por confiar en nosotros! ¡Descarga nuestra aplicación y facilita tu vida con Moronanet!
+    El lenguaje de programacion principal es <b>PHP</b> y el gestor de base de datos es <b>MYSQL</b>
     <br><br>
 </p>
 
@@ -37,7 +25,7 @@
 <p>
     Este proyecto es de código abierto, ¡lo que significa que es completamente libre! 🙌 Puedes usarlo, copiarlo, modificarlo y distribuirlo como desees para tus propios proyectos sin ningún tipo de restricciones. 🚀
     <br><br>
-    Nos encanta la idea de que más personas puedan utilizar y mejorar nuestra landing page. ¡Así que adelante y úsala como quieras! 💻
+    Nos encanta la idea de que más personas puedan utilizar y mejorar nuestra pagina web y esperamos que lo disfrutes. 🤓
     <br><br>
     ¡Gracias por visitarnos y disfruta del código! 😎
     <br><br>
@@ -58,7 +46,6 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
     # PROJECT
     HTTP_DOMAIN = {{TOUR_DOMAIN}}
     TITLE = {{TITLE_OF_LANDING_PAGE}}
-    APP_NAME = {{APP_NAME}}
 
     # MYSQLI
     DB_HOST = {{YOUR_DB_HOST}}

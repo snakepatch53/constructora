@@ -1,31 +1,26 @@
 @font-face {
-    src: url('./../font.general/Oregano-Regular.ttf');
-    font-family: Oregano;
+    src: url('./../font.general/Nosifer-Regular.ttf');
+    font-family: logo;
 }
 
 @font-face {
-    src: url('./../font.general/Nunito-Regular.ttf');
-    font-family: nunito;
+    src: url('./../font.general/Pompiere-Regular.ttf');
+    font-family: contenido;
+}
+
+@font-face {
+    src: url('./../font.general/Khula-Regular.ttf');
+    font-family: titulo;
 }
 
 :root {
-    --color1: #4575c9;
-    --color1-contrast1: #ffffff;
-    --color2: rgba(69, 117, 201, 0.71);
-    --color2-contrast1: #ffffff;
-    --color3: #ffffff;
-    --color3-contrast1: #5e88fc;
-    --color3-contrast2: #8790af;
-    --color3-contrast3: #62b7f4;
+    --color1: #7bb5a3;
+    --color2: #a2bce4;
+    --color3: #f3ffff;
     
-    --color4: linear-gradient(80deg, #4d41c6, #66b2ea);
-    --color4-contrast1: #ffffff;
-    --color4-contrast2: #5e88fc;
-    --color4-contrast3: #e1e1e1;
-    
-    --color5: #192229;
-    --color5-contrast1: #ffffff;
-    --color5-contrast2: #b3b3b3;
+    --color4: #202020;
+    --color5: #b1d237;
+    --color6: #a4c639;
     
     
     
