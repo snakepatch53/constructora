@@ -1,31 +1,41 @@
 header {
-    --bg: var(--color1-translucent);
+/*    --bg: var(--color1-translucent);*/
+    
+    --bg-float: var(--color1);
     --txt: var(--color1-text);
     --bg-logo: var(--color1-logo);
     --txt-logo: var(--color1-logo);
-    
+
     --bg-btn: var(--color1-btn);
     --txt-btn: var(--color1-btn-text);
     
-    
-    
+    --bg-btn-movil: var(--color5-btn);
+    --txt-btn-movil: var(--color5-btn-text);
+
+
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--bg);
-    padding: 0 var(--padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: var(--header-height);
+    padding: 0 var(--padding);
+    background-color: var(--bg);
 }
 
 header.float {
-    background-color: var(--color1);
+    background-color: var(--bg-float);
 }
 
 header .container {
+    flex: 1;
     display: flex;
+    align-items: center;
     max-width: var(--max-width);
     height: 100%;
 }
@@ -33,6 +43,7 @@ header .container {
 header .logo {
     width: 200px;
     height: 100%;
+    text-decoration: none;
 
     --bg: var(--bg-logo);
     --txt: var(--txt-logo);
@@ -46,7 +57,7 @@ header nav {
 }
 
 header nav ul {
-    flex:1;
+    flex: 1;
     display: flex;
     gap: 10px;
     height: 100%;
@@ -66,15 +77,99 @@ header nav li a {
     color: var(--txt);
     padding: 10px 20px;
     border-radius: 5px;
+    transition: opacity 0.2s ease;
 }
 
-header nav li.btn {}
+header nav li a.active,
+header nav li a:hover,
+header nav li a.btn:active {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
 
-header nav li.btn a {
+header nav li a.btn {
     background-color: var(--bg-btn);
     color: var(--txt-btn);
+    opacity: 1;
+}
+
+header nav li a,
+header nav li a.btn:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
 }
 
 header .burger-toggle {
     display: none;
+    margin-left: auto;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+header .burger-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+header .burger-toggle i {
+    font-size: 1.2rem;
+    color: var(--txt);
+}
+
+
+@media(max-width: 900px) {
+    header .burger-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        width: 100%;
+        max-width: 0;
+        overflow: hidden;
+        opacity: 0;
+        height: calc(100vh - var(--header-height));
+        background: var(--color5);
+        transition: all 0.2s ease;
+    }
+
+    header nav:before {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        display: block;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li a {
+        color: var(--color5-text);
+    }
+
+    header nav ul li a.btn {
+        background-color: var(--bg-btn-movil);
+        color: var(--txt-btn-movil);
+    }
+
+    header.menu-open nav {
+        max-width: 200px;
+        opacity: 1;
+        transition: all 0.2s ease;
+    }
+
+    header.menu-open {
+        background-color: var(--bg-float);
+    }
+
 }

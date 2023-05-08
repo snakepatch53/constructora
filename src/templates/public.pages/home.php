@@ -4,6 +4,7 @@
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
     <!-- <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/home.css"> -->
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/frontpage.css">
 </head>
 
 <body>
@@ -13,7 +14,10 @@
     </header>
 
     <main class="animate__animated animate__fadeIn">
-        jijij
+        <section class="frontpage">
+            <?php include('./src/templates/public.component/frontpage.php') ?>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <?php
         var_dump($DATA);
@@ -27,6 +31,7 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/frontpage.component.js"></script>
 </foot>
 
 </html>

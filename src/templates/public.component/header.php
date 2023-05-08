@@ -1,23 +1,23 @@
 <div class="container">
-    <div class="logo">
+    <a href="<?= $DATA['http_domain'] ?>" class="logo">
         <?php include('./src/templates/public.component/logo.php'); ?>
-    </div>
+    </a>
     <nav>
         <ul>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>">HOME</a>
+                <a class="<?= $DATA['name'] == "home" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>">HOME</a>
             </li>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>">SERVICES</a>
+                <a class="<?= $DATA['name'] == "services" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>services">SERVICES</a>
             </li>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>">PORTFOLIO</a>
+                <a class="<?= $DATA['name'] == "portfolio" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>portfolio">PORTFOLIO</a>
             </li>
             <li>
-                <a href="<?= $DATA['http_domain'] ?>">ABOUT USSS</a>
+                <a class="<?= $DATA['name'] == "aboutus" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>aboutus">ABOUT US</a>
             </li>
-            <li class="btn">
-                <a href="<?= $DATA['http_domain'] ?>">CONTACT</a>
+            <li>
+                <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contact">CONTACT</a>
             </li>
         </ul>
     </nav>

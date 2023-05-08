@@ -44,15 +44,16 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
     # PROJECT
-    HTTP_DOMAIN = {{TOUR_DOMAIN}}
-    TITLE = {{TITLE_OF_LANDING_PAGE}}
+    HTTP_DOMAIN =
+    TITLE =
+    APP_NAME =
 
     # MYSQLI
-    DB_HOST = {{YOUR_DB_HOST}}
-    DB_USER = {{YOUR_DB_USER}}
-    DB_PASS = {{YOUR_DB_PASS}}
-    DB_NAME = {{YOUR_DB_NAME}}
-    DB_PORT =  {{YOUR_DB_PORT}}
+    DB_HOST =
+    DB_USER =
+    DB_PASS =
+    DB_NAME =
+    DB_PORT =
 ```
 
 ## 🐬 MYSQL

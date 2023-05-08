@@ -24,6 +24,11 @@
     --color5-text: #ffffff;
     --color5-text: #ffffff;
     --color5-logo: #ffffff;
+    --color5-btn: #e6c43e;
+    --color5-btn-text: #000000;
+
+    --color6: linear-gradient(rgba(55, 77, 153, 0.87), rgba(230, 196, 62, 0.53));
+    --color6-text: #374d99;
 }
 
 /* Media query para dark mode */
