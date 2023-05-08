@@ -14,16 +14,6 @@
 }
 
 :root {
-    --color1: #7bb5a3;
-    --color2: #a2bce4;
-    --color3: #f3ffff;
-    
-    --color4: #202020;
-    --color5: #b1d237;
-    --color6: #a4c639;
-    
-    
-    
     --max-width: 1200px;
     --padding: 50px;
     --header-height: 90px;

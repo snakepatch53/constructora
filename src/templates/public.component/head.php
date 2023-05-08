@@ -4,11 +4,13 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/swiper/swiper-bundle.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/animate.min.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/logo.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
-<link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/logo.png" />
-<title>Moronanet - <?= $_ENV['TITLE'] ?></title>
+<link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/logo.svg" />
+<title><?= $_ENV['TITLE'] ?> - <?= $DATA['title'] ?></title>
 
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';

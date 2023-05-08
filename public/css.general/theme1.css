@@ -1,0 +1,40 @@
+:root {
+    --color1: #2A8A6C;
+    --color1-light: #5ABFAD;
+    --color1-dark: #1B6351;
+    --color2: #1C3553;
+    --color2-light: #56678E;
+    --color2-dark: #0E1F3B;
+    --color3: #FFF;
+    --color3-light: #F6F6F6;
+    --color3-dark: #E3E3E3;
+    --color-logo1: #2A8A6C;
+    --color-logo1-text: #FFF;
+    --color-logo2: #1C3553;
+    --color-logo2-text: #FFF;
+}
+
+
+
+/* Media query para dark mode */
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color1: #36BFA5;
+        --color1-text: #000;
+
+        --color2: #17A2B8;
+        --color2-text: #000;
+
+        --color3: #343A40;
+        --color3-text: #fff;
+
+         Colores del logo 
+        --color-logo1: #36BFA5;
+        --color-logo1-text: #000;
+
+        --color-logo2: #17A2B8;
+        --color-logo2-text: #000;
+    }
+}
+*/
