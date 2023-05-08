@@ -1,6 +1,7 @@
 <div class="container">
     <a href="<?= $DATA['http_domain'] ?>" class="logo">
-        <?php include('./src/templates/public.component/logo.php'); ?>
+        <?php include('./public/img/logo.svg'); ?>
+        <h1><?= $_ENV['TITLE'] ?></h1>
     </a>
     <nav>
         <ul>

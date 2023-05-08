@@ -41,14 +41,34 @@ header .container {
 }
 
 header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 100%;
+    padding: 30px;
     text-decoration: none;
-
-    --bg: var(--bg-logo);
-    --txt: var(--txt-logo);
-    --fs: 0.8rem;
+    overflow: hidden;
 }
+
+header .logo svg {
+    height: 100%;
+    fill: var(--bg-logo);
+}
+
+header .logo h1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: logo;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: var(--txt-logo);
+
+}
+
 
 header nav {
     flex: 1;
@@ -74,6 +94,7 @@ header nav li {
 header nav li a {
     text-decoration: none;
     white-space: nowrap;
+    letter-spacing: 1px;
     color: var(--txt);
     padding: 10px 20px;
     border-radius: 5px;
