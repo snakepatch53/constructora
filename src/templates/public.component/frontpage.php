@@ -1,4 +1,5 @@
 <div class="container">
+    <img src="<?= $DATA['http_domain'] ?>public/img/nubes.png" class="img-clouds" alt="Imagen de nubes para el fondo de las imagenes" />
     <div class="swiper slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">

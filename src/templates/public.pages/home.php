@@ -5,6 +5,7 @@
     <?php include('./src/templates/public.component/head.php') ?>
     <!-- <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/home.css"> -->
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/frontpage.css">
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/facebook_posts.css">
 </head>
 
 <body>
@@ -16,6 +17,9 @@
     <main class="animate__animated animate__fadeIn">
         <section class="frontpage">
             <?php include('./src/templates/public.component/frontpage.php') ?>
+        </section>
+        <section class="facebook_posts">
+            <?php include('./src/templates/public.component/facebook_posts.php') ?>
         </section>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
