@@ -1,12 +1,13 @@
 .facebook_posts {
     display: flex;
-
+    justify-content: center;
     padding: var(--padding);
 }
 
 .facebook_posts .container {
     display: flex;
     flex-direction: column;
+    max-width: var(--max-width);
 }
 
 .facebook_posts .title {
@@ -45,7 +46,7 @@
 }
 
 .facebook_posts .item img {
-/*    flex: 1;*/
+    /*    flex: 1;*/
     height: 300px;
     width: 100%;
     object-fit: contain;
