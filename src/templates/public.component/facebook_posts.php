@@ -1,23 +1,12 @@
 <?php
-
-// $FB_APP_ID = "3137191796580899";
-// $FB_APP_SECRET = "275f9e71824c74504027d196136637f8";
-// $FB_GRAPH_VERSION = "v16.0";
-// $FB_PAGE_ID = "453395385426480";
-// $FB_ACCESS_TOKEN = "EAAslQmKgoiMBAOE6392KHZAa1jhFvDLV4ZBstzZBeiFwasHX3tfq7kYtGcgtZCnbzPbxxROU2ZCVdTeJ0YniXZCMZAZBrZA51S6my7gRZBLYxeZARZC2AcVKZC23hPT6ykJHfdDCRBXr1Exwj7sBF1rBWR3ZAmsTbX9NDpiIHlVRSffvgmP24UV4jTzyWHvSH9QGZBrf3H6ZC9bA5gZB9eQ8m5OqYcrnN";
-// // $FB_PATH_REQUEST = '/453395385426480?fields=posts{full_picture,permalink_url,message}';
-// $FB_PATH_REQUEST = "https://graph.facebook.com/v16.0/$FB_PAGE_ID/posts?fields=full_picture,permalink_url,message";
-
-
 // $fb = new \Facebook\Facebook([
-//     'app_id' => $FB_APP_ID,
-//     'app_secret' => $FB_APP_SECRET,
-//     'default_graph_version' => $FB_GRAPH_VERSION
+//     'app_id' => $_ENV['FB_APP_ID'],
+//     'app_secret' => $_ENV['FB_APP_SECRET'],
+//     'default_graph_version' => $_ENV['FB_GRAPH_VERSION'],
 // ]);
 
-// $response = $fb->get($FB_PATH_REQUEST, $FB_ACCESS_TOKEN);
 // try {
-//     $response = $fb->get($FB_PATH_REQUEST, $FB_ACCESS_TOKEN);
+//     $response = $fb->get($_ENV['FB_PATH_REQUEST'], $_ENV['FB_ACCESS_TOKEN']);
 // } catch (\Facebook\Exception\FacebookResponseException $e) {
 //     echo 'Graph returned an error: ' . $e->getMessage();
 //     exit;
@@ -29,26 +18,16 @@
 // $data = $response->getDecodedBody();
 
 
-
-
-
-$CURL_REQUEST = "https://graph.facebook.com/v16.0/453395385426480?fields=posts%7Bfull_picture%2Cpermalink_url%2Cmessage%7D&access_token=EAAslQmKgoiMBAFf3ZCQ053IjIxAVklyAsVGu48kxdFT6nPWOwUm6d5ZAxO38YTqTY1PL5Qwl5xTAT1ywqVjoLiUSsLqgTL30YN6u9SIFvax7AZA5RBlqIgx5DlKmnd3vJCVjXw8r44VX3sIj7ZCMF7IZCu2JKkYpXdIiAnFsVtYNqOHgInPrOltPYBy3yZBYya3nGD7KyOX1hiZCIMkw4UV";
-
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => $CURL_REQUEST,
+    CURLOPT_URL => $_ENV['FB_HTTP_REQUEST'],
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
     CURLOPT_TIMEOUT => 0,
-    // CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET",
-    // CURLOPT_POSTFIELDS => array(
-    //     'fields' => 'posts{full_picture,permalink_url,message}',
-    //     'access_token' => $FB_ACCESS_TOKEN
-    // ),
+    CURLOPT_CUSTOMREQUEST => "GET"
 ));
 
 $response = curl_exec($curl);
