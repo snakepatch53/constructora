@@ -54,6 +54,19 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
     DB_PASS =
     DB_NAME =
     DB_PORT =
+
+    #  FACEBOOK
+    FB_APP_ID =
+    FB_APP_SECRET =
+    FB_GRAPH_VERSION =
+    FB_PAGE_ID =
+    FB_ACCESS_TOKEN =
+    FB_PATH_REQUEST =
+    FB_HTTP_REQUEST =
+
+    # DEVELOPERS AND DESIGNERS
+    DEVELOPER_LINK = https://ideasoft.site/
+    DESIGNER_LINK = http://leapestudio.com/
 ```
 
 ## 🐬 MYSQL
