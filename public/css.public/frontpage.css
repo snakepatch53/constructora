@@ -107,6 +107,13 @@
     color: var(--txt);
     text-decoration: none;
     gap: 10px;
+    opacity: 0.65;
+    transition: all 0.2s ease;
+}
+
+.frontpage a:hover {
+    opacity: 1;
+    transition: all 0.2s ease;
 }
 
 .frontpage a:hover i {
