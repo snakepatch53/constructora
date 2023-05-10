@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?= $_ENV['HTML_LANG'] ?>">
 
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
