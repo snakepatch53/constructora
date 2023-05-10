@@ -18,6 +18,12 @@
                 <a class="<?= $DATA['name'] == "aboutus" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>aboutus">ABOUT US</a>
             </li>
             <li>
+                <button class="btn-darkmode" id="theme-toggle">
+                    <i class="dark fas fa-moon"></i>
+                    <i class="light fas fa-sun"></i>
+                </button>
+            </li>
+            <li>
                 <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contact">CONTACT US</a>
             </li>
         </ul>

@@ -154,6 +154,59 @@ header .burger-toggle i {
     color: var(--txt);
 }
 
+header nav li button.btn-darkmode {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50px;
+    background: #000;
+    transition: all 0.2s ease;
+}
+
+header nav li button.btn-darkmode:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    content: '';
+    display: block;
+    height: calc(100% - 4px);
+    aspect-ratio: 1/1;
+    margin: auto;
+    background: #bcbcbc;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+body.dark header nav li button.btn-darkmode:before {
+    background: #414141;
+    left: unset;
+    right: 2px;
+    transition: all 0.2s ease;
+}
+
+body.dark header nav li button.btn-darkmode {
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+header nav li button.btn-darkmode i {
+    display: block;
+    aspect-ratio: 1/1;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+}
+
+header nav li button.btn-darkmode i.dark {
+    color: #000;
+}
+
+header nav li button.btn-darkmode i.light {
+    color: #ffd347;
+}
 
 @media(max-width: 900px) {
     header .burger-toggle {
