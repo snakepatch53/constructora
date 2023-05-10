@@ -1,7 +1,7 @@
 header {
     /*    --bg: var(--color1-translucent);*/
 
-    --bg-float: var(--color1);
+    --bg-float: var(--color1-translucent);
     --txt: var(--color1-text);
     --bg-logo-s1: var(--color1-logo-s1);
     --bg-logo-s2: var(--color1-logo-s2);
