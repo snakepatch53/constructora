@@ -16,8 +16,12 @@
 
 
 
-    <div class="logo">
+    <!-- <div class="logo">
         <?php include('./public/img/logo.svg'); ?>
-    </div>
-    <h1>Calidad en cada construccion, una promesa de nuestra empresa</h1>
+    </div> -->
+    <h2>Quality work in every home</h2>
+    <a href="<?= $DATA['http_domain'] ?>portfolio">
+        <span>See portfolio...</span>
+        <i class="fas fa-arrow-right"></i>
+    </a>
 </div>

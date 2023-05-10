@@ -1,8 +1,8 @@
 const swiper = new Swiper(".swiper", {
-    speed: 400,
+    speed: 2000,
     allowTouchMove: true,
     autoplay: {
-        delay: 5000,
+        delay: 3000,
     },
     effect: "fade",
     fadeEffect: {

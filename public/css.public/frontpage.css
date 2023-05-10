@@ -7,8 +7,9 @@
     display: flex;
     padding: var(--padding);
     width: 100%;
-    aspect-ratio: 2/1;
-    max-height: 100vh;
+/*    aspect-ratio: 2/1;*/
+/*    max-height: 100vh;*/
+    height: calc(100vh - 150px);
 }
 
 .frontpage .container {
@@ -88,7 +89,7 @@
     fill: var(--txt);
 }
 
-.frontpage h1 {
+.frontpage h2 {
     text-align: center;
     font-size: 2.5rem;
     font-family: titulo;
@@ -97,6 +98,32 @@
     letter-spacing: 1px;
     text-shadow: 0 0 15px #ffffff;
     /*    position: relative;*/
+}
+
+.frontpage a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--txt);
+    text-decoration: none;
+    gap: 10px;
+}
+
+.frontpage a:hover i {
+    transform: translateX(15px);
+    transition: all 0.2s ease;
+}
+
+.frontpage a span {
+    font-family: titulo;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.frontpage a i {
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
 }
 
 @media (max-width: 900px) {

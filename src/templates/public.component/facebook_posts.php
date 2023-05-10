@@ -18,23 +18,25 @@
 // $data = $response->getDecodedBody();
 
 
-$curl = curl_init();
+$posts = [];
 
-curl_setopt_array($curl, array(
-    CURLOPT_URL => $_ENV['FB_HTTP_REQUEST'],
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 0,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET"
-));
+// $curl = curl_init();
 
-$response = curl_exec($curl);
+// curl_setopt_array($curl, array(
+//     CURLOPT_URL => $_ENV['FB_HTTP_REQUEST'],
+//     CURLOPT_RETURNTRANSFER => true,
+//     CURLOPT_ENCODING => "",
+//     CURLOPT_MAXREDIRS => 10,
+//     CURLOPT_TIMEOUT => 0,
+//     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//     CURLOPT_CUSTOMREQUEST => "GET"
+// ));
 
-curl_close($curl);
+// $response = curl_exec($curl);
 
-$posts = json_decode($response, true)['posts']['data'];
+// curl_close($curl);
+
+// $posts = json_decode($response, true)['posts']['data'];
 ?>
 
 

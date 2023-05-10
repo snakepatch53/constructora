@@ -18,7 +18,7 @@
                 <a class="<?= $DATA['name'] == "aboutus" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>aboutus">ABOUT US</a>
             </li>
             <li>
-                <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contact">CONTACT</a>
+                <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contact">CONTACT US</a>
             </li>
         </ul>
     </nav>

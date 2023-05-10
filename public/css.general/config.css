@@ -1,10 +1,13 @@
 @font-face {
-    src: url('./../font.general/Nosifer-Regular.ttf');
+/*    src: url('./../font.general/Roboto-Regular.ttf');*/
+    src: local("roboto");
+    font-weight: bold;
     font-family: logo;
 }
 
 @font-face {
-    src: url('./../font.general/Pompiere-Regular.ttf');
+/*    src: url('./../font.general/Pompiere-Regular.ttf');*/
+    src: local("roboto");
     font-family: contenido;
 }
 

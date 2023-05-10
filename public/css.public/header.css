@@ -1,14 +1,18 @@
 header {
-/*    --bg: var(--color1-translucent);*/
-    
+    /*    --bg: var(--color1-translucent);*/
+
     --bg-float: var(--color1);
     --txt: var(--color1-text);
-    --bg-logo: var(--color1-logo);
-    --txt-logo: var(--color1-logo);
+    --bg-logo-s1: var(--color1-logo-s1);
+    --bg-logo-s2: var(--color1-logo-s2);
+    --bg-logo-s3: var(--color1-logo-s3);
+    --txt-logo: var(--color1-logo-text);
 
     --bg-btn: var(--color1-btn);
     --txt-btn: var(--color1-btn-text);
-    
+
+    --bg-nav-movil: var(--color5);
+    --txt-nav-movil: var(--color5-text);
     --bg-btn-movil: var(--color5-btn);
     --txt-btn-movil: var(--color5-btn-text);
 
@@ -44,16 +48,21 @@ header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: auto;
     height: 100%;
-    padding: 30px;
+    padding: 10px 0;
     text-decoration: none;
     overflow: hidden;
 }
 
 header .logo svg {
     height: 100%;
-    fill: var(--bg-logo);
+    max-height: 60px;
+
+
+    --s1: var(--bg-logo-s1);
+    --s2: var(--bg-logo-s2);
+    --s3: var(--bg-logo-s3);
 }
 
 header .logo h1 {
@@ -61,10 +70,14 @@ header .logo h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 150px;
     height: 100%;
+    padding-top: 10px;
     font-family: logo;
-    font-size: 0.8rem;
     font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
     color: var(--txt-logo);
 
 }
@@ -95,6 +108,7 @@ header nav li a {
     text-decoration: none;
     white-space: nowrap;
     letter-spacing: 1px;
+    font-size: 0.9rem;
     color: var(--txt);
     padding: 10px 20px;
     border-radius: 5px;
@@ -104,11 +118,13 @@ header nav li a {
 header nav li a.active,
 header nav li a:hover,
 header nav li a.btn:active {
+    font-weight: bold;
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
 header nav li a.btn {
+    font-weight: bold;
     background-color: var(--bg-btn);
     color: var(--txt-btn);
     opacity: 1;
@@ -154,7 +170,7 @@ header .burger-toggle i {
         overflow: hidden;
         opacity: 0;
         height: calc(100vh - var(--header-height));
-        background: var(--color5);
+        background: var(--bg-nav-movil);
         transition: all 0.2s ease;
     }
 
@@ -175,7 +191,7 @@ header .burger-toggle i {
     }
 
     header nav ul li a {
-        color: var(--color5-text);
+        color: var(--txt-nav-movil);
     }
 
     header nav ul li a.btn {
