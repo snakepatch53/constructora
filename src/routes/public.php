@@ -9,3 +9,7 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
 // HOME
 $radapter->getHTML('/', 'home');
 $radapter->getHTML('/index.php', 'home');
+$radapter->getHTML('/services', 'services');
+$radapter->getHTML('/portfolio', 'portfolio');
+$radapter->getHTML('/aboutus', 'aboutus');
+$radapter->getHTML('/contactus', 'contactus');

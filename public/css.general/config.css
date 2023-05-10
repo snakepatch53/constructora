@@ -37,6 +37,10 @@ html {
     scroll-padding: 60px;
 }
 
+body.dark {
+    background: #363636;
+}
+
 img {
     pointer-events: none;
 }

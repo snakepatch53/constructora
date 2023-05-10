@@ -24,7 +24,7 @@
                 </button>
             </li>
             <li>
-                <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contact">CONTACT US</a>
+                <a class="btn <?= $DATA['name'] == "contact" ? "active" : "" ?>" href="<?= $DATA['http_domain'] ?>contactus">CONTACT US</a>
             </li>
         </ul>
     </nav>
