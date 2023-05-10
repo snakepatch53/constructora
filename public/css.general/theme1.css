@@ -20,6 +20,7 @@
     --color4: #ffffff;
     --color4-text: #000000;
     --color4-text2: #363636;
+    --color4-text3: #384e9a;
 
     --color5: #363636;
     --color5-text: #ffffff;
@@ -56,6 +57,7 @@ body.dark {
     --color4: #484848;
     --color4-text: #ffffff;
     --color4-text2: #b2b2b2;
+    --color4-text3: #a1a7ba;
 
     --color5: #363636;
     --color5-text: #ffffff;
