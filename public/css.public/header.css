@@ -157,12 +157,13 @@ header .burger-toggle i {
 header nav li button.btn-darkmode {
     position: relative;
     display: flex;
-    gap: 5px;
+    gap: 3px;
     cursor: pointer;
     padding: 2px;
     border-radius: 50px;
     background: #000;
     transition: all 0.2s ease;
+    margin-left: auto;
 }
 
 header nav li button.btn-darkmode:before {
@@ -195,9 +196,9 @@ body.dark header nav li button.btn-darkmode {
 header nav li button.btn-darkmode i {
     display: block;
     aspect-ratio: 1/1;
-    padding: 4px;
+    padding: 3px;
     border-radius: 50%;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 header nav li button.btn-darkmode i.dark {
