@@ -87,27 +87,39 @@
                         <h2>What are you looking for yourself?</h2>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/1.jpg" alt="Image of patio">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/1.jpg" alt="Image of patio">
+                        </div>
                         <h3>Yards</h3>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/2.jpg" alt="Image of Retaining Walls">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/2.jpg" alt="Image of Retaining Walls">
+                        </div>
                         <h3>Retaining Walls</h3>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/3.jpg" alt="Image of Side Walks">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/3.jpg" alt="Image of Side Walks">
+                        </div>
                         <h3>Side Walks</h3>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/4.jpg" alt="Image of Lawn Care">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/4.jpg" alt="Image of Lawn Care">
+                        </div>
                         <h3>Lawn Care</h3>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/5.jpg" alt="Image of Mulch">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/5.jpg" alt="Image of Mulch">
+                        </div>
                         <h3>Mulch</h3>
                     </div>
                     <div class="item">
-                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/6.jpg" alt="Image of Trimming">
+                        <div class="img">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/6.jpg" alt="Image of Trimming">
+                        </div>
                         <h3>Trimming</h3>
                     </div>
                 </div>
