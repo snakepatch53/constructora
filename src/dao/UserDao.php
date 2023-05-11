@@ -39,26 +39,30 @@ class UserDao
     public function insert(
         $user_name,
         $user_user,
-        $user_pass
+        $user_pass,
+        $user_photo
     ) {
         return $this->mysqlAdapter->query("
             INSERT INTO user SET 
                 user_name='$user_name', 
                 user_user='$user_user',
-                user_pass='$user_pass'
+                user_pass='$user_pass',
+                user_photo='$user_photo'
         ");
     }
     public function update(
         $user_name,
         $user_user,
         $user_pass,
+        $user_photo,
         $user_id
     ) {
         return $this->mysqlAdapter->query("
             UPDATE user SET 
                 user_name='$user_name', 
                 user_user='$user_user',
-                user_pass='$user_pass'
+                user_pass='$user_pass',
+                user_photo='$user_photo'
             WHERE user_id = $user_id 
         ");
     }

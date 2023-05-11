@@ -6,10 +6,9 @@ class UserService
         header('Content-Type: application/json');
         header('Access-Control-Allow-Origin: *');
         $adapter = $DATA['mysqlAdapter'];
-        $userDao = new UserDao($adapter);
         $result = [
             'status' => 'error',
-            'message' => 'Usuario o contraseña incorrectos',
+            'message' => 'Data not found',
             'response' => false,
             'data' => null
         ];
@@ -17,6 +16,8 @@ class UserService
             $_POST['user_user'],
             $_POST['user_pass']
         )) {
+            $result['message'] = 'User or password incorrect';
+            $userDao = new UserDao($adapter);
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
             $user_rs = $userDao->login($user_user, addslashes($user_pass));
@@ -30,16 +31,15 @@ class UserService
                     $_SESSION['user_name'] = $user_r['user_name'];
                     $_SESSION['user_user'] = $user_r['user_user'];
                     $_SESSION['user_pass'] = $user_r['user_pass'];
-
+                    $_SESSION['user_photo'] = $user_r['user_photo'];
+                    $_SESSION['user_last'] = $user_r['user_last'];
+                    $_SESSION['user_created'] = $user_r['user_created'];
+                    $user_r['user_pass'] = null;
                     $result = [
                         'status' => 'success',
-                        'message' => 'Bienvenido al sistema',
+                        'message' => 'Welcom to system ' . $user_r['user_name'],
                         'response' => true,
-                        'data' => [
-                            'user_id' => $user_r['user_id'],
-                            'user_name' => $user_r['user_name'],
-                            'user_user' => $user_r['user_user']
-                        ]
+                        'data' => $user_r
                     ];
                 }
             }
@@ -54,7 +54,7 @@ class UserService
         session_destroy();
         echo json_encode([
             'status' => 'success',
-            'message' => 'Sesión cerrada',
+            'message' => 'Session closed',
             'response' => true,
             'data' => null
         ]);
@@ -69,7 +69,7 @@ class UserService
         $users = $userDao->select();
         echo json_encode([
             'status' => 'success',
-            'message' => 'Usuarios obtenidos correctamente',
+            'message' => 'Users obtained successfully',
             'response' => true,
             'data' => $users
         ]);
@@ -81,7 +81,7 @@ class UserService
         $adapter = $DATA['mysqlAdapter'];
         $result = [
             'status' => 'error',
-            'message' => 'Faltan datos para ingresar el usuario',
+            'message' => 'Data not found',
             'response' => false,
             'data' => null
         ];
@@ -94,13 +94,20 @@ class UserService
             $user_name = $_POST['user_name'];
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
+            $user_photo = "default.png";
+            if (isset($_FILES['user_photo'])) {
+                if ($_FILES['user_photo']['tmp_name'] != "" or $_FILES['user_photo']['tmp_name'] != null) {
+                    $user_photo = uploadFIle($_FILES['user_photo'], './public/img.users/');
+                }
+            };
             $user = $userDao->insert(
                 $user_name,
                 $user_user,
-                $user_pass
+                $user_pass,
+                $user_photo
             );
             $result['status'] = 'success';
-            $result['message'] = 'Usuario insertado correctamente';
+            $result['message'] = 'User created successfully';
             $result['response'] = true;
             $result['data'] = $user;
         }
@@ -114,7 +121,7 @@ class UserService
         $adapter = $DATA['mysqlAdapter'];
         $result = [
             'status' => 'error',
-            'message' => 'Faltan datos para actualizar el usuario',
+            'message' => 'Data not found',
             'response' => false,
             'data' => null
         ];
@@ -129,7 +136,7 @@ class UserService
             $user_id = $_POST['user_id'];
             $current_user = $userDao->selectById($user_id);
             if (!$current_user) {
-                $result['message'] = 'El usuario no existe';
+                $result['message'] = 'User not found';
                 echo json_encode($result);
                 exit();
             }
@@ -138,15 +145,22 @@ class UserService
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
             $user_id = $_POST['user_id'];
-
+            $user_photo = $current_user['user_photo'];
+            if (isset($_FILES['user_photo'])) {
+                if ($_FILES['user_photo']['tmp_name'] != "" or $_FILES['user_photo']['tmp_name'] != null) {
+                    if ($user_photo != 'default.png' && $user_photo != '') deleteFile('./public/img.users/' . $user_photo);
+                    $user_photo = uploadFIle($_FILES['user_photo'], './public/img.users/');
+                }
+            }
             $user = $userDao->update(
                 $user_name,
                 $user_user,
                 $user_pass,
+                $user_photo,
                 $user_id
             );
             $result['status'] = 'success';
-            $result['message'] = 'Usuario actualizado correctamente';
+            $result['message'] = 'User updated successfully';
             $result['response'] = true;
             $result['data'] = $user;
         }
@@ -160,7 +174,7 @@ class UserService
         $adapter = $DATA['mysqlAdapter'];
         $result = [
             'status' => 'error',
-            'message' => 'Faltan datos para eliminar el usuario',
+            'message' => 'Data not found',
             'response' => false,
             'data' => null
         ];
@@ -169,13 +183,16 @@ class UserService
             $user_id = $_POST['user_id'];
             $user = $userDao->selectById($user_id);
             if (!$user) {
-                $result['message'] = 'El usuario no existe';
+                $result['message'] = 'User not found';
                 echo json_encode($result);
                 exit();
             }
+            if ($user['user_photo'] != 'default.png' && $user['user_photo'] != '') {
+                deleteFile('./public/img.users/' . $user['user_photo']);
+            }
             $userDao->delete($user_id);
             $result['status'] = 'success';
-            $result['message'] = 'Usuario eliminado correctamente';
+            $result['message'] = 'User deleted successfully';
             $result['response'] = true;
         }
         echo json_encode($result);

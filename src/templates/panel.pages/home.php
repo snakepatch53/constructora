@@ -46,7 +46,7 @@
                                 <span>Links</span>
                                 <i class="fas fa-link"></i>
                             </h5>
-                            <p class="card-text">Total de links: <?= $DATA['links_total'] ?></p>
+                            <p class="card-text">Total de links: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/links">Ver links</a>
                     </div>
@@ -59,7 +59,7 @@
                                 <span>Mensajes</span>
                                 <i class="fas fa-envelope"></i>
                             </h5>
-                            <p class="card-text">Total de mensajes: <?= $DATA['mensajes_total'] ?></p>
+                            <p class="card-text">Total de mensajes: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/mensajes">Ver mensajes</a>
                     </div>
@@ -72,7 +72,7 @@
                                 <span>Planes</span>
                                 <i class="fa-solid fa-credit-card"></i>
                             </h5>
-                            <p class="card-text">Total de planes: <?= $DATA['planes_total'] ?></p>
+                            <p class="card-text">Total de planes:</p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/planes">Ver planes</a>
                     </div>
@@ -85,7 +85,7 @@
                                 <span>Preguntas</span>
                                 <i class="fa-solid fa-question"></i>
                             </h5>
-                            <p class="card-text">Total de preguntas: <?= $DATA['preguntas_total'] ?></p>
+                            <p class="card-text">Total de preguntas: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/preguntas">Ver preguntas</a>
                     </div>
@@ -98,7 +98,7 @@
                                 <span>Restricciones</span>
                                 <i class="fa-solid fa-lock"></i>
                             </h5>
-                            <p class="card-text">Total de restricciones: <?= $DATA['restricciones_total'] ?></p>
+                            <p class="card-text">Total de restricciones: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/preguntas">Ver restricciones</a>
                     </div>
@@ -111,7 +111,7 @@
                                 <span>Slider</span>
                                 <i class="fas fa-images"></i>
                             </h5>
-                            <p class="card-text">Total de slides: <?= $DATA['slider_total'] ?></p>
+                            <p class="card-text">Total de slides: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/slider">Ver slider</a>
                     </div>
@@ -124,7 +124,7 @@
                                 <span>Redes</span>
                                 <i class="fa-solid fa-share"></i>
                             </h5>
-                            <p class="card-text">Total de redes: <?= $DATA['social_total'] ?></p>
+                            <p class="card-text">Total de redes: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/social">Ver redes</a>
                     </div>
@@ -137,7 +137,7 @@
                                 <span>Usuarios</span>
                                 <i class="fa-solid fa-user"></i>
                             </h5>
-                            <p class="card-text">Total de usuarios: <?= $DATA['user_total'] ?></p>
+                            <p class="card-text">Total de usuarios: </p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/user">Ver usuarios</a>
                     </div>

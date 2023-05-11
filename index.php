@@ -18,12 +18,14 @@ require_once(__DIR__ . '/src/functions/middlewares.php');
 
 
 // cargamos los objetos de acceso a datos
-// require_once('./src/dao/InfoDao.php');
+require_once('./src/dao/InfoDao.php');
+require_once('./src/dao/UserDao.php');
 
 
 
 // cargamos los servicios para el web service (WEB SERVICE)
-// require_once('./src/services/info.service.php');
+require_once('./src/services/info.service.php');
+require_once('./src/services/user.service.php');
 
 
 // cargamos las variables de entorno

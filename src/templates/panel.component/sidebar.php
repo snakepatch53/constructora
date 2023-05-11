@@ -6,7 +6,9 @@
     <div class="sidebar-header">
         <h4 class="text-truncate p-2"><?= $DATA['info']['info_name'] ?></h4>
     </div>
-    <div class="logo"><img src="<?= $DATA['http_domain'] ?>public/img/logo.png?last=<?= $DATA['info']['info_last'] ?>" alt="Logo"></div>
+    <div class="logo">
+        <img class="p-2" src="<?= $DATA['http_domain'] ?>public/img/logo.svg?last=<?= $DATA['info']['info_last'] ?>" alt="Logo">
+    </div>
     <!-- List | ini -->
     <ul class="list-group rounded-0 p-2 border-0">
 
@@ -18,6 +20,11 @@
         <a href="<?= $DATA['http_domain'] ?>panel/info" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "info") ? "shadow  active" : "" ?>">
             <i class="fa-solid fa-info"></i>
             <span class="ms-2">Informacion</span>
+        </a>
+
+        <a href="<?= $DATA['http_domain'] ?>panel/users" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "users") ? "shadow  active" : "" ?>">
+            <i class="fa-solid fa-users"></i>
+            <span class="ms-2">Usuarios</span>
         </a>
 
         <a href="<?= $DATA['http_domain'] ?>panel/links" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "links") ? "shadow  active" : "" ?>">
@@ -55,10 +62,7 @@
             <span class="ms-2">Redes</span>
         </a>
 
-        <a href="<?= $DATA['http_domain'] ?>panel/users" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "users") ? "shadow  active" : "" ?>">
-            <i class="fa-solid fa-users"></i>
-            <span class="ms-2">Usuarios</span>
-        </a>
+
 
     </ul>
     <!-- List | end -->

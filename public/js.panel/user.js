@@ -83,10 +83,13 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ user_id, user_name, user_user }) {
+    getTr: function ({ user_id, user_name, user_user, user_photo }) {
         return `
             <tr>
                 <td class="d-none d-md-table-cell fw-bold">${user_id}</td>
+                <td class="text-center text-md-left">
+                    <img src="${http_domain}public/img.users/${user_photo}" alt="avatar" class="rounded-circle me-2 avatar" />
+                </td>
                 <td class="text-center text-md-left">${user_name}</td>
                 <td class="d-none d-md-table-cell text-center text-md-left">
                     <span>${user_user}</span>

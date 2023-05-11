@@ -4,3 +4,11 @@ $radapter = new RAdapter($router, $_TEMPLATE_SERVICES_PATH, $_ENV['HTTP_DOMAIN']
 
 // CONFIGURATION
 $radapter->getHTML('/services/configuration', 'configuration');
+
+// USER
+$radapter->post('/services/user/login', fn (...$args) => UserService::login(...$args));
+$radapter->post('/services/user/logout', fn () => UserService::logout());
+$radapter->post('/services/user/select', fn (...$args) => UserService::select(...$args));
+$radapter->post('/services/user/insert', fn (...$args) => UserService::insert(...$args));
+$radapter->post('/services/user/update', fn (...$args) => UserService::update(...$args));
+$radapter->post('/services/user/delete', fn (...$args) => UserService::delete(...$args));

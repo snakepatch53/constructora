@@ -4,11 +4,11 @@
 
 body {
     --txt-message: var(--danger);
-    
+
     --bg-form: var(--color4);
     --txt-form: var(--color4-text);
     --bg-filter: var(--color6);
-    
+
     --bg-icon: var(--color2);
     --txt-icon: var(--color2-text2);
 
@@ -172,7 +172,7 @@ form .row input {
 }
 
 
-form button {  
+form button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,6 +192,10 @@ form button:hover {
     background: var(--bg-btn);
     opacity: 1;
     transition: all 0.2s ease;
+}
+
+form button i {
+    color: var(--txt-btn);
 }
 
 

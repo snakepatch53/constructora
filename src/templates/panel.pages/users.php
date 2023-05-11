@@ -13,17 +13,17 @@
         <div class=" pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Users</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Usuarios</b>
+                        <b>Users</b>
                         <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
-                            <span>Crear nuevo</span>
+                            <span>Create new</span>
                         </button>
                     </div>
                 </div>
@@ -32,9 +32,10 @@
                         <thead class="bg-dark text-light">
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
-                                <th class="text-center text-md-left" scope="col">Nombre</th>
-                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Usuario</th>
-                                <th class="text-center" scope="col">Acciones</th>
+                                <th class="text-center text-md-left" scope="col">Photo</th>
+                                <th class="text-center text-md-left" scope="col">Name</th>
+                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">User</th>
+                                <th class="text-center" scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody id="element-table"></tbody>
@@ -55,17 +56,17 @@
                 <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
                     <input type="hidden" name="user_id" value="0">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="element-modalformLabel">Formulario</h5>
+                        <h5 class="modal-title" id="element-modalformLabel">User Form</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <!-- form | ini -->
                         <div class="row g-3">
                             <div class="col-md-12">
-                                <label for="validationServer01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationServer01" placeholder="Nombre.." name="user_name" required>
+                                <label for="validationServer01" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="validationServer01" placeholder="Name.." name="user_name" required>
                                 <div class="invalid-feedback">
-                                    Escribe el nombre del usuario!
+                                    Write a name!
                                 </div>
                             </div>
 
@@ -73,24 +74,29 @@
                                 <label for="validationServer03" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="validationServer03" placeholder="Username.." name="user_user" required>
                                 <div class="invalid-feedback">
-                                    Escribe el usuario para el login!
+                                    Write a username!
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationServer04" class="form-label">Contraseña</label>
+                                <label for="validationServer04" class="form-label">Password</label>
                                 <input type="text" class="form-control" id="validationServer04" placeholder="********" name="user_pass" required>
                                 <div class="invalid-feedback">
-                                    Escribe la contraseña para el login!
+                                    Write a password!
                                 </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="validationServer05" class="form-label">Photo</label>
+                                <input type="file" class="form-control" id="validationServer05" name="user_photo">
                             </div>
 
                         </div>
                         <!-- form | end -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>

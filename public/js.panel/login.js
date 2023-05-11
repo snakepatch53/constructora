@@ -33,6 +33,7 @@ function handleSubmit(event) {
     try {
         fetch_query(formData, "user", "login").then((res) => {
             try {
+                console.log(res);
                 showMsg(res.message);
                 if (res.response) return (location.href = http_domain + "panel");
             } catch (error) {

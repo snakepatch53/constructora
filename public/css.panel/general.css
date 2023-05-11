@@ -149,6 +149,15 @@ input[value="1"] ~ .checkbox:before {
 }
 
 
+.avatar {
+    width: 40px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
 
 
 

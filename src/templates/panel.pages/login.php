@@ -48,7 +48,7 @@
                     <div class="input">
                         <button type="submit">
                             <span class="me-1">Log In</span>
-                            <i class="fa-solid fa-right-to-bracket"></i>
+                            <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </div>
                 </form>
