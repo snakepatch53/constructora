@@ -237,7 +237,7 @@ header nav li button.btn-darkmode i.light {
 
     header nav:before {
         position: fixed;
-        bottom: 0;
+        top: var(--header-height);
         left: 0;
         z-index: -1;
         content: '';
