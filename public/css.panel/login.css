@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --bg-form: var(--color4);
+    --txt-form: var(--color4-text);
+    --bg-filter: var(--color6);
+
+    --bg-logo-s1: var(--color4-logo-s1);
+    --bg-logo-s2: var(--color4-logo-s2);
+    --bg-logo-s3: var(--color4-logo-s3);
+    --txt-logo: var(--color4-logo-text);
+
+    --bg-btn: var(--color1);
+    --txt-btn: var(--color1-text);
+
+
+
+
+
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-image-url) !important;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+}
+
+#element-msg-login {
+    height: 50px;
+}
+
+.login-container {
+    box-shadow: 0 30px 50px -15px #000;
+    border-radius: 5px;
+}
+
+main {
+    position: relative;
+}
+
+main:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -50;
+    content: '';
+    background: var(--bg-filter);
+    opacity: 0.85;
+}
+
+main img.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -100;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    filter: grayscale(1);
+}
+
+form .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*    background: #000;*/
+    height: 100px;
+}
+
+form .logo svg {
+    height: 100%;
+    aspect-ratio: 1/1;
+    --s1: var(--bg-logo-s1);
+    --s2: var(--bg-logo-s2);
+    --s3: var(--bg-logo-s3);
+}
+
+form .logo h1 {
+    display: inline !important;
+    text-align: left;
+    width: 160px;
+    font-family: logo;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 10px;
+    color: var(--txt-logo);
+}
+
+
+.modal-form {
+    background: var(--bg-form);
+    max-width: 430px;
+    margin: auto;
+}
+
+form label {
+    color: var(--txt-form);
+}
+
+
+form button[type='submit'] {
+    /*    background: #000;*/
+    border: none;
+    background: var(--bg-btn);
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
+
+form button[type='submit']:hover {
+    background: var(--bg-btn);
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+form button[type='submit'] span,
+form button[type='submit'] i {
+    color: var(--txt-btn);
+}
