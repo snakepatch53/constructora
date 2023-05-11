@@ -41,33 +41,78 @@
                 <h2>Qualities of our brand</h2>
                 <div class="items">
                     <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
+                        <div class="card">
+                            <div class="back">
+                                <img src="<?= $DATA['http_domain'] ?>public/img/pool.jpg" alt="Image of pool">
+                            </div>
+                            <div class="icon">
+                                <?php include('./public/img/stars.svg'); ?>
+                            </div>
+                            <h3>Innovation</h3>
+                            <p>Find the best details and always look up to date</p>
                         </div>
-                        <h3>Innovation</h3>
-                        <p>Find the best details and always look up to date</p>
                     </div>
                     <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
+                        <div class="card">
+                            <div class="back">
+                                <img src="<?= $DATA['http_domain'] ?>public/img/handshake.jpg" alt="Image of person shaking hands">
+                            </div>
+                            <div class="icon">
+                                <?php include('./public/img/stars.svg'); ?>
+                            </div>
+                            <h3>Commitment</h3>
+                            <p>You'll have our guarantee in quality and punctuality</p>
                         </div>
-                        <h3>Commitment</h3>
-                        <p>You'll have our guarantee in quality and punctuality</p>
                     </div>
                     <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
+                        <div class="card">
+                            <div class="back">
+                                <img src="<?= $DATA['http_domain'] ?>public/img/elegance.jpg" alt="Image of elegant build">
+                            </div>
+                            <div class="icon">
+                                <?php include('./public/img/stars.svg'); ?>
+                            </div>
+                            <h3>Elegance</h3>
+                            <p>Up to date with all current aesthetic details</p>
                         </div>
-                        <h3>Elegance</h3>
-                        <p>Up to date with all current aesthetic details</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+        <section class="section-3">
+            <div class="container">
+                <div class="items">
+                    <div class="item title">
+                        <h2>What are you looking for yourself?</h2>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/1.jpg" alt="Image of patio">
+                        <h3>Yards</h3>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/2.jpg" alt="Image of Retaining Walls">
+                        <h3>Retaining Walls</h3>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/3.jpg" alt="Image of Side Walks">
+                        <h3>Side Walks</h3>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/4.jpg" alt="Image of Lawn Care">
+                        <h3>Lawn Care</h3>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/5.jpg" alt="Image of Mulch">
+                        <h3>Mulch</h3>
+                    </div>
+                    <div class="item">
+                        <img src="<?= $DATA['http_domain'] ?>public/img.patios/6.jpg" alt="Image of Trimming">
+                        <h3>Trimming</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="section-footer">
