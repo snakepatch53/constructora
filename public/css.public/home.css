@@ -120,6 +120,8 @@
     }
 
     .section-1 .item {
+        flex: 1;
+        flex-basis: 0;
         padding: 20px;
     }
 }
