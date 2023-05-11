@@ -19,7 +19,8 @@ $toggleButton.onclick = function () {
     const $input = $toggleButton.parentNode.querySelector("input");
     const type = $input.getAttribute("type") === "password" ? "text" : "password";
     $input.setAttribute("type", type);
-    $toggleButton.innerHTML = type === "password" ? "<i class='fa fa-eye'></i>" : "<i class='fa fa-eye-slash'></i>";
+    // $toggleButton.innerHTML = type === "password" ? "<i class='fa fa-eye'></i>" : "<i class='fa fa-eye-slash'></i>";
+    $toggleButton.classList.toggle("show");
 };
 
 function handleSubmit(event) {
