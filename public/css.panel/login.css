@@ -106,6 +106,15 @@ form label {
     color: var(--txt-form);
 }
 
+form .icon {
+/*    background: var(--color1);*/
+}
+
+form .icon i {
+    background: #000;
+    font-size: 2rem;
+    color: red !important;
+}
 
 form button[type='submit'] {
     /*    background: #000;*/
