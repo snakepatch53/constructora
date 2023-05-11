@@ -2,6 +2,7 @@ header {
     /*    --bg: var(--color1-translucent);*/
 
     --bg-float: var(--color1-translucent);
+    --bg: var(--color1);
     --txt: var(--color1-text);
     --bg-logo-s1: var(--color1-logo-s1);
     --bg-logo-s2: var(--color1-logo-s2);
@@ -221,8 +222,8 @@ header nav li button.btn-darkmode i.light {
 
     header nav {
         position: fixed;
+        top: var(--header-height);
         right: 0;
-        bottom: 0;
         z-index: 100;
         width: 100%;
         max-width: 0;
@@ -231,6 +232,7 @@ header nav li button.btn-darkmode i.light {
         height: calc(100vh - var(--header-height));
         background: var(--bg-nav-movil);
         transition: all 0.2s ease;
+        padding: 30px 0;
     }
 
     header nav:before {
@@ -274,7 +276,7 @@ header nav li button.btn-darkmode i.light {
     }
 
     header.menu-open {
-        background-color: var(--bg-float);
+        background-color: var(--bg);
     }
 
 }
