@@ -21,6 +21,9 @@ require_once(__DIR__ . '/src/functions/middlewares.php');
 require_once('./src/dao/InfoDao.php');
 require_once('./src/dao/UserDao.php');
 require_once('./src/dao/SliderDao.php');
+require_once('./src/dao/ContactDao.php');
+require_once('./src/dao/QualityDao.php');
+require_once('./src/dao/ServiceDao.php');
 
 
 

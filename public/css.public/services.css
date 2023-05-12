@@ -15,7 +15,8 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 150px);
+/*    height: calc(100vh - 150px);*/
+    height: 100vh;
     padding: var(--padding);
     padding-top: var(--header-height);
     background-image: var(--bg);

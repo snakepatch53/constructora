@@ -114,7 +114,8 @@ footer .item.social-media li a {
 }
 
 footer .item.social-media li a i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--color);
 }
 
 footer .copy {

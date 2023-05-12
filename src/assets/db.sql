@@ -6,6 +6,7 @@ CREATE TABLE info (
     info_country VARCHAR(50),
     info_state VARCHAR(50),
     info_city VARCHAR(50),
+    info_whatsapp VARCHAR(20),
     info_location TEXT,
     info_desc TEXT,
     info_mision TEXT,
@@ -23,7 +24,8 @@ VALUES
         'United States',
         'New York',
         'Newburgh, NY',
-        '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11952.162265164!2d-74.032010721862!3d41.50339571062848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd2bf1836bd927%3A0xf745d68dec3c106e!2sNewburgh%2C%20Nueva%20York%2012550%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1683840815584!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+        '+1 845-219-3871',
+        '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.054286150355!2d-74.02387432310792!3d41.50309838880862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3203a0e548c9%3A0xda06f18ce34c05f4!2s322%201st%20St%2C%20Newburgh%2C%20NY%2012550%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1683904817084!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
         'Our experienced team is here to help with the entire process, from initial idea to commissioning, we are here to help you get the design and work you need.',
         "Erazo Brothers is a construction company committed to building high-quality, innovative and sustainable projects, exceeding our clients' expectations. Our mission is to contribute to the growth and development of our community, providing our clients with the best possible construction experience through excellent customer service, professionalism and a commitment to safety and environmental responsibility.",
         "Our vision at Erazo Brothers is to be recognized as a leader in the construction industry, delivering exceptional quality, innovative solutions, and unparalleled customer service. We strive to exceed our clients' expectations by constantly improving our processes, utilizing cutting-edge technology, and fostering a culture of excellence and collaboration among our team members.",
@@ -105,6 +107,199 @@ VALUES
         '3.png',
         '',
         '',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
+DROP TABLE IF EXISTS contacts;
+
+CREATE TABLE contacts (
+    contact_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    contact_name VARCHAR(50),
+    contact_value VARCHAR(50),
+    contact_link TEXT,
+    contact_icon VARCHAR(50),
+    contact_color VARCHAR(50),
+    contact_type ENUM('contact', 'social') DEFAULT 'contact',
+    contact_last VARCHAR(50),
+    contact_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    contacts
+VALUES
+    (
+        1,
+        'Phone',
+        '+1 845-219-3871',
+        'tel:+1 845-219-3871',
+        'fas fa-phone-alt',
+        '#0d6efd',
+        'contact',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Email',
+        'admin@erazobrothersllc.com',
+        'mailto:admin@erazobrothersllc.com',
+        'fas fa-envelope',
+        '#0d6efd',
+        'contact',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Address',
+        '322 first st newburgh ny 12550',
+        'https://goo.gl/maps/6oQxHiLhJex82nck9?coh=178573&entry=tt',
+        'fas fa-map-marker-alt',
+        '#0d6efd',
+        'contact',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        4,
+        'Facebook',
+        '@erazobrothers',
+        'https://www.facebook.com/erazobrothers',
+        'fab fa-facebook-f',
+        '#0d6efd',
+        'social',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        5,
+        'Instagram',
+        '@erazobrothers',
+        'https://www.instagram.com/erazobrothers',
+        'fab fa-instagram',
+        '#833ab4',
+        'social',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        6,
+        'Twitter',
+        '@erazobrothers',
+        'https://www.twitter.com/erazobrothers',
+        'fab fa-twitter',
+        '#00acee',
+        'social',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
+DROP TABLE IF EXISTS qualities;
+
+CREATE TABLE qualities (
+    quality_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    quality_title VARCHAR(50),
+    quality_desc TEXT,
+    quality_img VARCHAR(50),
+    quality_last VARCHAR(50),
+    quality_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    qualities
+VALUES
+    (
+        1,
+        'Innovation',
+        'Find the best details and always look up to date',
+        '1.jpg',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Commitment',
+        "You'll have our guarantee in quality and punctuality",
+        '2.jpg',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Elegance',
+        'Up to date with all current aesthetic details',
+        '3.jpg',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
+DROP TABLE IF EXISTS services;
+
+CREATE TABLE services (
+    service_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    service_title VARCHAR(50),
+    service_desc TEXT,
+    service_img VARCHAR(50),
+    service_wtsp_msg TEXT,
+    service_last VARCHAR(50),
+    service_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    services
+VALUES
+    (
+        1,
+        'Patios',
+        'We remodel and fix your outdoor spaces to give you a different and lively style.',
+        '1.jpg',
+        'Hello, I would like to know more about the patio construction service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Retaining Walls',
+        'A retaining wall is important and needs to be very well built, we guarantee it.',
+        '2.jpg',
+        'Hello, I would like to know more about the retaining wall construction service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Sidewalks',
+        'Give your home a better presentation by building beautiful and elegant sidewalks.',
+        '3.jpg',
+        'Hello, I would like to know more about the sidewalk construction service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        4,
+        'Lawn Care',
+        'Your lawn also deserves to have a good presentation, keep it trimmed and well cared for.',
+        '4.jpg',
+        'Hello, I would like to know more about the lawn care service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        5,
+        'Mulch',
+        'Apply the best organic material to your plots and give it life and color for longer.',
+        '5.jpg',
+        'Hello, I would like to know more about the mulch service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        6,
+        'Trimming',
+        'Apply beautifiers and make your house have a different touch from the others.',
+        '6.jpg',
+        'Hello, I would like to know more about the trimming service.',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );

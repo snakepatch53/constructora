@@ -40,42 +40,20 @@
             <div class="container">
                 <h2>Qualities of our brand</h2>
                 <div class="items">
-                    <div class="item">
-                        <div class="card">
-                            <div class="back">
-                                <img src="<?= $DATA['http_domain'] ?>public/img/pool.jpg" alt="Image of pool">
+                    <?php foreach ($DATA['qualities'] as $value) { ?>
+                        <div class="item">
+                            <div class="card">
+                                <div class="back">
+                                    <img src="<?= $value['quality_img'] ?>" alt="Image of <?= $value['quality_title'] ?> quality">
+                                </div>
+                                <div class="icon">
+                                    <?php include('./public/img/stars.svg'); ?>
+                                </div>
+                                <h3><?= $value['quality_title'] ?></h3>
+                                <p><?= $value['quality_desc'] ?></p>
                             </div>
-                            <div class="icon">
-                                <?php include('./public/img/stars.svg'); ?>
-                            </div>
-                            <h3>Innovation</h3>
-                            <p>Find the best details and always look up to date</p>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="back">
-                                <img src="<?= $DATA['http_domain'] ?>public/img/handshake.jpg" alt="Image of person shaking hands">
-                            </div>
-                            <div class="icon">
-                                <?php include('./public/img/stars.svg'); ?>
-                            </div>
-                            <h3>Commitment</h3>
-                            <p>You'll have our guarantee in quality and punctuality</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="back">
-                                <img src="<?= $DATA['http_domain'] ?>public/img/elegance.jpg" alt="Image of elegant build">
-                            </div>
-                            <div class="icon">
-                                <?php include('./public/img/stars.svg'); ?>
-                            </div>
-                            <h3>Elegance</h3>
-                            <p>Up to date with all current aesthetic details</p>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -86,42 +64,14 @@
                     <div class="item title">
                         <h2>What are you looking for yourself?</h2>
                     </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/1.jpg" alt="Image of patio">
+                    <?php foreach ($DATA['services'] as $value) { ?>
+                        <div class="item">
+                            <div class="img">
+                                <img src="<?= $value['service_img'] ?>" alt="Image of <?= $value['service_title'] ?> service">
+                            </div>
+                            <h3><?= $value['service_title'] ?></h3>
                         </div>
-                        <h3>Yards</h3>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/2.jpg" alt="Image of Retaining Walls">
-                        </div>
-                        <h3>Retaining Walls</h3>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/3.jpg" alt="Image of Side Walks">
-                        </div>
-                        <h3>Side Walks</h3>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/4.jpg" alt="Image of Lawn Care">
-                        </div>
-                        <h3>Lawn Care</h3>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/5.jpg" alt="Image of Mulch">
-                        </div>
-                        <h3>Mulch</h3>
-                    </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.patios/6.jpg" alt="Image of Trimming">
-                        </div>
-                        <h3>Trimming</h3>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
