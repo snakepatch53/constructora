@@ -44,7 +44,7 @@
                         <div class="item">
                             <div class="card">
                                 <div class="back">
-                                    <img src="<?= $value['quality_img'] ?>" alt="Image of <?= $value['quality_title'] ?> quality">
+                                    <img src="<?= $value['quality_img_url'] ?>" alt="Image of <?= $value['quality_title'] ?> quality">
                                 </div>
                                 <div class="icon">
                                     <?php include('./public/img/stars.svg'); ?>
@@ -67,7 +67,7 @@
                     <?php foreach ($DATA['services'] as $value) { ?>
                         <div class="item">
                             <div class="img">
-                                <img src="<?= $value['service_img'] ?>" alt="Image of <?= $value['service_title'] ?> service">
+                                <img src="<?= $value['service_img_url'] ?>" alt="Image of <?= $value['service_title'] ?> service">
                             </div>
                             <h3><?= $value['service_title'] ?></h3>
                         </div>

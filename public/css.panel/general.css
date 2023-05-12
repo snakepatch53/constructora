@@ -14,6 +14,10 @@
     --sidebar-width-minimize: 70px;
 }
 
+img {
+    pointer-events: all;
+}
+
 body {
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;

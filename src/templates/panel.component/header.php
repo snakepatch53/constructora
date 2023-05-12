@@ -10,14 +10,14 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="header-user-btn nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img class="header-user-photo rounded-circle" src="<?= $DATA['http_domain'] ?>public/img.users/<?= $_SESSION['user_photo'] ?>?last=<?= $_SESSION['user_last'] ?>" alt="User photo">
+                    <img class="header-user-photo rounded-circle" src="<?= $_SESSION['user_photo_url'] ?>" alt="User photo">
                     <span><?= $_SESSION['user_name'] ?></span>
                 </a>
                 <ul class="header-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <div class="p-relative">
                         <img class="img-bg" src="<?= $DATA['http_domain'] ?>public/img/sidebar.jpg" alt="Image of background of sidebar">
                         <li class="text-center">
-                            <img class="dropdown-user-photo rounded-circle" src="<?= $DATA['http_domain'] ?>public/img.users/<?= $_SESSION['user_photo'] ?>?last=<?= $_SESSION['user_last'] ?>" alt="User photo">
+                            <img class="dropdown-user-photo rounded-circle" src="<?= $_SESSION['user_photo_url'] ?>" alt="User photo">
                             <br><br>
                             <span class="text-primary"><?= $_SESSION['user_name'] ?></span>
                             <br><br>

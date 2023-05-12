@@ -64,7 +64,7 @@ class ServiceDao
 
     private function schematize($row)
     {
-        $row['service_img'] = $_ENV['HTTP_DOMAIN'] . "public/img.services/" . $row['service_img'] . "?date=" . $row['service_last'];
+        $row['service_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.services/" . $row['service_img'] . "?date=" . $row['service_last'];
         return $row;
     }
 }

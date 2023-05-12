@@ -64,7 +64,7 @@ class QualityDao
 
     private function schematize($row)
     {
-        $row['quality_img'] = $_ENV['HTTP_DOMAIN'] . "public/img.qualities/" . $row['quality_img'] . "?date=" . $row['quality_last'];
+        $row['quality_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.qualities/" . $row['quality_img'] . "?date=" . $row['quality_last'];
         return $row;
     }
 }

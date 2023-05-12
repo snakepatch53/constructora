@@ -20,9 +20,8 @@ class UserService
             $userDao = new UserDao($adapter);
             $user_user = $_POST['user_user'];
             $user_pass = $_POST['user_pass'];
-            $user_rs = $userDao->login($user_user, addslashes($user_pass));
-            $user_r = mysqli_fetch_assoc($user_rs);
-            if (mysqli_num_rows($user_rs) > 0) {
+            $user_r = $userDao->login($user_user, addslashes($user_pass));
+            if (count($user_r) > 0) {
                 if (
                     $user_r['user_user'] == $user_user and
                     $user_r['user_pass'] == $user_pass
@@ -32,6 +31,7 @@ class UserService
                     $_SESSION['user_user'] = $user_r['user_user'];
                     $_SESSION['user_pass'] = $user_r['user_pass'];
                     $_SESSION['user_photo'] = $user_r['user_photo'];
+                    $_SESSION['user_photo_url'] = $user_r['user_photo_url'];
                     $_SESSION['user_last'] = $user_r['user_last'];
                     $_SESSION['user_created'] = $user_r['user_created'];
                     $user_r['user_pass'] = null;
