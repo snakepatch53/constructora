@@ -126,6 +126,18 @@ main {
 }
 
 
+/*form*/
+.input-file:before {
+    background: var(--info) !important;
+    color: #ffffff !important;
+    transition: all 0.2s ease;
+}
+
+.input-file:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
 
 /*main*/
 
@@ -149,6 +161,22 @@ main .card.shadow thead * {
 
 main .card.shadow tbody tr {
     cursor: pointer;
+}
+
+main #element-gallery button {
+    background: var(--danger);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+main #element-gallery button * {
+    color: #ffffff !important;
+}
+
+main #element-gallery button:hover {
+    transition: all 0.2s ease;
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 main .card.shadow button.btn-outline-success,

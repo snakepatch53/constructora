@@ -23,7 +23,7 @@
                         <b>Slider</b>
                         <input type="hidden" name="slider_id">
                         <input type="hidden" name="slider_title" value="">
-                        <input type="file" name="slider_img" class="input-file" placeholder="➕ Add">
+                        <input type="file" name="slider_img" class="input-file" placeholder="+ Add">
                     </form>
                 </div>
                 <div class="card-body">
