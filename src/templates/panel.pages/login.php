@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/animate.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css">
@@ -16,9 +17,12 @@
     </script>
 </head>
 
-<body>
-    <main class='container-fluid animate__animated animate__fadeIn'>
-        <img src="<?= $DATA['http_domain'] ?>/public/img/login-background.jpg" alt="Image of background" class="bg">
+<body class="loading">
+    <div class="load">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <img src="<?= $DATA['http_domain'] ?>public/img/login-background.jpg" alt="Image of background" class="bg" id="imgrain">
+    <main class='container-fluid'>
         <div class="modal">
             <div class="container">
                 <form id="element-loginform" onsubmit="return false">
@@ -58,6 +62,7 @@
 </body>
 <foot>
     <script src="<?= $DATA['http_domain'] ?>public/js.general/fetch.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/library.general/rainyday.min.js"></script>
     <script src="<?= $DATA['http_domain'] ?>public/js.panel/login.js"></script>
 </foot>
 

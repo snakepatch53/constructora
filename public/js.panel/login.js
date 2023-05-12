@@ -85,3 +85,29 @@ function pickTheme() {
     if (theme) return document.body.classList.add("dark");
 }
 pickTheme();
+
+// RAIN EFFECT
+function run() {
+    var image = document.getElementById("imgrain");
+    image.onload = function () {
+        var engine = new RainyDay({
+            image: this,
+        });
+        engine.rain([[1, 2, 8000]]);
+        engine.rain(
+            [
+                [3, 3, 0.88],
+                [5, 5, 0.9],
+                [6, 2, 1],
+            ],
+            100
+        );
+    };
+    image.crossOrigin = "anonymous";
+}
+window.onload = () => {
+    run();
+    setTimeout(() => {
+        document.body.classList.remove("loading");
+    }, 200);
+};
