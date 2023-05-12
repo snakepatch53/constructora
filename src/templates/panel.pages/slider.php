@@ -13,7 +13,7 @@
         <div class="pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Slider</li>
                 </ol>
             </nav>
@@ -23,7 +23,7 @@
                         <b>Slider</b>
                         <input type="hidden" name="slider_id">
                         <input type="hidden" name="slider_title" value="">
-                        <input type="file" name="slider_img" class="input-file" placeholder="➕ Agregar">
+                        <input type="file" name="slider_img" class="input-file" placeholder="➕ Add">
                     </form>
                 </div>
                 <div class="card-body">
@@ -39,15 +39,15 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="element-modalconfirmLabel">Eliminar registro</h5>
+                        <h5 class="modal-title" id="element-modalconfirmLabel">Delete Slide</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ¿Estas seguro de eliminar este registro?
+                        ¿Are you sure you want to delete this slide?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" onclick="crudFunction.delete()">Eliminar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="crudFunction.delete()">Delete</button>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/bootstrap.min.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/adapter-theme.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/general.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/sidebar.css">
 
 <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg?last=<?= $DATA['info']['info_last'] ?>" type="image/x-icon">
 <title><?= $DATA['info']['info_name'] ?> ⚙️ Panel <?= $DATA['title'] ?></title>

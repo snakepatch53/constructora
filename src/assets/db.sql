@@ -69,3 +69,42 @@ VALUES
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );
+
+DROP TABLE IF EXISTS slider;
+
+CREATE TABLE slider (
+    slider_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    slider_img VARCHAR(150),
+    slider_title VARCHAR(50),
+    slider_desc TEXT,
+    slider_last VARCHAR(50),
+    slider_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    slider
+VALUES
+    (
+        1,
+        '1.png',
+        '',
+        '',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        '2.png',
+        '',
+        '',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        '3.png',
+        '',
+        '',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );

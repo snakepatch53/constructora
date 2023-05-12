@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
 <link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg" />
-<title><?= $_ENV['TITLE'] ?> - <?= $DATA['title'] ?></title>
+<title><?= $DATA['info']['info_name'] ?> - <?= $DATA['title'] ?></title>
 
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';

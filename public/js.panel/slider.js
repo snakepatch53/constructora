@@ -53,7 +53,7 @@ const uiFunction = {
                         <img src="${http_domain}public/img.slider/${slider_img}" class="card-img slider-img" alt="...">
                         <button class="btn btn-warning mt-2" style="width:100%" onclick="handleFunction.delete(${slider_id})">
                             <i class="fa-solid fa-trash"></i>
-                            <span>Eliminar</span>
+                            <span>Delete</span>
                         </button>
                     </div>
                 </div>

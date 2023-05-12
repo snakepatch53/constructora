@@ -10,12 +10,14 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
 $radapter->getHTML('/', 'home', function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 
 $radapter->getHTML('/index.php', 'home', function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 

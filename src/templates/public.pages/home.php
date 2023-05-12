@@ -30,7 +30,7 @@
                 <div class="items">
                     <div class="item"></div>
                     <div class="item">
-                        <p>Our experienced team is here to help with the entire process, from initial idea to commissioning, we are here to help you get the design and work you need.</p>
+                        <p><?= $DATA['info']['info_desc'] ?></p>
                     </div>
                 </div>
             </div>

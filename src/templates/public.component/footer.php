@@ -4,7 +4,7 @@
             <div class="item item-logo">
                 <a href="<?= $DATA['http_domain'] ?>" class="logo">
                     <?php include('./public/img/logo.svg'); ?>
-                    <span><?= $_ENV['TITLE'] ?></span>
+                    <span><?= $DATA['info']['info_name'] ?></span>
                 </a>
             </div>
             <div class="item">

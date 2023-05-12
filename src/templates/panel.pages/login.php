@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/login.css">
     <link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg" type="image/x-icon">
-    <title><?= $_ENV['TITLE'] ?> ⚙️ Login</title>
+    <title><?= $DATA['info']['info_name'] ?> ⚙️ Login</title>
     <script>
         const http_domain = '<?= $DATA['http_domain'] ?>';
     </script>
@@ -24,7 +24,7 @@
                 <form id="element-loginform" onsubmit="return false">
                     <a href="<?= $DATA['http_domain'] ?>" class="logo">
                         <?php include('./public/img/logo.svg') ?>
-                        <h1><?= $_ENV['TITLE'] ?></h1>
+                        <h1><?= $DATA['info']['info_name'] ?></h1>
                     </a>
                     <div class="input">
                         <label for="validationCustom01">Username</label>

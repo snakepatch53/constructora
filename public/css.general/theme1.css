@@ -1,7 +1,8 @@
 :root {
-    --danger: #ce392d;
-    --info: #2c74dc;
+    --danger: #c71c22;
+    --info: #2fa4e7;
     --warn: #eab518;
+    --success: #73a839;
 
     --color1: #374d99;
     --color1-translucent: rgba(55, 77, 153, 0.85);
