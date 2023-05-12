@@ -37,11 +37,11 @@ window.onkeyup = (evt) => {
 const lightModeQuery = window.matchMedia("(prefers-color-scheme: light)");
 const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 const $theme_btn = document.querySelector("#theme-toggle");
-// $theme_btn.onclick = () => {
-//     document.body.classList.toggle("dark");
-//     if (document.body.classList.contains("dark")) changeTheme("dark");
-//     else changeTheme("light");
-// };
+$theme_btn.onclick = () => {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) changeTheme("dark");
+    else changeTheme("light");
+};
 
 lightModeQuery.addEventListener("change", function (e) {
     if (e.matches) changeTheme("light");

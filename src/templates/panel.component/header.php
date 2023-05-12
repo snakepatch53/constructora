@@ -2,6 +2,12 @@
     <div class="container-fluid">
         <!-- Options | ini -->
         <ul class="navbar-nav mb-0 mb-lg-0 ms-auto">
+            <li class="li-togle-dark">
+                <button class="btn-darkmode" id="theme-toggle">
+                    <i class="dark fas fa-moon"></i>
+                    <i class="light fas fa-sun"></i>
+                </button>
+            </li>
             <li class="nav-item dropdown">
                 <a class="header-user-btn nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="header-user-photo rounded-circle" src="<?= $DATA['http_domain'] ?>public/img.users/<?= $_SESSION['user_photo'] ?>?last=<?= $_SESSION['user_last'] ?>" alt="User photo">

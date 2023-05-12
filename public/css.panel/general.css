@@ -21,7 +21,7 @@ body {
     grid-template-areas:
         "sidebar header"
         "sidebar main";
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
     min-height: 100vh;
 }
 
@@ -198,4 +198,69 @@ input[value="1"] ~ .checkbox:before {
     box-shadow: 0 0 5px 0 #39a9e8;
     background: #ffffff;
     padding: 2px;
+}
+
+
+
+
+
+.header li.li-togle-dark {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.header button.btn-darkmode {
+    position: relative;
+    display: flex;
+    gap: 3px;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50px;
+    background: #000;
+    transition: all 0.2s ease;
+}
+
+.header button.btn-darkmode:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    content: '';
+    display: block;
+    height: calc(100% - 4px);
+    aspect-ratio: 1/1;
+    margin: auto;
+    background: #bcbcbc;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+body.dark .header button.btn-darkmode:before {
+    background: #414141;
+    left: unset;
+    right: 2px;
+    transition: all 0.2s ease;
+}
+
+body.dark .header button.btn-darkmode {
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.header button.btn-darkmode svg,
+.header button.btn-darkmode svg {
+    display: block;
+    aspect-ratio: 1/1;
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.header button.btn-darkmode svg {
+    color: #000;
+}
+
+.header button.btn-darkmode svg {
+    color: #ffd347;
 }
