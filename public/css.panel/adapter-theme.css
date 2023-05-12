@@ -64,7 +64,7 @@ main {
 .sidebar .nav-option:hover,
 .sidebar .nav-option.active {
     background: var(--c4-bg);
-    color: var(--c4-txt);
+    color: var(--c4-txt) !important;
 }
 
 .sidebar .nav-option:not(.active) {
