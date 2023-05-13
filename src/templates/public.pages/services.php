@@ -4,7 +4,6 @@
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/services.css">
-    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/contact.component.css">
 </head>
 
 <body>
@@ -58,7 +57,6 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
-    <script src="<?= $DATA['http_domain'] ?>public/js.public/contact.component.js"></script>
 </foot>
 
 </html>

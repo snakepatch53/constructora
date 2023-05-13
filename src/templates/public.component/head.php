@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
+<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/contact.component.css">
 <link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg" />
 <title><?= $DATA['info']['info_name'] ?> - <?= $DATA['title'] ?></title>
 
