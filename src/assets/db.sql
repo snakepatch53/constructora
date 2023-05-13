@@ -166,7 +166,7 @@ VALUES
         'Facebook',
         '@erazobrothers',
         'https://www.facebook.com/erazobrothers',
-        'fab fa-facebook-f',
+        'fab fa-facebook',
         '#0d6efd',
         'social',
         '2023-01-01 00:00:00',

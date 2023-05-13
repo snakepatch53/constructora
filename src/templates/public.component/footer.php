@@ -13,7 +13,7 @@
                     <?php foreach ($DATA['contacts'] as $value) { ?>
                         <li>
                             <a href="<?= $value['contact_link'] ?>" target="_blank">
-                                <?= $value['contact_icon'] ?>
+                                <?= $value['contact_icon_html'] ?>
                                 <span><?= $value['contact_value'] ?></span>
                             </a>
                         </li>
@@ -25,7 +25,9 @@
                 <ul>
                     <?php foreach ($DATA['socials'] as $value) { ?>
                         <li style="--color: <?= $value['contact_color'] ?>">
-                            <a href="<?= $value['contact_link'] ?>" target="_blank"><?= $value['contact_icon'] ?></a>
+                            <a href="<?= $value['contact_link'] ?>" target="_blank">
+                                <?= $value['contact_icon_html'] ?>
+                            </a>
                         </li>
                     <?php } ?>
                 </ul>

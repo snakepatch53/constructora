@@ -268,3 +268,8 @@ body.dark .header button.btn-darkmode {
 .header button.btn-darkmode svg {
     color: #ffd347;
 }
+
+.color-important-svg,
+.color-important-svg * {
+    color: var(--color) !important;
+}

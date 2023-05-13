@@ -8,6 +8,7 @@ body {
 
     --c3-bg: var(--color4);
     --c3-txt: var(--color4-text);
+    --c3-txt2: var(--color4-text2);
     --c3-logo-s1: var(--color4-logo-s1);
     --c3-logo-s2: var(--color4-logo-s2);
     --c3-logo-s3: var(--color4-logo-s3);
@@ -27,18 +28,8 @@ main {
     position: relative;
     background: var(--c2-bg) !important;
 }
-
-.sidebar .logo {
-    height: 100px;
-    background: var(--c3-bg);
-    aspect-radio: 1/1;
-    border-radius: 50%;
-}
-
 .sidebar .logo svg {
-    width: 100%;
-    height: 100%;
-
+    background: var(--c3-bg);
     --s1: var(--c3-logo-s1);
     --s2: var(--c3-logo-s2);
     --s3: var(--c3-logo-s3);
@@ -150,10 +141,8 @@ main .card.shadow {
     border-color: var(--c3-txt);
 }
 
-main .card.shadow * {
-    color: var(--c3-txt) !important;
-}
 
+/*aqui esta el problema para cambiar de color a los iconos en social media y contacts*/
 main .card.shadow thead * {
     background: var(--c5-bg);
     color: var(--c5-txt) !important;
@@ -161,6 +150,10 @@ main .card.shadow thead * {
 
 main .card.shadow tbody tr {
     cursor: pointer;
+}
+
+main .card.shadow tbody tr * {
+    color: var(--c3-txt);
 }
 
 main #element-gallery button {
@@ -213,4 +206,44 @@ main .card.shadow button.btn-outline-success:hover *,
 main .card.shadow button.btn-outline-primary:hover *,
 main .card.shadow button.btn-outline-danger:hover * {
     color: #ffffff !important;
+}
+
+
+
+
+#element-modalform .modal-content {
+    background: var(--c3-bg);
+}
+
+#element-modalform .modal-content h5 {
+    color: var(--c3-txt);
+}
+
+#element-modalform .modal-content label.form-label {
+    color: var(--c3-txt2);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary {
+    background: var(--info);
+    border-color: var(--info);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-secondary {
+    background: var(--danger);
+    border-color: var(--danger);
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary,
+#element-modalform .modal-content .modal-footer .btn.btn-secondary {
+    color: #ffffff;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+#element-modalform .modal-content .modal-footer .btn.btn-primary:hover,
+#element-modalform .modal-content .modal-footer .btn.btn-secondary:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
 }

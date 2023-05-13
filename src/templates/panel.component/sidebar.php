@@ -33,6 +33,16 @@
             <span class="ms-2">Slider</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/contacts" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "contacts") ? "shadow  active" : "" ?>">
+            <i class="fas fa-address-book"></i>
+            <span class="ms-2">Contacts</span>
+        </a>
+
+        <a href="<?= $DATA['http_domain'] ?>panel/socials" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "socials") ? "shadow  active" : "" ?>">
+            <i class="fa fa-share-alt"></i>
+            <span class="ms-2">Social Media</span>
+        </a>
+
     </ul>
     <!-- List | end -->
 </div>

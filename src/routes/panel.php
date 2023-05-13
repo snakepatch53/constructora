@@ -25,3 +25,15 @@ $radapter->getHTML('/panel/slider', 'slider', fn () => middlewareSessionLogin(),
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
     ];
 });
+
+$radapter->getHTML('/panel/socials', 'socials', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+$radapter->getHTML('/panel/contacts', 'contacts', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
