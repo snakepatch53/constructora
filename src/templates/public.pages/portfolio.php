@@ -38,25 +38,25 @@
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
-                            <a href="#" target="_blank">
+                            <a href="https://moronanet.com/" target="_blank">
                                 <img src="<?= $DATA['http_domain'] ?>public/img.customers/1.png" alt="Image of enterprise {{ENTERPRISENAME}}">
                                 <h4>Moronanet</h4>
                             </a>
                         </li>
                         <li class="splide__slide">
-                            <a href="#" target="_blank">
+                            <a href="https://learnidea.ideasoft.site/" target="_blank">
                                 <img src="<?= $DATA['http_domain'] ?>public/img.customers/2.png" alt="Image of enterprise {{ENTERPRISENAME}}">
                                 <h4>Learnidea</h4>
                             </a>
                         </li>
                         <li class="splide__slide">
-                            <a href="#" taget="_blank">
+                            <a href="https://harold.ideasoft.com/" taget="_blank">
                                 <img src="<?= $DATA['http_domain'] ?>public/img.customers/3.png" alt="Image of enterprise {{ENTERPRISENAME}}">
                                 <h4>Ideasoft</h4>
                             </a>
                         </li>
                         <li class="splide__slide">
-                            <a href="#" taget="_blank">
+                            <a href="https://www.leapestudio.com/" taget="_blank">
                                 <img src="<?= $DATA['http_domain'] ?>public/img.customers/4.png" alt="Image of enterprise {{ENTERPRISENAME}}">
                                 <h4>Leap Estudio</h4>
                             </a>
