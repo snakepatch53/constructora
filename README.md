@@ -44,9 +44,10 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
 
 ```env
     # PROJECT
-    HTTP_DOMAIN =
-    TITLE =
-    APP_NAME =
+    HTTP_DOMAIN = http://localhost/constructora/
+    HTML_LANG = 'en'
+    APP_NAME = 'erazobrothers'
+    APP_STATE = 'development'
 
     # MYSQLI
     DB_HOST =

@@ -15,7 +15,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-/*    height: calc(100vh - 150px);*/
+    /*    height: calc(100vh - 150px);*/
     height: 100vh;
     padding: var(--padding);
     padding-top: var(--header-height);
@@ -109,7 +109,7 @@ header {
     align-items: center;
     width: 100%;
     background: var(--bg);
-    padding: var(--padding);
+    padding: 100px var(--padding);
 }
 
 .section2:before {
@@ -265,6 +265,81 @@ header {
 }
 
 
+
+
+
+
+
+/* SECTION 2 */
+.section3 {
+/*
+    --c1-bg: var(--color2);
+    --c1-txt: var(--color2-text);
+    --c1-txt2: var(--color2-text2);
+    --c2-bg: var(--color1);
+    --c2-txt: var(--color1-text);
+    --c2-txt2: var(--color1-text2);
+    --c3-bg: var(--color4);
+    --c3-txt: var(--color4-text);
+*/
+    --c1-bg: var(--color1);
+    --c1-txt: var(--color1-text);
+    --c1-txt2: var(--color1-text2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px var(--padding);
+    background: var(--c1-bg);
+}
+
+.section3 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.section3 h3 {
+    position: relative;
+    font-family: titulo;
+    font-size: 3rem;
+    max-width: 560px;
+    text-align: center;
+    color: var(--c1-txt);
+    padding: 0 5px;
+}
+
+.section3 h3:before,
+.section3 h3:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: auto;
+    background: var(--c1-txt);
+}
+
+.section3 h3:before {
+    left: 100%;
+}
+
+.section3 h3:after {
+    right: 100%;
+}
+
+.section3 h4 {
+    font-family: titulo;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--c1-txt2);
+    margin: 50px 0;
+}
 
 
 

@@ -4,6 +4,7 @@
 <head>
     <?php include('./src/templates/public.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/services.css">
+    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/contact.component.css">
 </head>
 
 <body>
@@ -41,7 +42,14 @@
             </div>
         </section>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="section3">
+            <div class="container">
+                <h3>Do you need something more specific?</h3>
+                <h4>Contact Us</h4>
+                <?php include('./src/templates/public.component/contact.component.php') ?>
+            </div>
+        </section>
+
     </main>
 
     <footer id="section-footer">
@@ -51,6 +59,7 @@
 
 <foot>
     <?php include('./src/templates/public.component/foot.php') ?>
+    <script src="<?= $DATA['http_domain'] ?>public/js.public/contact.component.js"></script>
 </foot>
 
 </html>

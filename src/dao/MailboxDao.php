@@ -38,6 +38,7 @@ class MailboxDao
         $mail_location,
         $mail_message
     ) {
+        $mail_message = addslashes($mail_message);
         $mail_last = date('Y-m-d H:i:s');
         $mail_created = date('Y-m-d H:i:s');
         $resultset = $this->mysqlAdapter->query("

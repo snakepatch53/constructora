@@ -33,7 +33,7 @@
 
     --color5: #363636;
     --color5-text: #ffffff;
-    --color5-text: #ffffff;
+    --color5-text2: #a7a7a7;
     --color5-logo-s1: #ffffff;
     --color5-logo-s2: #fbaa2d;
     --color5-logo-s3: #5265a7;
@@ -62,14 +62,14 @@ body.dark {
     --color1-btn: #e6c43e;
     --color1-btn-text: #000000;
 
-    --color2: #e6c43e;
-    --color2-text: #ffffff;
-    --color2-text2: #000000;
+    --color2: #816d1f;
+    --color2-text: #171717;
+    --color2-text2: #cbcbcb;
 
     --color3: #8ce6a1;
     --color3-text: #5a5a5a;
 
-    --color4: #484848;
+    --color4: #334a58;
     --color4-text: #d1d1d1;
     --color4-text2: #b2b2b2;
     --color4-text3: #a1a7ba;
