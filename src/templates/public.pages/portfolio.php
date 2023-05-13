@@ -50,11 +50,22 @@
             </div>
         </section>
 
-        <section class="section-title" id="section-work-1">
-            <div class="container">
-                <h3>Patios</h3>
-            </div>
-        </section>
+
+        <?php foreach ($DATA['services'] as $value) { ?>
+            <section class="section-title">
+                <div class="container">
+                    <h3><?= $value['service_title'] ?></h3>
+                </div>
+            </section>
+
+            <section class="section-gallery" id="section-work-1">
+                <div class="collage">
+                    <?php for ($i = 1; $i <= 11; $i++) { ?>
+                        <img src="<?= $DATA['http_domain'] ?>public/img.gallery/<?= $i ?>" alt="Image <?= $i ?>">
+                    <?php } ?>
+                </div>
+            </section>
+        <?php } ?>
 
 
     </main>

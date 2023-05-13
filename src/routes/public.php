@@ -44,6 +44,7 @@ $radapter->getHTML('/portfolio', 'portfolio', function ($DATA) {
         'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
         'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
         'customers' => (new CustomerDao($DATA['mysqlAdapter']))->select(),
+        'services' => (new ServiceDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 
