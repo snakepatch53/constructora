@@ -38,6 +38,6 @@
 <div class="copy">
     <div class="container">
         <p>All rights reserved © <a target="_blank" href="<?= $DATA['http_domain'] ?>"><?= $DATA['info']['info_name'] ?></a> <?= date('Y') ?></p>
-        <p>Developed and designed by <a target="_blank" href="<?= $_ENV['DEVELOPER_LINK'] ?>">Ideasoft</a> & <a target="_blank" href="<?= $_ENV['DESIGNER_LINK'] ?>">Leap Estudio</a></p>
+        <p>Developed and designed by <a target="_blank" href="<?= $_ENV['DEVELOPER_LINK'] ?>"><?= $_ENV['DEVELOPER_NAME'] ?></a> & <a target="_blank" href="<?= $_ENV['DESIGNER_LINK'] ?>"><?= $_ENV['DESIGNER_NAME'] ?></a></p>
     </div>
 </div>

@@ -63,10 +63,6 @@ Crea el archivo <b><i>.env</i></b> en la raiz del proyecto y configuralo
     FB_ACCESS_TOKEN =
     FB_PATH_REQUEST =
     FB_HTTP_REQUEST =
-
-    # DEVELOPERS AND DESIGNERS
-    DEVELOPER_LINK = https://ideasoft.site/
-    DESIGNER_LINK = http://leapestudio.com/
 ```
 
 ## 🐬 MYSQL
