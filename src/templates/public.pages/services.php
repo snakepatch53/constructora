@@ -18,7 +18,7 @@
                 <h1>You are closer, how can we help you?</h1>
                 <h2>Find the service you need</h2>
                 <a href="#section-2" class="btn">
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-arrow-down"></i>
                 </a>
             </div>
         </section>
