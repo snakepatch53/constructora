@@ -45,7 +45,6 @@
         <section class="section3">
             <div class="container">
                 <h3>Do you need something more specific?</h3>
-                <h4>Contact Us</h4>
                 <?php include('./src/templates/public.component/contact.component.php') ?>
             </div>
         </section>

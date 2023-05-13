@@ -48,3 +48,11 @@ function pickTheme() {
     if (theme) return document.body.classList.add("dark");
 }
 pickTheme();
+
+// MODAL CONTACT COMPONENT
+const $contact_component_modal = document.getElementById("contact-component-modal");
+const $contact_component_open_btn = document.getElementById("contact-component-open-btn");
+const $contact_component_close_btn = document.getElementById("contact-component-close-btn");
+
+$contact_component_close_btn.onclick = () => $contact_component_modal.classList.remove("open");
+$contact_component_open_btn.onclick = () => $contact_component_modal.classList.add("open");

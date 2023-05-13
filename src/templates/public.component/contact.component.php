@@ -1,4 +1,7 @@
 <form class="form-contact-component" onsubmit="return false">
+    <div class="input col-2">
+        <h4>Contact Us</h4>
+    </div>
     <div class="successfully">
         <i class="fas fa-check"></i>
         <p>Message sent successfully!</p>

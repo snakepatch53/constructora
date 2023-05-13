@@ -82,11 +82,12 @@ header {
     }
 
     .frontpage h1 {
-        font-size: 1.4rem;
+        font-size: 2rem;
+        max-width: 450px;
     }
 
     .frontpage h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -138,7 +139,7 @@ header {
     position: relative;
     font-family: titulo;
     font-size: 3rem;
-    max-width: 550px;
+    max-width: 520px;
     text-align: center;
     color: var(--txt);
     padding: 0 5px;
@@ -237,7 +238,8 @@ header {
 @media (max-width: 900px) {
 
     .section2 h3 {
-        font-size: 1.4rem;
+        font-size: 2rem;
+        max-width: 350px;
     }
 
     .section2 h3:before,
@@ -298,6 +300,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     width: 100%;
     max-width: var(--max-width);
 }
@@ -333,13 +336,33 @@ header {
     right: 100%;
 }
 
-.section3 h4 {
-    font-family: titulo;
-    text-align: center;
-    font-size: 2rem;
-    color: var(--c1-txt2);
-    margin: 50px 0;
+
+@media (max-width: 900px) {
+
+    .section3 h3 {
+        font-size: 2rem;
+        max-width: 380px;
+    }
+    
+    .section3 h4 {
+        font-size: 1.5rem;
+    }
+
+    .section3 h3:before,
+    .section3 h3:after {
+        width: 50px;
+        height: 2px;
+    }
 }
+
+@media (max-width: 600px) {
+    .section3 h3:before,
+    .section3 h3:after {
+        display: none;
+    }
+}
+
+
 
 
 
