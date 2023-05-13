@@ -317,3 +317,50 @@ CREATE TABLE mailbox (
     mail_last VARCHAR(50),
     mail_created VARCHAR(50)
 ) ENGINE INNODB;
+
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    customer_name VARCHAR(50),
+    customer_link TEXT,
+    customer_logo VARCHAR(50) DEFAULT 'default.png',
+    customer_last VARCHAR(50),
+    customer_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    customers
+VALUES
+    (
+        1,
+        'Moronanet',
+        'https://moronanet.com/',
+        '1.png',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Learnidea',
+        'https://ideasoft.learnidea.site/',
+        '2.png',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Ideasoft',
+        'https://ideasoft.site/',
+        '3.png',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        4,
+        'Leap Estudio',
+        'https://leapestudio.com/',
+        '4.png',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    )

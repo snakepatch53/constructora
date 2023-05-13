@@ -222,7 +222,7 @@
 }
 
 .section-customers .slider .splide__list {
-    padding: 20px 0 !important;
+    padding: var(--padding) 0 !important;
 }
 
 .section-customers .slider .splide__track .splide__slide {
@@ -281,14 +281,6 @@
     opacity: 0.9;
     transition: all 0.2s ease;
 }
-
-@media(max-width: 900px) {
-    .section-customers .slider .splide__track .splide__slide {
-        width: 200px;
-        height: 100px !important;
-    }
-}
-
 
 
 

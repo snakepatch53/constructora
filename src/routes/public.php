@@ -43,18 +43,11 @@ $radapter->getHTML('/portfolio', 'portfolio', function ($DATA) {
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
         'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
         'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
+        'customers' => (new CustomerDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 
 $radapter->getHTML('/aboutus', 'aboutus', function ($DATA) {
-    return [
-        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
-        'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
-        'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
-    ];
-});
-
-$radapter->getHTML('/contactus', 'contactus', function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
         'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),

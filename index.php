@@ -26,6 +26,7 @@ require_once('./src/dao/ContactDao.php');
 require_once('./src/dao/MailboxDao.php');
 require_once('./src/dao/QualityDao.php');
 require_once('./src/dao/ServiceDao.php');
+require_once('./src/dao/CustomerDao.php');
 
 
 
