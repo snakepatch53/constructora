@@ -13,14 +13,14 @@
         <div class=" pt-4 px-md-5 px-1">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Buzon de Mensajes</li>
+                    <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mailbox</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Buzon de Mensajes</b>
+                        <b>Mailbox</b>
                         <!-- <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
                             <span>Crear nuevo</span>
@@ -32,10 +32,10 @@
                         <thead class="bg-dark text-light">
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
-                                <th class="text-center text-md-left" scope="col">Nombre</th>
-                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Celular</th>
+                                <th class="text-center text-md-left" scope="col">Name</th>
+                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Phone</th>
                                 <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Email</th>
-                                <th class="text-center" scope="col">Acciones</th>
+                                <th class="text-center" scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody id="element-table"></tbody>
@@ -54,44 +54,49 @@
         <div class="modal fade" id="element-modalform" tabindex="-1" aria-labelledby="element-modalformLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
-                    <input type="hidden" name="mensaje_id" value="0">
+                    <input type="hidden" name="mail_id" value="0">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="element-modalformLabel">Mensaje</h5>
+                        <h5 class="modal-title" id="element-modalformLabel">Mail</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <!-- form | ini -->
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label">Emisor</label>
-                                <p class="form-control" id="form_mensaje_name"></p>
+                                <label class="form-label">Transmitter</label>
+                                <p class="form-control" id="form_mail_name"></p>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Asunto</label>
-                                <p class="form-control" id="form_mensaje_affair"></p>
+                                <label class="form-label">Subject</label>
+                                <p class="form-control" id="form_mail_affair"></p>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="form-label">Address</label>
+                                <p class="form-control" id="form_mail_location"></p>
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Celular</label>
-                                <p class="form-control" id="form_mensaje_phone"></p>
+                                <label class="form-label">Phone</label>
+                                <p class="form-control" id="form_mail_phone"></p>
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label">Email</label>
-                                <p class="form-control" id="form_mensaje_email"></p>
+                                <p class="form-control" id="form_mail_email"></p>
                             </div>
 
                             <div class="col-md-12">
-                                <label class="form-label">Mensaje</label>
-                                <p class="form-control" id="form_mensaje_message"></p>
+                                <label class="form-label">Message</label>
+                                <p class="form-control" id="form_mail_message"></p>
                             </div>
 
                         </div>
                         <!-- form | end -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- <button type="submit" class="btn btn-primary">Guardar</button> -->
                     </div>
                 </form>
@@ -123,7 +128,7 @@
 </body>
 <foot>
     <?php include('./src/templates/panel.component/foot.php') ?>
-    <script src="<?= $DATA['http_domain'] ?>public/js.panel/mensajes.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/mailbox.js"></script>
 </foot>
 
 </html>

@@ -43,6 +43,11 @@
             <span class="ms-2">Social Media</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/mailbox" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "mailbox") ? "shadow  active" : "" ?>">
+            <i class="fa fa-envelope"></i>
+            <span class="ms-2">Mailbox</span>
+        </a>
+
     </ul>
     <!-- List | end -->
 </div>

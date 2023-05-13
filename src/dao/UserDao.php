@@ -46,12 +46,16 @@ class UserDao
         $user_pass,
         $user_photo
     ) {
+        $user_last = date('Y-m-d H:i:s');
+        $user_created = date('Y-m-d H:i:s');
         return $this->mysqlAdapter->query("
             INSERT INTO user SET 
                 user_name='$user_name', 
                 user_user='$user_user',
                 user_pass='$user_pass',
-                user_photo='$user_photo'
+                user_photo='$user_photo',
+                user_last='$user_last',
+                user_created='$user_created'
         ");
     }
     public function update(
@@ -61,12 +65,14 @@ class UserDao
         $user_photo,
         $user_id
     ) {
+        $user_last = date('Y-m-d H:i:s');
         return $this->mysqlAdapter->query("
             UPDATE user SET 
                 user_name='$user_name', 
                 user_user='$user_user',
                 user_pass='$user_pass',
-                user_photo='$user_photo'
+                user_photo='$user_photo',
+                user_last='$user_last'
             WHERE user_id = $user_id 
         ");
     }

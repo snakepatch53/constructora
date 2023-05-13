@@ -27,3 +27,10 @@ $radapter->post('/services/contact/select', fn (...$args) => ContactService::sel
 $radapter->post('/services/contact/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => ContactService::insert(...$args));
 $radapter->post('/services/contact/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => ContactService::update(...$args));
 $radapter->post('/services/contact/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => ContactService::delete(...$args));
+
+// MAILBOX
+$radapter->post('/services/mailbox/insert', fn (...$args) => MailboxService::insert(...$args));
+// need to be logged
+$radapter->post('/services/mailbox/select', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::select(...$args));
+$radapter->post('/services/mailbox/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::update(...$args));
+$radapter->post('/services/mailbox/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::delete(...$args));

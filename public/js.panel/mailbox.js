@@ -34,27 +34,28 @@ async function main() {
 const handleFunction = {
     new: function () {
         uiFunction.modalForm_clear();
-        $form["mensaje_id"].value = 0;
+        $form["mail_id"].value = 0;
         bootstrap_modalform.show();
     },
     edit: function ($register_id) {
-        const register = uiFunction.database.find((el) => el["mensaje_id"] == $register_id);
+        const register = uiFunction.database.find((el) => el["mail_id"] == $register_id);
         setValuesForm(register, $form);
-        $form.querySelector("#form_mensaje_name").innerText = register["mensaje_name"];
-        $form.querySelector("#form_mensaje_affair").innerText = register["mensaje_affair"];
-        $form.querySelector("#form_mensaje_phone").innerText = register["mensaje_phone"];
-        $form.querySelector("#form_mensaje_email").innerText = register["mensaje_email"];
-        $form.querySelector("#form_mensaje_message").innerText = register["mensaje_message"];
+        $form.querySelector("#form_mail_name").innerText = register["mail_name"];
+        $form.querySelector("#form_mail_affair").innerText = register["mail_affair"];
+        $form.querySelector("#form_mail_phone").innerText = register["mail_phone"];
+        $form.querySelector("#form_mail_location").innerText = register["mail_location"];
+        $form.querySelector("#form_mail_email").innerText = register["mail_email"];
+        $form.querySelector("#form_mail_message").innerText = register["mail_message"];
         bootstrap_modalform.show();
     },
     delete: function (register_id) {
-        $form["mensaje_id"].value = register_id;
+        $form["mail_id"].value = register_id;
         bootstrap_modalconfirm.show();
     },
 
     // gift functions
     giftTrButton: function (register_id) {
-        $form_gift["mensaje_id"].value = register_id;
+        $form_gift["mail_id"].value = register_id;
         uiFunction.refreshTableGift(register_id);
         element_modalgift.show();
     },
@@ -62,7 +63,7 @@ const handleFunction = {
 
 const crudFunction = {
     select: async function () {
-        await fetch_query(new FormData($form), "mensaje", "select").then((res) => {
+        await fetch_query(new FormData($form), "mailbox", "select").then((res) => {
             if (res.response) {
                 uiFunction.database = res.data;
                 uiFunction.refreshTable();
@@ -70,14 +71,14 @@ const crudFunction = {
         });
     },
     insertUpdate: function (form) {
-        const action = $form["mensaje_id"].value == 0 ? "insert" : "update";
-        fetch_query(new FormData(form), "mensaje", action).then((res) => {
+        const action = $form["mail_id"].value == 0 ? "insert" : "update";
+        fetch_query(new FormData(form), "mailbox", action).then((res) => {
             uiFunction.modalForm_hide();
             this.select();
         });
     },
     delete: function () {
-        fetch_query(new FormData($form), "mensaje", "delete").then((res) => {
+        fetch_query(new FormData($form), "mailbox", "delete").then((res) => {
             uiFunction.modalForm_hide();
             this.select();
             uiFunction.modalConfirm_hide();
@@ -88,18 +89,18 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ mensaje_id, mensaje_name, mensaje_phone, mensaje_email }) {
+    getTr: function ({ mail_id, mail_name, mail_phone, mail_email }) {
         return `
             <tr>
-                <td class="d-none d-md-table-cell fw-bold">${mensaje_id}</td>
-                <td class="text-center text-md-left">${mensaje_name}</td>
-                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_phone}</td>
-                <td class="d-none d-md-table-cell text-center text-md-left">${mensaje_email}</td>
+                <td class="d-none d-md-table-cell fw-bold">${mail_id}</td>
+                <td class="text-center text-md-left">${mail_name}</td>
+                <td class="d-none d-md-table-cell text-center text-md-left">${mail_phone}</td>
+                <td class="d-none d-md-table-cell text-center text-md-left">${mail_email}</td>
                 <td class="text-center">
-                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${mensaje_id})">
+                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${mail_id})">
                         <i class="fa-solid fa-envelope"></i>
                     </button>
-                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${mensaje_id})">
+                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${mail_id})">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </td>

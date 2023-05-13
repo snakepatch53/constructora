@@ -37,3 +37,9 @@ $radapter->getHTML('/panel/contacts', 'contacts', fn () => middlewareSessionLogi
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
     ];
 });
+
+$radapter->getHTML('/panel/mailbox', 'mailbox', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});

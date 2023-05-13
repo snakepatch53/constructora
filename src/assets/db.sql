@@ -303,3 +303,17 @@ VALUES
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );
+
+DROP TABLE IF EXISTS mailbox;
+
+CREATE TABLE mailbox (
+    mail_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    mail_name VARCHAR(50),
+    mail_email VARCHAR(50),
+    mail_phone VARCHAR(50),
+    mail_subject VARCHAR(50),
+    mail_location VARCHAR(50),
+    mail_message TEXT,
+    mail_last VARCHAR(50),
+    mail_created VARCHAR(50)
+) ENGINE INNODB;
