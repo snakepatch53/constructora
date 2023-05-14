@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="container banner">
-                <img class="bg-img" src="<?= $DATA['http_domain'] ?>public/img/car.jpg" alt="Image of car in the road">
+                <img class="bg-img" src="<?= $DATA['http_domain'] ?>public/img/home-section-1.jpg" alt="Image of car in the road">
                 <div class="items">
                     <div class="item"></div>
                     <div class="item">

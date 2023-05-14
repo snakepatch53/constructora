@@ -61,7 +61,17 @@
             <section class="section-gallery" id="section-work-1">
                 <div class="collage">
                     <?php for ($i = 1; $i <= 7; $i++) { ?>
-                        <img src="<?= $DATA['http_domain'] ?>public/img.gallery/<?= $i ?>.jpg" alt="Image <?= $i ?>">
+                        <div class="item">
+                            <img src="<?= $DATA['http_domain'] ?>public/img.gallery/<?= $i ?>.jpg" alt="Image <?= $i ?>">
+                            <?php if ($i % 2 == 0) { ?>
+                                <a href="#" target="_blank">
+                                    <label>
+                                        <span>Ver en Facebook</span>
+                                        <i class="fab fa-facebook"></i>
+                                    </label>
+                                </a>
+                            <?php } ?>
+                        </div>
                     <?php } ?>
                 </div>
             </section>

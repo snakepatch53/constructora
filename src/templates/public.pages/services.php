@@ -14,6 +14,9 @@
 
     <main class="animate__animated animate__fadeIn">
         <section class="frontpage">
+            <div class="bg-img">
+                <img src="<?= $DATA['http_domain'] ?>public/img/frontpage-services.jpg" alt="Image background of Services">
+            </div>
             <div class="container">
                 <h1>You are closer, how can we help you?</h1>
                 <h2>Find the service you need</h2>
