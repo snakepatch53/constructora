@@ -65,16 +65,21 @@
                     <?php foreach ($service['projects'] as $project) { ?>
                         <div class="item">
                             <img src="<?= $project['project_img_url'] ?>" alt="Image of project <?= $project['project_title'] ?>">
-                            <?php if ($project['project_origin'] == 'website') { ?>
-                                <div class="desc">
-                                    <h5><?= $project['project_title'] ?></h5>
-                                    <p><?= $project['project_desc'] ?></p>
-                                    <a href="<?= $project['project_link'] ?>" target="_blank">
-                                        <span>Ver en Facebook</span>
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
+                            <?php if ($project['project_link']) { ?>
+                                <div class="location-icon <?= $project['project_origin'] != 'website' ? 'fb' : 'url' ?>">
+                                    <i class="<?= $project['project_origin'] != 'website' ? 'fb fab fa-facebook' : 'fas fa-globe-americas' ?>"></i>
                                 </div>
                             <?php } ?>
+                            <div class="desc">
+                                <h5><?= $project['project_title'] ?></h5>
+                                <p><?= $project['project_desc'] ?></p>
+                                <?php if ($project['project_link']) { ?>
+                                    <a class="<?= $project['project_origin'] != 'website' ? 'fb' : 'url' ?>" href="<?= $project['project_link'] ?>" target="_blank">
+                                        <span><?= $project['project_origin'] != 'website' ? 'Ver en Facebook' : 'Ir al enlace' ?></span>
+                                        <i class="<?= $project['project_origin'] != 'website' ? 'fab fa-facebook' : 'fas fa-external-link-alt' ?>"></i>
+                                    </a>
+                                <?php } ?>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
