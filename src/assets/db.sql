@@ -302,6 +302,155 @@ VALUES
         'Hello, I would like to know more about the trimming service.',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
+    ),
+    (
+        7,
+        'Roofing',
+        'We repair and build roofs, we have the best materials and the best prices.',
+        '7.jpg',
+        'Hello, I would like to know more about the roofing service.',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
+DROP TABLE IF EXISTS projects;
+
+CREATE TABLE projects (
+    project_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    project_title VARCHAR(50),
+    project_desc TEXT,
+    project_img VARCHAR(50),
+    project_link TEXT,
+    project_origin VARCHAR(50) DEFAULT 'website',
+    project_last VARCHAR(50),
+    project_created VARCHAR(50),
+    service_id INT,
+    FOREIGN KEY (service_id) REFERENCES services(service_id)
+) ENGINE INNODB;
+
+INSERT INTO
+    projects
+VALUES
+    (
+        1,
+        'Project 1',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '1.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        3
+    ),
+    (
+        2,
+        'Project 2',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '2.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        6
+    ),
+    (
+        3,
+        'Project 3',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '3.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        3
+    ),
+    (
+        4,
+        'Project 4',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '4.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        1
+    ),
+    (
+        5,
+        'Project 5',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '5.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        4
+    ),
+    (
+        6,
+        'Project 6',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '6.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        7
+    ),
+    (
+        7,
+        'Project 7',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '7.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        1
+    ),
+    (
+        8,
+        'Project 7',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '8.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        1
+    ),
+    (
+        9,
+        'Project 9',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '9.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        3
+    ),
+    (
+        10,
+        'Project 10',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '9.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        3
+    ),
+    (
+        11,
+        'Project 11',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
+        '11.jpg',
+        '',
+        'website',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00',
+        5
     );
 
 DROP TABLE IF EXISTS mailbox;

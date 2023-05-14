@@ -24,8 +24,8 @@ require_once('./src/dao/UserDao.php');
 require_once('./src/dao/SliderDao.php');
 require_once('./src/dao/ContactDao.php');
 require_once('./src/dao/MailboxDao.php');
-require_once('./src/dao/QualityDao.php');
 require_once('./src/dao/ServiceDao.php');
+require_once('./src/dao/QualityDao.php');
 require_once('./src/dao/CustomerDao.php');
 
 
@@ -36,6 +36,7 @@ require_once('./src/services/user.service.php');
 require_once('./src/services/slider.service.php');
 require_once('./src/services/contact.service.php');
 require_once('./src/services/mailbox.service.php');
+require_once('./src/services/service.service.php');
 
 
 // cargamos las variables de entorno

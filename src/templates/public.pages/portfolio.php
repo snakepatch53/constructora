@@ -50,20 +50,22 @@
             </div>
         </section>
 
-
-        <?php foreach ($DATA['services'] as $value) { ?>
+        <?php
+        foreach ($DATA['services'] as $service) {
+            if (count($service['projects']) == 0) continue;
+        ?>
             <section class="section-title">
                 <div class="container">
-                    <h3><?= $value['service_title'] ?></h3>
+                    <h3><?= $service['service_title'] ?></h3>
                 </div>
             </section>
 
             <section class="section-gallery" id="section-work-1">
                 <div class="collage">
-                    <?php for ($i = 1; $i <= 7; $i++) { ?>
+                    <?php foreach ($service['projects'] as $project) { ?>
                         <div class="item">
-                            <img src="<?= $DATA['http_domain'] ?>public/img.gallery/<?= $i ?>.jpg" alt="Image <?= $i ?>">
-                            <?php if ($i % 2 == 0) { ?>
+                            <img src="<?= $project['project_img_url'] ?>" alt="Image of project <?= $project['project_title'] ?>">
+                            <?php if ($project['project_origin'] == 'website') { ?>
                                 <a href="#" target="_blank">
                                     <label>
                                         <span>Ver en Facebook</span>

@@ -34,3 +34,8 @@ $radapter->post('/services/mailbox/insert', fn (...$args) => MailboxService::ins
 $radapter->post('/services/mailbox/select', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::select(...$args));
 $radapter->post('/services/mailbox/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::update(...$args));
 $radapter->post('/services/mailbox/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => MailboxService::delete(...$args));
+
+// SERVICES
+$radapter->post('/services/service/select', fn (...$args) => ServiceService::select(...$args));
+$radapter->post('/services/service/select_join_projects', fn (...$args) => ServiceService::select_join_projects(...$args));
+// need to be logged

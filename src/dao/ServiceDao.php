@@ -26,6 +26,31 @@ class ServiceDao
         return $result;
     }
 
+    public function select_join_projects(int $limit = 0)
+    {
+        $str_limit = "";
+        if ($limit) {
+            $str_limit = " LIMIT $limit";
+        }
+
+        $services_rs = $this->mysqlAdapter->query("SELECT * FROM services $str_limit");
+        $projects_rs = $this->mysqlAdapter->query("SELECT * FROM projects");
+
+        $services = [];
+
+        while ($row = mysqli_fetch_assoc($services_rs)) {
+            $row['projects'] = [];
+
+            mysqli_data_seek($projects_rs, 0);
+            while ($project = mysqli_fetch_assoc($projects_rs)) {
+                if ($project['service_id'] == $row['service_id']) $row['projects'][] = $this->schematize_project($project);
+            }
+            $services[] = $this->schematize($row);
+        }
+
+        return $services ?? [];
+    }
+
     public function selectById(int $id)
     {
         $resultset = $this->mysqlAdapter->query("SELECT * FROM services WHERE service_id = $id");
@@ -65,6 +90,12 @@ class ServiceDao
     private function schematize($row)
     {
         $row['service_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.services/" . $row['service_img'] . "?date=" . $row['service_last'];
+        return $row;
+    }
+
+    private function schematize_project($row)
+    {
+        $row['project_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.projects/" . $row['project_img'] . "?date=" . $row['project_last'];
         return $row;
     }
 }
