@@ -60,7 +60,7 @@
 
             <section class="section-gallery" id="section-work-1">
                 <div class="collage">
-                    <?php for ($i = 1; $i <= 10; $i++) { ?>
+                    <?php for ($i = 1; $i <= 7; $i++) { ?>
                         <img src="<?= $DATA['http_domain'] ?>public/img.gallery/<?= $i ?>.jpg" alt="Image <?= $i ?>">
                     <?php } ?>
                 </div>
