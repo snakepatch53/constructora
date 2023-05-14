@@ -288,8 +288,10 @@
 /*SECTION GALLERY*/
 .section-gallery {
     --c1-bg: var(--color4);
-    --c2-bg: #097deb;
     --c2-txt: #ffffff;
+    --c2-txt2: #c6c6c6;
+    --c3-bg: #097deb;
+    --c3-txt: #ffffff;
 
     display: flex;
     justify-content: center;
@@ -331,15 +333,17 @@
 }
 
 
-.section-gallery .item a {
+.section-gallery .item .desc {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     width: 100%;
     max-width: 0;
     height: 100%;
@@ -349,45 +353,59 @@
     margin: auto;
     background: transparent;
     transition: all 0.2s ease;
-    text-decoration: none;
 }
 
-.section-gallery .item:hover a {
+.section-gallery .item:hover .desc {
     max-width: 100%;
     max-height: 100%;
     opacity: 1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     transition: all 0.2s ease;
 }
 
-.section-gallery .item a label {
+.section-gallery .item .desc h5 {
+    font-family: titulo;
+    font-size: 2rem;
+    color: var(--c2-txt);
+    text-align: center;
+}
+
+.section-gallery .item .desc p {
+    color: var(--c2-txt2);
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.section-gallery .item .desc a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
     padding: 15px;
-    background: var(--c2-bg);
+    background: var(--c3-bg);
     border-radius: 5px;
     cursor: pointer;
     opacity: 0.7;
+    text-decoration: none;
     transition: all 0.2s ease;
 }
 
-.section-gallery .item a label:hover {
+.section-gallery .item .desc a:hover {
     transform: scale(1.03);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: all 0.2s ease;
 }
 
-.section-gallery .item a label span {
-    color: var(--c2-txt);
+.section-gallery .item .desc a span {
+    color: var(--c3-txt);
 }
 
 
-.section-gallery .item a label i {
-    color: var(--c2-txt);
+.section-gallery .item .desc a i {
+    color: var(--c3-txt);
     margin-bottom: 2px;
 }
 

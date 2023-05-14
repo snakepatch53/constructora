@@ -66,12 +66,14 @@
                         <div class="item">
                             <img src="<?= $project['project_img_url'] ?>" alt="Image of project <?= $project['project_title'] ?>">
                             <?php if ($project['project_origin'] == 'website') { ?>
-                                <a href="#" target="_blank">
-                                    <label>
+                                <div class="desc">
+                                    <h5><?= $project['project_title'] ?></h5>
+                                    <p><?= $project['project_desc'] ?></p>
+                                    <a href="<?= $project['project_link'] ?>" target="_blank">
                                         <span>Ver en Facebook</span>
                                         <i class="fab fa-facebook"></i>
-                                    </label>
-                                </a>
+                                    </a>
+                                </div>
                             <?php } ?>
                         </div>
                     <?php } ?>
