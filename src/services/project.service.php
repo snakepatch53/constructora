@@ -39,14 +39,15 @@ class ProjectService
         $projectDao = new ProjectDao($adapter);
         $info = $infoDao->select();
         // creamos el adaptador para obtener los posts de facebook con las credenciales desde la base de datos
-        $fbSDKAdapter = new FacebookSDKAdapter(
-            $info['info_fb_app_id'],
-            $info['info_fb_app_secret'],
-            $info['info_fb_access_token'],
-            $info['info_fb_page_id']
-        );
-        $facebook_result = $fbSDKAdapter->getPosts($token_renew_threshold, fn ($v) => $infoDao->updateFacebookAccessToken($v));
-        // $facebook_result = json_decode(file_get_contents('./src/mooks/facebook_posts.json'), true); // ! TESTS
+        // TODO: descomentar en produccion
+        // $fbSDKAdapter = new FacebookSDKAdapter(
+        //     $info['info_fb_app_id'],
+        //     $info['info_fb_app_secret'],
+        //     $info['info_fb_access_token'],
+        //     $info['info_fb_page_id']
+        // );
+        // $facebook_result = $fbSDKAdapter->getPosts($token_renew_threshold, fn ($v) => $infoDao->updateFacebookAccessToken($v));
+        $facebook_result = json_decode(file_get_contents('./src/mooks/facebook_posts.json'), true); // ! TESTS
         if ($facebook_result == null) {
             $result['message'] = 'could not get posts';
             echo json_encode($result);
