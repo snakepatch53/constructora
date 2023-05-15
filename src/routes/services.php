@@ -39,6 +39,9 @@ $radapter->post('/services/mailbox/delete', fn () => middlewareSessionServicesLo
 $radapter->post('/services/service/select', fn (...$args) => ServiceService::select(...$args));
 $radapter->post('/services/service/select_join_projects', fn (...$args) => ServiceService::select_join_projects(...$args));
 // need to be logged
+$radapter->post('/services/service/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => ServiceService::insert(...$args));
+$radapter->post('/services/service/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => ServiceService::update(...$args));
+$radapter->post('/services/service/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => ServiceService::delete(...$args));
 
 
 // PROJECTS

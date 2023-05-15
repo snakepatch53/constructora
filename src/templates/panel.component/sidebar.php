@@ -48,6 +48,11 @@
             <span class="ms-2">Mailbox</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/services" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "services") ? "shadow  active" : "" ?>">
+            <i class="fas fa-tools"></i>
+            <span class="ms-2">Services</span>
+        </a>
+
         <a href="<?= $DATA['http_domain'] ?>panel/customers" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "customers") ? "shadow  active" : "" ?>">
             <i class="fas fa-handshake"></i>
             <span class="ms-2">Customers</span>

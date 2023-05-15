@@ -162,6 +162,20 @@ input[value="1"] ~ .checkbox:before {
     padding: 3px;
 }
 
+.avatar.no-rounded {
+    border-radius: 5px;
+}
+
+.avatar.xl {
+    width: 70px;
+}
+
+.avatar.cover {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+
 
 
 

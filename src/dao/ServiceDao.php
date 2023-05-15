@@ -58,34 +58,50 @@ class ServiceDao
         return $row;
     }
 
-    // public function insert(
-    //     string $slider_title,
-    //     String $slider_img
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO slider SET 
-    //             slider_title='$slider_title',
-    //             slider_img='$slider_img'
-    //     ");
-    // }
+    public function insert(
+        string $service_title,
+        string $service_desc,
+        string $service_img,
+        string $service_wtsp_msg
+    ) {
+        $service_last = date('Y-m-d H:i:s');
+        $service_created = date('Y-m-d H:i:s');
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO services SET 
+                service_title='$service_title', 
+                service_desc='$service_desc',
+                service_img='$service_img',
+                service_wtsp_msg='$service_wtsp_msg',
+                service_last='$service_last',
+                service_created='$service_created'
+        ");
+        if ($resultset) return $this->mysqlAdapter->getLastId();
+        return false;
+    }
 
-    // public function update(
-    //     string $slider_title,
-    //     string $slider_img,
-    //     int $slider_id
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE slider SET
-    //             slider_title='$slider_title', 
-    //             slider_img='$slider_img'
-    //         WHERE slider_id=$slider_id
-    //     ");
-    // }
+    public function update(
+        string $service_title,
+        string $service_desc,
+        string $service_img,
+        string $service_wtsp_msg,
+        int $service_id
+    ) {
+        $service_last = date('Y-m-d H:i:s');
+        return $this->mysqlAdapter->query("
+            UPDATE services SET
+                service_title='$service_title', 
+                service_desc='$service_desc',
+                service_img='$service_img',
+                service_wtsp_msg='$service_wtsp_msg',
+                service_last='$service_last'
+            WHERE service_id=$service_id
+        ");
+    }
 
-    // public function delete(string $slider_id)
-    // {
-    //     return $this->mysqlAdapter->query("DELETE FROM slider WHERE slider_id = $slider_id ");
-    // }
+    public function delete(string $id)
+    {
+        return $this->mysqlAdapter->query("DELETE FROM services WHERE service_id = $id ");
+    }
 
     private function schematize($row)
     {
