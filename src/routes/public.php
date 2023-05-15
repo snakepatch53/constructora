@@ -57,6 +57,8 @@ $radapter->getHTML('/aboutus', 'aboutus', function ($DATA) {
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
         'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
         'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
+        'goals' => (new GoalDao($DATA['mysqlAdapter']))->select(3),
+        'team' => (new TeamDao($DATA['mysqlAdapter']))->select(4),
     ];
 });
 

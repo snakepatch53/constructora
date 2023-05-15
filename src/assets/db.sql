@@ -81,6 +81,58 @@ VALUES
         '2023-01-01 00:00:00'
     );
 
+DROP TABLE IF EXISTS team;
+
+CREATE TABLE team (
+    team_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    team_name VARCHAR(50),
+    team_position VARCHAR(50),
+    team_photo VARCHAR(50) DEFAULT 'default.png',
+    team_link TEXT,
+    team_last VARCHAR(50),
+    team_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    team
+VALUES
+    (
+        1,
+        'John Doe',
+        'CEO',
+        '1.png',
+        'https://www.facebook.com/erazobrothers',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Bryan Sans',
+        'Manager',
+        '2.png',
+        'https://www.facebook.com/erazobrothers',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Eliot Smith',
+        'Adviser',
+        '3.png',
+        'https://www.facebook.com/erazobrothers',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        4,
+        'Michael Thompson',
+        'Agent',
+        '4.png',
+        'https://www.facebook.com/erazobrothers',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
 DROP TABLE IF EXISTS slider;
 
 CREATE TABLE slider (
@@ -239,6 +291,41 @@ VALUES
         'Elegance',
         'Up to date with all current aesthetic details',
         '3.jpg',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    );
+
+DROP TABLE IF EXISTS goals;
+
+CREATE TABLE goals (
+    goal_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    goal_name VARCHAR(50),
+    goal_icon VARCHAR(50),
+    goal_last VARCHAR(50),
+    goal_created VARCHAR(50)
+) ENGINE INNODB;
+
+INSERT INTO
+    goals
+VALUES
+    (
+        1,
+        'Advise',
+        'fa fa-hand-holding-heart',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        2,
+        'Escort',
+        'fa fa-handshake',
+        '2023-01-01 00:00:00',
+        '2023-01-01 00:00:00'
+    ),
+    (
+        3,
+        'Innvate',
+        'fa fa-lightbulb',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );

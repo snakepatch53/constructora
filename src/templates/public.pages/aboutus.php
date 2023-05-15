@@ -31,11 +31,11 @@
                 <div class="items">
                     <div class="item">
                         <h3>Mission</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p><?= $DATA['info']['info_mision'] ?></p>
                     </div>
                     <div class="item">
                         <h3>Vision</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p><?= $DATA['info']['info_vision'] ?></p>
                     </div>
                 </div>
             </div>
@@ -45,29 +45,15 @@
             <div class="container">
                 <h2>Goals with you</h2>
                 <div class="items">
-                    <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
-                            <i class="fa fa-hand-holding-heart"></i>
+                    <?php foreach ($DATA['goals'] as $value) { ?>
+                        <div class="item">
+                            <div class="icon">
+                                <?php include('./public/img/stars.svg'); ?>
+                                <?= $value['goal_icon_html'] ?>
+                            </div>
+                            <h3><?= $value['goal_name'] ?></h3>
                         </div>
-                        <h3>Advise</h3>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
-                            <i class="fa fa-handshake"></i>
-                        </div>
-                        <h3>Escort</h3>
-                    </div>
-
-                    <div class="item">
-                        <div class="icon">
-                            <?php include('./public/img/stars.svg'); ?>
-                            <i class="fa fa-lightbulb"></i>
-                        </div>
-                        <h3>Innovate</h3>
-                    </div>
+                    <?php } ?>
                 </div>
                 <p>Our commitment is to provide you with the best experience so that you can fulfill your desire to renovate your home.</p>
             </div>
@@ -79,13 +65,13 @@
             <div class="container">
                 <h2>Our team</h2>
                 <div class="items">
-                    <?php for ($i = 1; $i < 5; $i++) { ?>
-                        <a href="#" class="item" target="_blank">
+                    <?php foreach ($DATA['team'] as $value) { ?>
+                        <a href="<?= $value['team_link'] ?>" class="item" target="_blank">
                             <div class="img">
-                                <img src="<?= $DATA['http_domain'] ?>public/img.team/default.png" alt="Image of team member">
+                                <img src="<?= $value['team_photo_url'] ?>" alt="Image of <?= $value['team_name'] ?>">
                             </div>
-                            <h3>Member #<?= $i ?></h3>
-                            <span>Position of menber #<?= $i ?></span>
+                            <h3><?= $value['team_name'] ?></h3>
+                            <span><?= $value['team_position'] ?></span>
                         </a>
                     <?php } ?>
                 </div>

@@ -22,12 +22,14 @@ require_once(__DIR__ . '/src/functions/middlewares.php');
 // cargamos los objetos de acceso a datos
 require_once('./src/dao/InfoDao.php');
 require_once('./src/dao/UserDao.php');
+require_once('./src/dao/TeamDao.php');
 require_once('./src/dao/SliderDao.php');
 require_once('./src/dao/ContactDao.php');
 require_once('./src/dao/MailboxDao.php');
 require_once('./src/dao/ServiceDao.php');
 require_once('./src/dao/ProjectDao.php');
 require_once('./src/dao/QualityDao.php');
+require_once('./src/dao/GoalDao.php');
 require_once('./src/dao/CustomerDao.php');
 
 
@@ -41,6 +43,7 @@ require_once('./src/services/mailbox.service.php');
 require_once('./src/services/service.service.php');
 require_once('./src/services/project.service.php');
 require_once('./src/services/quality.service.php');
+require_once('./src/services/goal.service.php');
 require_once('./src/services/customer.service.php');
 
 
