@@ -39,12 +39,17 @@ class FacebookSDKAdapter
         int $tokenRenewThreshold,
         callable $onUpdateAccessToken
     ) {
+        $tokenRenewThreshold = $tokenRenewThreshold + 60; // ?le sumamos 60 segundos para que no se renueve justo cuando expira
         $timeout = $this->getTimeOut();
         if ($timeout < $tokenRenewThreshold) {
             $this->access_token = $this->updateAccessToken();
             $onUpdateAccessToken($this->access_token);
         }
-        return $this->_getPosts() ?? null;
+
+        return [
+            "expire_in" => $timeout,
+            "posts" => $this->_getPosts()
+        ] ?? null;
     }
 
     private function _getPosts()
