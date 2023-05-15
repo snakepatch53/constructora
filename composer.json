@@ -15,9 +15,9 @@
         "dompdf/dompdf": "^2.0",
         "bramus/router": "^1.6",
         "vlucas/phpdotenv": "^5.5",
-        "facebook/graph-sdk": "^5.1",
         "php-http/curl-client": "^2.3",
-        "guzzlehttp/psr7": "^2.5"
+        "guzzlehttp/psr7": "^2.5",
+        "facebook/php-business-sdk": "^16.0"
     },
     "config": {
         "allow-plugins": {

@@ -5,7 +5,6 @@
     <?php include('./src/templates/public.component/head.php') ?>
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/home.css">
     <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/frontpage.css">
-    <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/facebook_posts.css">
 </head>
 
 <body>

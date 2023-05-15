@@ -11,6 +11,11 @@ CREATE TABLE info (
     info_desc TEXT,
     info_mision TEXT,
     info_vision TEXT,
+    -- information of sdk facebook api
+    info_fb_app_id TEXT,
+    info_fb_app_secret TEXT,
+    info_fb_page_id TEXT,
+    info_fb_access_token TEXT,
     info_last VARCHAR(50),
     info_created VARCHAR(50)
 ) ENGINE INNODB;
@@ -29,6 +34,10 @@ VALUES
         'Our experienced team is here to help with the entire process, from initial idea to commissioning, we are here to help you get the design and work you need.',
         "Erazo Brothers is a construction company committed to building high-quality, innovative and sustainable projects, exceeding our clients' expectations. Our mission is to contribute to the growth and development of our community, providing our clients with the best possible construction experience through excellent customer service, professionalism and a commitment to safety and environmental responsibility.",
         "Our vision at Erazo Brothers is to be recognized as a leader in the construction industry, delivering exceptional quality, innovative solutions, and unparalleled customer service. We strive to exceed our clients' expectations by constantly improving our processes, utilizing cutting-edge technology, and fostering a culture of excellence and collaboration among our team members.",
+        '',
+        '',
+        '',
+        '',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     );
@@ -319,7 +328,7 @@ CREATE TABLE projects (
     project_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     project_title VARCHAR(50),
     project_desc TEXT,
-    project_img VARCHAR(50),
+    project_img TEXT,
     project_link TEXT,
     project_origin VARCHAR(50) DEFAULT 'website',
     project_last VARCHAR(50),

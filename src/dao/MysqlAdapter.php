@@ -48,6 +48,11 @@ class MysqlAdapter
     {
         return $this->last_id;
     }
+
+    public function getConn()
+    {
+        return $this->conn;
+    }
 }
 
 

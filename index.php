@@ -15,6 +15,7 @@ require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/src/functions/RouterAdapter.php');
 require_once(__DIR__ . '/src/functions/utils.php');
 require_once(__DIR__ . '/src/dao/MysqlAdapter.php');
+require_once(__DIR__ . '/src/dao/FacebookSDKAdapter.php');
 require_once(__DIR__ . '/src/functions/middlewares.php');
 
 
@@ -25,6 +26,7 @@ require_once('./src/dao/SliderDao.php');
 require_once('./src/dao/ContactDao.php');
 require_once('./src/dao/MailboxDao.php');
 require_once('./src/dao/ServiceDao.php');
+require_once('./src/dao/ProjectDao.php');
 require_once('./src/dao/QualityDao.php');
 require_once('./src/dao/CustomerDao.php');
 
@@ -37,6 +39,7 @@ require_once('./src/services/slider.service.php');
 require_once('./src/services/contact.service.php');
 require_once('./src/services/mailbox.service.php');
 require_once('./src/services/service.service.php');
+require_once('./src/services/project.service.php');
 
 
 // cargamos las variables de entorno

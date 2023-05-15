@@ -65,11 +65,9 @@
                     <?php foreach ($service['projects'] as $project) { ?>
                         <div class="item">
                             <img src="<?= $project['project_img_url'] ?>" alt="Image of project <?= $project['project_title'] ?>">
-                            <?php if ($project['project_link']) { ?>
-                                <div class="location-icon <?= $project['project_origin'] != 'website' ? 'fb' : 'url' ?>">
-                                    <i class="<?= $project['project_origin'] != 'website' ? 'fb fab fa-facebook' : 'fas fa-globe-americas' ?>"></i>
-                                </div>
-                            <?php } ?>
+                            <div class="location-icon <?= $project['project_origin'] != 'website' ? 'fb' : 'url' ?>">
+                                <i class="<?= $project['project_origin'] != 'website' ? 'fb fab fa-facebook' : 'fas fa-globe-americas' ?>"></i>
+                            </div>
                             <div class="desc">
                                 <h5><?= $project['project_title'] ?></h5>
                                 <p><?= $project['project_desc'] ?></p>

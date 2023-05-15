@@ -3,7 +3,7 @@
         'name' => 'harold/constructora',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '7aa900fe82330a0f48cfd1718fc47b8f7684b7b6',
+        'reference' => 'de60e6fb24dd91bb3c106edd040f3c36b681545b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -37,12 +37,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'facebook/graph-sdk' => array(
-            'pretty_version' => '5.1.4',
-            'version' => '5.1.4.0',
-            'reference' => '38fd7187a6704d3ab14ded2f3a534ac4ee6f3481',
+        'facebook/php-business-sdk' => array(
+            'pretty_version' => '16.0.2',
+            'version' => '16.0.2.0',
+            'reference' => '18886362b93ce6afdfb298d4654461b32e9371ea',
             'type' => 'library',
-            'install_path' => __DIR__ . '/../facebook/graph-sdk',
+            'install_path' => __DIR__ . '/../facebook/php-business-sdk',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -52,6 +52,24 @@
             'reference' => '672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831',
             'type' => 'library',
             'install_path' => __DIR__ . '/../graham-campbell/result-type',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/guzzle' => array(
+            'pretty_version' => '7.6.0',
+            'version' => '7.6.0.0',
+            'reference' => '733dd89533dd371a0987172727df15f500dab0ef',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/guzzle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'guzzlehttp/promises' => array(
+            'pretty_version' => '1.5.2',
+            'version' => '1.5.2.0',
+            'reference' => 'b94b2807d85443f9719887892882d0329d1e2598',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/promises',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -67,7 +85,7 @@
         'harold/constructora' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '7aa900fe82330a0f48cfd1718fc47b8f7684b7b6',
+            'reference' => 'de60e6fb24dd91bb3c106edd040f3c36b681545b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -103,15 +121,15 @@
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'php-http/client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'php-http/curl-client' => array(
@@ -195,8 +213,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -211,8 +229,8 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -227,8 +245,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'ralouphie/getallheaders' => array(

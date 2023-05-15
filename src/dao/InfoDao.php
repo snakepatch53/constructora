@@ -59,4 +59,13 @@ class InfoDao
                 info_slider_desc = '$info_slider_desc'
         ");
     }
+
+    public function updateFacebookAccessToken(
+        string $info_fb_access_token
+    ) {
+        return $this->mysqlAdapter->query("
+            UPDATE info SET 
+                info_fb_access_token = '$info_fb_access_token'
+        ");
+    }
 }

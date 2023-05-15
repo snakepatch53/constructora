@@ -95,7 +95,11 @@ class ServiceDao
 
     private function schematize_project($row)
     {
-        $row['project_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.projects/" . $row['project_img'] . "?date=" . $row['project_last'];
+        if (strpos($row['project_img'], 'http') !== false) {
+            $row['project_img_url'] = $row['project_img'];
+        } else {
+            $row['project_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.projects/" . $row['project_img'] . "?date=" . $row['project_last'];
+        }
         return $row;
     }
 }

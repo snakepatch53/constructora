@@ -6,6 +6,10 @@ $radapter = new RAdapter($router, $_TEMPLATE_PUBLIC_PATH, $_ENV['HTTP_DOMAIN']);
 /**
  * ? El error a quedado solucionado
  */
+
+//  TEST
+$radapter->getHTML('/test', 'test',);
+
 // HOME
 $radapter->getHTML('/', 'home', function ($DATA) {
     return [
