@@ -17,10 +17,10 @@ class ProjectService
         ]);
     }
 
-    public static function tests($DATA, $app_token, $token_renew_threshold)
+    public static function update_from_facebook($DATA, $app_token, $token_renew_threshold)
     {
-        header('Content-Type: application/json');
-        header('Access-Control-Allow-Origin: *');
+        // header('Content-Type: application/json');
+        // header('Access-Control-Allow-Origin: *');
         $result = [
             'status' => 'error',
             'message' => "You're not authorized to access this resource",
@@ -42,14 +42,14 @@ class ProjectService
 
 
         // TODO: descomentar esta linea, esta asi para no gastar consultas a la api
-        // $fbSDKAdapter = new FacebookSDKAdapter(
-        //     $info['info_fb_app_id'],
-        //     $info['info_fb_app_secret'],
-        //     $info['info_fb_access_token'],
-        //     $info['info_fb_page_id']
-        // );
-        // $posts = $fbSDKAdapter->getPosts($token_renew_threshold, fn ($v) => $infoDao->updateFacebookAccessToken($v['access_token']));
-        $posts = json_decode(file_get_contents('./src/mooks/facebook_posts.json'), true);
+        $fbSDKAdapter = new FacebookSDKAdapter(
+            $info['info_fb_app_id'],
+            $info['info_fb_app_secret'],
+            $info['info_fb_access_token'],
+            $info['info_fb_page_id']
+        );
+        $posts = $fbSDKAdapter->getPosts($token_renew_threshold, fn ($v) => $infoDao->updateFacebookAccessToken($v['access_token']));
+        // $posts = json_decode(file_get_contents('./src/mooks/facebook_posts.json'), true);
 
         if ($posts == null) {
             // english

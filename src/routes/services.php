@@ -47,5 +47,5 @@ $radapter->post('/services/project/select', fn (...$args) => ProjectService::sel
 
 
 // TESTS
-$radapter->getHTML('/services/projects/update_from_facebook/{app_token}/{token_renew_threshold}', '', fn (...$args) => ProjectService::tests(...$args), null, false);
+$radapter->getHTML('/services/projects/update_from_facebook/{app_token}/{token_renew_threshold}', '', fn (...$args) => ProjectService::update_from_facebook(...$args), null, false);
 //http://localhost/constructora/services/projects/update_from_facebook/0x10ED43C718714eb63d5aA57B78B54704E256024E/600
