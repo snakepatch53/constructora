@@ -40,6 +40,7 @@ require_once('./src/services/contact.service.php');
 require_once('./src/services/mailbox.service.php');
 require_once('./src/services/service.service.php');
 require_once('./src/services/project.service.php');
+require_once('./src/services/quality.service.php');
 require_once('./src/services/customer.service.php');
 
 

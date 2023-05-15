@@ -34,24 +34,24 @@ async function main() {
 const handleFunction = {
     new: function () {
         uiFunction.modalForm_clear();
-        $form["service_id"].value = 0;
-        $form["service_img"].required = true;
+        $form["quality_id"].value = 0;
+        $form["quality_img"].required = true;
         bootstrap_modalform.show();
     },
     edit: function ($register_id) {
-        const register = uiFunction.database.find((el) => el["service_id"] == $register_id);
-        $form["service_img"].required = false;
+        const register = uiFunction.database.find((el) => el["quality_id"] == $register_id);
+        $form["quality_img"].required = false;
         setValuesForm(register, $form);
         bootstrap_modalform.show();
     },
     delete: function (register_id) {
-        $form["service_id"].value = register_id;
+        $form["quality_id"].value = register_id;
         bootstrap_modalconfirm.show();
     },
 
     // gift functions
     giftTrButton: function (register_id) {
-        $form_gift["service_id"].value = register_id;
+        $form_gift["quality_id"].value = register_id;
         uiFunction.refreshTableGift(register_id);
         element_modalgift.show();
     },
@@ -59,7 +59,7 @@ const handleFunction = {
 
 const crudFunction = {
     select: async function () {
-        await fetch_query(new FormData($form), "service", "select").then((res) => {
+        await fetch_query(new FormData($form), "quality", "select").then((res) => {
             if (res.response) {
                 uiFunction.database = res.data;
                 uiFunction.refreshTable();
@@ -67,14 +67,14 @@ const crudFunction = {
         });
     },
     insertUpdate: function (form) {
-        const action = $form["service_id"].value == 0 ? "insert" : "update";
-        fetch_query(new FormData(form), "service", action).then((res) => {
+        const action = $form["quality_id"].value == 0 ? "insert" : "update";
+        fetch_query(new FormData(form), "quality", action).then((res) => {
             uiFunction.modalForm_hide();
             this.select();
         });
     },
     delete: function () {
-        fetch_query(new FormData($form), "service", "delete").then((res) => {
+        fetch_query(new FormData($form), "quality", "delete").then((res) => {
             uiFunction.modalForm_hide();
             this.select();
             uiFunction.modalConfirm_hide();
@@ -85,19 +85,19 @@ const crudFunction = {
 const uiFunction = {
     database: [],
     giftDatabase: [],
-    getTr: function ({ service_id, service_title, service_img_url }) {
+    getTr: function ({ quality_id, quality_title, quality_img_url }) {
         return `
             <tr>
-                <td class="d-none d-md-table-cell fw-bold">${service_id}</td>
+                <td class="d-none d-md-table-cell fw-bold">${quality_id}</td>
                 <td class="text-center text-md-left">
-                    <img src="${service_img_url}" alt="avatar" class="avatar no-rounded xl cover" />
+                    <img src="${quality_img_url}" alt="avatar" class="avatar no-rounded xl cover" />
                 </td>
-                <td class="text-center text-md-left">${service_title}</td>
+                <td class="text-center text-md-left">${quality_title}</td>
                 <td class="text-center">
-                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${service_id})">
+                    <button class="btn btn-outline-primary" onclick="handleFunction.edit(${quality_id})">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>
-                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${service_id})">
+                    <button class="btn btn-outline-danger" onclick="handleFunction.delete(${quality_id})">
                         <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </td>

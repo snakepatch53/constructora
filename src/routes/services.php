@@ -48,6 +48,14 @@ $radapter->post('/services/service/delete', fn () => middlewareSessionServicesLo
 $radapter->post('/services/project/select', fn (...$args) => ProjectService::select(...$args));
 $radapter->getHTML('/services/projects/update_from_facebook/{app_token}/{token_renew_threshold}', '', fn (...$args) => ProjectService::update_from_facebook(...$args), null, false);
 
+// QUALITIES
+$radapter->post('/services/quality/select', fn (...$args) => QualityService::select(...$args));
+// need to be logged
+$radapter->post('/services/quality/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => QualityService::insert(...$args));
+$radapter->post('/services/quality/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => QualityService::update(...$args));
+$radapter->post('/services/quality/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => QualityService::delete(...$args));
+
+
 // CUSTOMERS
 $radapter->post('/services/customer/select', fn (...$args) => CustomerService::select(...$args));
 // need to be logged

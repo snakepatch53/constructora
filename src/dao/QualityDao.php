@@ -33,34 +33,46 @@ class QualityDao
         return $row;
     }
 
-    // public function insert(
-    //     string $slider_title,
-    //     String $slider_img
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO slider SET 
-    //             slider_title='$slider_title',
-    //             slider_img='$slider_img'
-    //     ");
-    // }
+    public function insert(
+        string $quality_title,
+        string $quality_desc,
+        string $quality_img
+    ) {
+        $quality_last = date('Y-m-d H:i:s');
+        $quality_created = date('Y-m-d H:i:s');
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO qualities SET 
+                quality_title='$quality_title',
+                quality_desc='$quality_desc',
+                quality_img='$quality_img',
+                quality_last='$quality_last',
+                quality_created='$quality_created'
+        ");
+        if ($resultset) return $this->mysqlAdapter->getLastId();
+        return false;
+    }
 
-    // public function update(
-    //     string $slider_title,
-    //     string $slider_img,
-    //     int $slider_id
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE slider SET
-    //             slider_title='$slider_title', 
-    //             slider_img='$slider_img'
-    //         WHERE slider_id=$slider_id
-    //     ");
-    // }
+    public function update(
+        string $quality_title,
+        string $quality_desc,
+        string $quality_img,
+        int $quality_id
+    ) {
+        $quality_last = date('Y-m-d H:i:s');
+        return $this->mysqlAdapter->query("
+            UPDATE qualities SET
+                quality_title='$quality_title', 
+                quality_desc='$quality_desc',
+                quality_img='$quality_img',
+                quality_last='$quality_last'
+            WHERE quality_id=$quality_id
+        ");
+    }
 
-    // public function delete(string $slider_id)
-    // {
-    //     return $this->mysqlAdapter->query("DELETE FROM slider WHERE slider_id = $slider_id ");
-    // }
+    public function delete(string $quality_id)
+    {
+        return $this->mysqlAdapter->query("DELETE FROM qualities WHERE quality_id = $quality_id ");
+    }
 
     private function schematize($row)
     {

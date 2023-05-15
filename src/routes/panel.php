@@ -50,6 +50,12 @@ $radapter->getHTML('/panel/services', 'services', fn () => middlewareSessionLogi
     ];
 });
 
+$radapter->getHTML('/panel/qualities', 'qualities', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
 $radapter->getHTML('/panel/customers', 'customers', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
