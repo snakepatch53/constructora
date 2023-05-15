@@ -43,3 +43,9 @@ $radapter->getHTML('/panel/mailbox', 'mailbox', fn () => middlewareSessionLogin(
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
     ];
 });
+
+$radapter->getHTML('/panel/customers', 'customers', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});

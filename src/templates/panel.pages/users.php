@@ -127,7 +127,7 @@
 </body>
 <foot>
     <?php include('./src/templates/panel.component/foot.php') ?>
-    <script src="<?= $DATA['http_domain'] ?>public/js.panel/user.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/users.js"></script>
 </foot>
 
 </html>

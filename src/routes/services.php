@@ -43,9 +43,17 @@ $radapter->post('/services/service/select_join_projects', fn (...$args) => Servi
 
 // PROJECTS
 $radapter->post('/services/project/select', fn (...$args) => ProjectService::select(...$args));
+$radapter->getHTML('/services/projects/update_from_facebook/{app_token}/{token_renew_threshold}', '', fn (...$args) => ProjectService::update_from_facebook(...$args), null, false);
+
+// CUSTOMERS
+$radapter->post('/services/customer/select', fn (...$args) => CustomerService::select(...$args));
+// need to be logged
+$radapter->post('/services/customer/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => CustomerService::insert(...$args));
+$radapter->post('/services/customer/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => CustomerService::update(...$args));
+$radapter->post('/services/customer/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => CustomerService::delete(...$args));
+
 
 
 
 // TESTS
-$radapter->getHTML('/services/projects/update_from_facebook/{app_token}/{token_renew_threshold}', '', fn (...$args) => ProjectService::update_from_facebook(...$args), null, false);
 //http://localhost/constructora/services/projects/update_from_facebook/0x10ED43C718714eb63d5aA57B78B54704E256024E/600

@@ -146,7 +146,7 @@
 </body>
 <foot>
     <?php include('./src/templates/panel.component/foot.php') ?>
-    <script src="<?= $DATA['http_domain'] ?>public/js.panel/contact.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/contacts.js"></script>
 </foot>
 
 </html>

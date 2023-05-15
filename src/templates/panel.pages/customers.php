@@ -3,7 +3,6 @@
 
 <head>
     <?php include('./src/templates/panel.component/head.php') ?>
-
 </head>
 
 <body>
@@ -15,16 +14,16 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?= $DATA['http_domain'] ?>panel">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Social Media</li>
+                    <li class="breadcrumb-item active" aria-current="page">Customers</li>
                 </ol>
             </nav>
             <div class="card shadow">
                 <div class="card-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Social Media</b>
+                        <b>Customers</b>
                         <button class="btn btn-outline-success" onclick="handleFunction.new()">
                             <i class="fa-solid fa-plus"></i>
-                            <span>Create New</span>
+                            <span>Create new</span>
                         </button>
                     </div>
                 </div>
@@ -33,8 +32,8 @@
                         <thead class="bg-dark text-light">
                             <tr>
                                 <th class="d-none d-md-table-cell" scope="col">#</th>
+                                <th class="text-center text-md-left" scope="col">Logo</th>
                                 <th class="text-center text-md-left" scope="col">Name</th>
-                                <th class="d-none d-md-table-cell text-center text-md-left" scope="col">Icon</th>
                                 <th class="text-center" scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -54,10 +53,9 @@
         <div class="modal fade" id="element-modalform" tabindex="-1" aria-labelledby="element-modalformLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <form class="modal-content needs-validation" id="element-form" onsubmit="return false" novalidate>
-                    <input type="hidden" name="contact_id" value="0">
-                    <input type="hidden" name="contact_type" value="social">
+                    <input type="hidden" name="customer_id" value="0">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="element-modalformLabel">Social Media Form</h5>
+                        <h5 class="modal-title" id="element-modalformLabel">Customer Form</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -65,62 +63,31 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="validationServer01" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="validationServer01" placeholder="Name.." name="contact_name" required>
+                                <input type="text" class="form-control" id="validationServer01" placeholder="Name.." name="customer_name" required>
                                 <div class="invalid-feedback">
                                     Write a name!
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationServer02" class="form-label">Value</label>
-                                <input type="text" class="form-control" id="validationServer02" placeholder="Value.." name="contact_value" required>
+                                <label for="validationServer03" class="form-label">Link</label>
+                                <input type="text" class="form-control" id="validationServer03" placeholder="http://.." name="customer_link" required>
                                 <div class="invalid-feedback">
-                                    Write a value!
+                                    Insert a link!
                                 </div>
                             </div>
 
                             <div class="col-md-12">
-                                <label for="validationServer03" class="form-label">Link</label>
-                                <input type="text" class="form-control" id="validationServer03" placeholder="Link.." name="contact_link" required>
-                                <div class="invalid-feedback">
-                                    Write a link!
-                                </div>
+                                <label for="validationServer04" class="form-label">Logo</label>
+                                <input type="file" class="form-control" id="validationServer04" name="customer_logo">
                             </div>
 
-                            <div class="col-md-6">
-                                <label for="validationServer04" class="form-label">Icon</label>
-                                <select class="form-control form-select selectpicker" name="contact_icon" id="validationServer04" required>
-                                    <option value="">Select a fontawesome icon</option>
-                                    <option value="fab fa-facebook">Facebook</option>
-                                    <option value="fab fa-twitter">Twitter</option>
-                                    <option value="fab fa-instagram">Instagram</option>
-                                    <option value="fab fa-linkedin">Linkedin</option>
-                                    <option value="fab fa-youtube">Youtube</option>
-                                    <option value="fab fa-whatsapp">Whatsapp</option>
-                                    <option value="fab fa-telegram">Telegram</option>
-                                    <option value="fab fa-tiktok">Tiktok</option>
-                                    <option value="fab fa-twitch">Twitch</option>
-                                    <option value="fab fa-pinterest">Pinterest</option>
-                                    <option value="fab fa-snapchat">Snapchat</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Select a fontawesome icon!
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="validationServer04" class="form-label">Color</label>
-                                <input type="color" class="form-control" id="validationServer04" placeholder="Color.." name="contact_color" required>
-                                <div class="invalid-feedback">
-                                    Pick a color!
-                                </div>
-                            </div>
                         </div>
                         <!-- form | end -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>
@@ -151,7 +118,7 @@
 </body>
 <foot>
     <?php include('./src/templates/panel.component/foot.php') ?>
-    <script src="<?= $DATA['http_domain'] ?>public/js.panel/socials.js"></script>
+    <script src="<?= $DATA['http_domain'] ?>public/js.panel/customers.js"></script>
 </foot>
 
 </html>
