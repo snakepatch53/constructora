@@ -184,7 +184,8 @@ class ProjectService
             $project_title = $_POST['project_title'];
             $project_desc = $_POST['project_desc'];
             $project_link = $_POST['project_link'];
-            $project_origin = 'website';
+            // $project_origin = 'website';
+            $project_origin = $current_project['project_origin'];
             $service_id = $_POST['service_id'];
             $project_img = $current_project['project_img'];
             if (isset($_FILES['project_img'])) {

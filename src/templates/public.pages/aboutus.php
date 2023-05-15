@@ -82,7 +82,7 @@
                     <?php for ($i = 1; $i < 5; $i++) { ?>
                         <a href="#" class="item" target="_blank">
                             <div class="img">
-                                <img src="<?= $DATA['http_domain'] ?>public/img.team/<?= $i ?>.png" alt="Image of team member">
+                                <img src="<?= $DATA['http_domain'] ?>public/img.team/default.png" alt="Image of team member">
                             </div>
                             <h3>Member #<?= $i ?></h3>
                             <span>Position of menber #<?= $i ?></span>
@@ -90,6 +90,15 @@
                     <?php } ?>
                 </div>
                 <p>Our commitment is to provide you with the best experience so that you can fulfill your desire to renovate your home.</p>
+            </div>
+        </section>
+
+
+
+        <section class="section5">
+            <div class="container">
+                <h2>Locate Us</h2>
+                <div class="mapa"><?= $DATA['info']['info_location'] ?></div>
             </div>
         </section>
     </main>
