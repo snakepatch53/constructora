@@ -48,6 +48,7 @@ class ProjectService
         // );
         // $facebook_result = $fbSDKAdapter->getPosts($token_renew_threshold, fn ($v) => $infoDao->updateFacebookAccessToken($v));
         $facebook_result = json_decode(file_get_contents('./src/mooks/facebook_posts.json'), true); // ! TESTS
+
         if ($facebook_result == null) {
             $result['message'] = 'could not get posts';
             echo json_encode($result);
