@@ -43,12 +43,12 @@
                     <div class="card bg-primary text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Links</span>
-                                <i class="fas fa-link"></i>
+                                <span>Users</span>
+                                <i class="fa-solid fa-users"></i>
                             </h5>
-                            <p class="card-text">Total de links: </p>
+                            <p class="card-text">Total users: <?= count($DATA['users']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/links">Ver links</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/users">See users</a>
                     </div>
                 </div>
 
@@ -56,12 +56,12 @@
                     <div class="card bg-success text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Mensajes</span>
-                                <i class="fas fa-envelope"></i>
+                                <span>Slider</span>
+                                <i class="fa-solid fa-image"></i>
                             </h5>
-                            <p class="card-text">Total de mensajes: </p>
+                            <p class="card-text">Total slides: <?= count($DATA['slider']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/mensajes">Ver mensajes</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/slider">See slides</a>
                     </div>
                 </div>
 
@@ -69,12 +69,12 @@
                     <div class="card bg-warning text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Planes</span>
-                                <i class="fa-solid fa-credit-card"></i>
+                                <span>Contacts</span>
+                                <i class="fas fa-address-book"></i>
                             </h5>
-                            <p class="card-text">Total de planes:</p>
+                            <p class="card-text">Total contacts: <?= count($DATA['contacts']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/planes">Ver planes</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/contacts">See contacts</a>
                     </div>
                 </div>
 
@@ -82,12 +82,12 @@
                     <div class="card bg-danger text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Preguntas</span>
-                                <i class="fa-solid fa-question"></i>
+                                <span>Social Media</span>
+                                <i class="fa fa-share-alt"></i>
                             </h5>
-                            <p class="card-text">Total de preguntas: </p>
+                            <p class="card-text">Total social media: <?= count($DATA['socials']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/preguntas">Ver preguntas</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/socials">See social media</a>
                     </div>
                 </div>
 
@@ -95,12 +95,12 @@
                     <div class="card bg-dark text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Restricciones</span>
-                                <i class="fa-solid fa-lock"></i>
+                                <span>Qualities</span>
+                                <i class="fas fa-star"></i>
                             </h5>
-                            <p class="card-text">Total de restricciones: </p>
+                            <p class="card-text">Total qualities: <?= count($DATA['qualities']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/preguntas">Ver restricciones</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/qualities">See qualities</a>
                     </div>
                 </div>
 
@@ -108,12 +108,12 @@
                     <div class="card bg-info text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Slider</span>
-                                <i class="fas fa-images"></i>
+                                <span>Customers</span>
+                                <i class="fas fa-handshake"></i>
                             </h5>
-                            <p class="card-text">Total de slides: </p>
+                            <p class="card-text">Total customers: <?= count($DATA['customers']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/slider">Ver slider</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/customers">See customers</a>
                     </div>
                 </div>
 
@@ -121,12 +121,12 @@
                     <div class="card bg-primary text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Redes</span>
-                                <i class="fa-solid fa-share"></i>
+                                <span>Services</span>
+                                <i class="fas fa-tools"></i>
                             </h5>
-                            <p class="card-text">Total de redes: </p>
+                            <p class="card-text">Total services: <?= count($DATA['services']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/social">Ver redes</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/services">See services</a>
                     </div>
                 </div>
 
@@ -134,12 +134,25 @@
                     <div class="card bg-success text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
-                                <span>Usuarios</span>
-                                <i class="fa-solid fa-user"></i>
+                                <span>Projects</span>
+                                <i class="fas fa-project-diagram"></i>
                             </h5>
-                            <p class="card-text">Total de usuarios: </p>
+                            <p class="card-text">Total projects: <?= count($DATA['projects']) ?></p>
                         </div>
-                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/user">Ver usuarios</a>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/projects">See projects</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3">
+                    <div class="card bg-light text-dark">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex justify-content-between">
+                                <span>Mailbox</span>
+                                <i class="fa fa-envelope"></i>
+                            </h5>
+                            <p class="card-text">Total mails: <?= count($DATA['mails']) ?></p>
+                        </div>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/mailbox">See mailbox</a>
                     </div>
                 </div>
 

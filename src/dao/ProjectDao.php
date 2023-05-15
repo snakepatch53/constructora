@@ -18,7 +18,7 @@ class ProjectDao
         if ($limit) {
             $str_limit = " LIMIT $limit";
         }
-        $resultset = $this->mysqlAdapter->query("SELECT * FROM projects $str_limit");
+        $resultset = $this->mysqlAdapter->query("SELECT * FROM projects $str_limit INNER JOIN services ON projects.service_id = services.service_id");
         $result = [];
         while ($row = mysqli_fetch_assoc($resultset)) {
             $result[] = $this->schematize($row);
@@ -28,7 +28,7 @@ class ProjectDao
 
     public function selectById(int $id)
     {
-        $resultset = $this->mysqlAdapter->query("SELECT * FROM projects WHERE service_id = $id");
+        $resultset = $this->mysqlAdapter->query("SELECT * FROM projects WHERE project_id = $id");
         $row = mysqli_fetch_assoc($resultset);
         return $row;
     }
@@ -71,34 +71,59 @@ class ProjectDao
         return $this->mysqlAdapter->query("DELETE FROM projects WHERE project_origin = '$origin'");
     }
 
-    // public function insert(
-    //     string $slider_title,
-    //     String $slider_img
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO slider SET 
-    //             slider_title='$slider_title',
-    //             slider_img='$slider_img'
-    //     ");
-    // }
+    public function insert(
+        string $project_title,
+        string $project_desc,
+        string $project_img,
+        string $project_link,
+        string $project_origin,
+        int $service_id
+    ) {
+        $project_last = date('Y-m-d H:i:s');
+        $project_created = date('Y-m-d H:i:s');
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO projects SET 
+                project_title='$project_title', 
+                project_desc='$project_desc',
+                project_img='$project_img',
+                project_link='$project_link',
+                project_origin='$project_origin',
+                service_id='$service_id',
+                project_last='$project_last',
+                project_created='$project_created'
+        ");
+        if ($resultset) return $this->mysqlAdapter->getLastId();
+        return false;
+    }
 
-    // public function update(
-    //     string $slider_title,
-    //     string $slider_img,
-    //     int $slider_id
-    // ) {
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE slider SET
-    //             slider_title='$slider_title', 
-    //             slider_img='$slider_img'
-    //         WHERE slider_id=$slider_id
-    //     ");
-    // }
+    public function update(
+        string $project_title,
+        string $project_desc,
+        string $project_img,
+        string $project_link,
+        string $project_origin,
+        int $service_id,
+        int $project_id
+    ) {
+        $project_last = date('Y-m-d H:i:s');
+        return $this->mysqlAdapter->query("
+            UPDATE projects SET
+                project_title='$project_title', 
+                project_desc='$project_desc',
+                project_img='$project_img',
+                project_link='$project_link',
+                project_origin='$project_origin',
+                service_id='$service_id',
+                project_last='$project_last'
+            WHERE project_id=$project_id
+        ");
+    }
 
-    // public function delete(string $slider_id)
-    // {
-    //     return $this->mysqlAdapter->query("DELETE FROM slider WHERE slider_id = $slider_id ");
-    // }
+    public function delete(string $id)
+    {
+        return $this->mysqlAdapter->query("DELETE FROM projects WHERE project_id = $id ");
+    }
+
     public function deleteFacebookPosts()
     {
         return $this->mysqlAdapter->query("DELETE FROM projects WHERE project_origin = 'facebook'");
@@ -106,7 +131,11 @@ class ProjectDao
 
     private function schematize($row)
     {
-        $row['project_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.projects/" . $row['project_img'] . "?date=" . $row['project_last'];
+        if (strpos($row['project_img'], 'http') !== false) {
+            $row['project_img_url'] = $row['project_img'];
+        } else {
+            $row['project_img_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.projects/" . $row['project_img'] . "?date=" . $row['project_last'];
+        }
         return $row;
     }
 }

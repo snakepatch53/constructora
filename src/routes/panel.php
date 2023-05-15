@@ -11,6 +11,21 @@ $radapter->getHTML('/panel/login', 'login', fn () => middlewareSessionLogout(), 
 $radapter->getHTML('/panel', 'home', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'users' => (new UserDao($DATA['mysqlAdapter']))->select(),
+        'slider' => (new SliderDao($DATA['mysqlAdapter']))->select(),
+        'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
+        'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
+        'qualities' => (new QualityDao($DATA['mysqlAdapter']))->select(),
+        'customers' => (new CustomerDao($DATA['mysqlAdapter']))->select(),
+        'services' => (new ServiceDao($DATA['mysqlAdapter']))->select(),
+        'projects' => (new ProjectDao($DATA['mysqlAdapter']))->select(),
+        'mails' => (new MailBoxDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+$radapter->getHTML('/panel/info', 'info', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 
@@ -47,6 +62,13 @@ $radapter->getHTML('/panel/mailbox', 'mailbox', fn () => middlewareSessionLogin(
 $radapter->getHTML('/panel/services', 'services', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+$radapter->getHTML('/panel/projects', 'projects', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'services' => (new ServiceDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 
