@@ -24,70 +24,58 @@ class GoalDao
         return $result;
     }
 
-    // public function selectById(int $id)
-    // {
-    //     $resultset = $this->mysqlAdapter->query("SELECT * FROM contacts WHERE contact_id = $id");
-    //     $row = mysqli_fetch_assoc($resultset);
-    //     return $this->schematize($row);
-    // }
+    public function selectById(int $id)
+    {
+        $resultset = $this->mysqlAdapter->query("SELECT * FROM goals WHERE goal_id = $id");
+        $row = mysqli_fetch_assoc($resultset);
+        return $this->schematize($row);
+    }
 
-    // public function insert(
-    //     string $contact_name,
-    //     string $contact_value,
-    //     string $contact_link,
-    //     string $contact_icon,
-    //     string $contact_color,
-    //     string $contact_type
-    // ) {
-    //     $contact_last = date('Y-m-d H:i:s');
-    //     $contact_created = date('Y-m-d H:i:s');
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO contacts SET 
-    //             contact_name = '$contact_name',
-    //             contact_value = '$contact_value',
-    //             contact_link = '$contact_link',
-    //             contact_icon = '$contact_icon',
-    //             contact_color = '$contact_color',
-    //             contact_type = '$contact_type',
-    //             contact_last = '$contact_last',
-    //             contact_created = '$contact_created'
-    //     ");
-    // }
+    public function insert(
+        string $goal_name,
+        string $goal_icon,
+    ) {
+        $goal_last = date('Y-m-d H:i:s');
+        $goal_created = date('Y-m-d H:i:s');
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO goals SET 
+                goal_name = '$goal_name',
+                goal_icon = '$goal_icon',
+                goal_last = '$goal_last',
+                goal_created = '$goal_created'
+        ");
+        if ($resultset) return $this->mysqlAdapter->getLastId();
+        return false;
+    }
 
-    // public function update(
-    //     string $contact_name,
-    //     string $contact_value,
-    //     string $contact_link,
-    //     string $contact_icon,
-    //     string $contact_color,
-    //     string $contact_type,
-    //     int $contact_id
-    // ) {
-    //     $contact_last = date('Y-m-d H:i:s');
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE contacts SET
-    //             contact_name='$contact_name',
-    //             contact_value='$contact_value',
-    //             contact_link='$contact_link',
-    //             contact_icon='$contact_icon',
-    //             contact_color='$contact_color',
-    //             contact_type='$contact_type',
-    //             contact_last='$contact_last'
-    //         WHERE contact_id=$contact_id
-    //     ");
-    // }
+    public function update(
+        string $goal_name,
+        string $goal_icon,
+        int $goal_id
+    ) {
+        $goal_last = date('Y-m-d H:i:s');
+        return $this->mysqlAdapter->query("
+            UPDATE goals SET
+                goal_name = '$goal_name',
+                goal_icon = '$goal_icon',
+                goal_last = '$goal_last'
+            WHERE goal_id=$goal_id
+        ");
+    }
 
-    // public function delete(string $id)
-    // {
-    //     $resultset = $this->mysqlAdapter->query("DELETE FROM contacts WHERE contact_id = $id ");
-    //     if ($resultset) return true;
-    //     return false;
-    // }
+    public function delete(string $id)
+    {
+        $resultset = $this->mysqlAdapter->query("DELETE FROM goals WHERE goal_id = $id ");
+        if ($resultset) return true;
+        return false;
+    }
 
     private function schematize($row)
     {
         if (strpos($row['goal_icon'], '<i') === false) {
             $row['goal_icon_html'] = '<i class="' . $row['goal_icon'] . '" i></i>';
+        } else {
+            $row['goal_icon_html'] = $row['goal_icon'];
         }
         return $row;
     }

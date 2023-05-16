@@ -59,6 +59,13 @@ $radapter->post('/services/quality/insert', fn () => middlewareSessionServicesLo
 $radapter->post('/services/quality/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => QualityService::update(...$args));
 $radapter->post('/services/quality/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => QualityService::delete(...$args));
 
+// GOALS
+$radapter->post('/services/goal/select', fn (...$args) => GoalService::select(...$args));
+// need to be logged
+$radapter->post('/services/goal/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => GoalService::insert(...$args));
+$radapter->post('/services/goal/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => GoalService::update(...$args));
+$radapter->post('/services/goal/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => GoalService::delete(...$args));
+
 
 // CUSTOMERS
 $radapter->post('/services/customer/select', fn (...$args) => CustomerService::select(...$args));

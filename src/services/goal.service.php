@@ -6,18 +6,13 @@ class GoalService
         header('Content-Type: application/json');
         header('Access-Control-Allow-Origin: *');
         $adapter = $DATA['mysqlAdapter'];
-        $contactDao = new ContactDao($adapter);
-        $socials = [];
-        if (isset($_POST['contact_type'])) {
-            $socials = $contactDao->select($_POST['contact_type']);
-        } else {
-            $socials = $contactDao->select();
-        }
+        $goalDao = new GoalDao($adapter);
+        $goals = $goalDao->select();
         echo json_encode([
             'status' => 'success',
-            'message' => 'Contacts obtained correctly',
+            'message' => 'Goals obtained correctly',
             'response' => true,
-            'data' => $socials
+            'data' => $goals
         ]);
     }
 
@@ -32,36 +27,24 @@ class GoalService
             'data' => null
         ];
         if (isset(
-            $_POST['contact_name'],
-            $_POST['contact_value'],
-            $_POST['contact_link'],
-            $_POST['contact_icon'],
-            $_POST['contact_color'],
-            $_POST['contact_type']
+            $_POST['goal_name'],
+            $_POST['goal_icon']
         )) {
             $adapter = $DATA['mysqlAdapter'];
-            $contactDao = new ContactDao($adapter);
+            $goalDao = new GoalDao($adapter);
 
-            $contact_name = $_POST['contact_name'];
-            $contact_value = $_POST['contact_value'];
-            $contact_link = $_POST['contact_link'];
-            $contact_icon = $_POST['contact_icon'];
-            $contact_color = $_POST['contact_color'];
-            $contact_type = $_POST['contact_type'];
+            $goal_name = $_POST['goal_name'];
+            $goal_icon = $_POST['goal_icon'];
 
-            $contact_id = $contactDao->insert(
-                $contact_name,
-                $contact_value,
-                $contact_link,
-                $contact_icon,
-                $contact_color,
-                $contact_type
+            $goal_id = $goalDao->insert(
+                $goal_name,
+                $goal_icon
             );
 
             $result['status'] = 'success';
-            $result['message'] = 'Contact inserted correctly';
+            $result['message'] = 'Goal inserted correctly';
             $result['response'] = true;
-            $result['data'] = $contact_id;
+            $result['data'] = $goal_id;
         }
         echo json_encode($result);
     }
@@ -77,39 +60,27 @@ class GoalService
             'data' => null
         ];
         if (isset(
-            $_POST['contact_name'],
-            $_POST['contact_value'],
-            $_POST['contact_link'],
-            $_POST['contact_icon'],
-            $_POST['contact_color'],
-            $_POST['contact_type'],
-            $_POST['contact_id']
+            $_POST['goal_name'],
+            $_POST['goal_icon'],
+            $_POST['goal_id']
         )) {
             $adapter = $DATA['mysqlAdapter'];
-            $contactDao = new ContactDao($adapter);
+            $goalDao = new GoalDao($adapter);
 
-            $contact_name = $_POST['contact_name'];
-            $contact_value = $_POST['contact_value'];
-            $contact_link = $_POST['contact_link'];
-            $contact_icon = $_POST['contact_icon'];
-            $contact_color = $_POST['contact_color'];
-            $contact_type = $_POST['contact_type'];
-            $contact_id = $_POST['contact_id'];
+            $goal_name = $_POST['goal_name'];
+            $goal_icon = $_POST['goal_icon'];
+            $goal_id = $_POST['goal_id'];
 
-            $contactDao->update(
-                $contact_name,
-                $contact_value,
-                $contact_link,
-                $contact_icon,
-                $contact_color,
-                $contact_type,
-                $contact_id
+            $goalDao->update(
+                $goal_name,
+                $goal_icon,
+                $goal_id
             );
 
             $result['status'] = 'success';
-            $result['message'] = 'Contact updated correctly';
+            $result['message'] = 'Goal updated correctly';
             $result['response'] = true;
-            $result['data'] = $contact_id;
+            $result['data'] = $goal_id;
         }
         echo json_encode($result);
     }
@@ -124,15 +95,15 @@ class GoalService
             'response' => false,
             'data' => null
         ];
-        if (isset($_POST['contact_id'])) {
+        if (isset($_POST['goal_id'])) {
             $adapter = $DATA['mysqlAdapter'];
-            $contactDao = new ContactDao($adapter);
-            $contact_id = $_POST['contact_id'];
-            $contactDao->delete($contact_id);
+            $goalDao = new GoalDao($adapter);
+            $goal_id = $_POST['goal_id'];
+            $goalDao->delete($goal_id);
             $result['status'] = 'success';
-            $result['message'] = 'Contact deleted correctly';
+            $result['message'] = 'Goal deleted correctly';
             $result['response'] = true;
-            $result['data'] = $contact_id;
+            $result['data'] = $goal_id;
         }
         echo json_encode($result);
     }

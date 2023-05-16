@@ -48,6 +48,11 @@
             <span class="ms-2">Qualities</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/goals" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "goals") ? "shadow  active" : "" ?>">
+            <i class="fas fa-bullseye"></i>
+            <span class="ms-2">Goals</span>
+        </a>
+
         <a href="<?= $DATA['http_domain'] ?>panel/customers" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "customers") ? "shadow  active" : "" ?>">
             <i class="fas fa-handshake"></i>
             <span class="ms-2">Customers</span>

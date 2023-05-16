@@ -78,6 +78,14 @@ $radapter->getHTML('/panel/qualities', 'qualities', fn () => middlewareSessionLo
     ];
 });
 
+
+$radapter->getHTML('/panel/goals', 'goals', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
+
 $radapter->getHTML('/panel/customers', 'customers', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
