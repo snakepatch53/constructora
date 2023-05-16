@@ -53,6 +53,19 @@
                 </div>
 
                 <div class="col-sm-6 col-lg-3 mb-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex justify-content-between">
+                                <span>Team</span>
+                                <i class="fa-solid fa-user-friends"></i>
+                            </h5>
+                            <p class="card-text">Total team members: <?= count($DATA['team']) ?></p>
+                        </div>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/team">See team</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3">
                     <div class="card bg-success text-white">
                         <div class="card-body">
                             <h5 class="card-title d-flex justify-content-between">
@@ -101,6 +114,19 @@
                             <p class="card-text">Total qualities: <?= count($DATA['qualities']) ?></p>
                         </div>
                         <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/qualities">See qualities</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 mb-3">
+                    <div class="card bg-light text-dark">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex justify-content-between">
+                                <span>Goals</span>
+                                <i class="fas fa-bullseye"></i>
+                            </h5>
+                            <p class="card-text">Total goals: <?= count($DATA['goals']) ?></p>
+                        </div>
+                        <a class="card-footer btn" href="<?= $DATA['http_domain'] ?>panel/goals">See goals</a>
                     </div>
                 </div>
 

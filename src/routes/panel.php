@@ -12,10 +12,12 @@ $radapter->getHTML('/panel', 'home', fn () => middlewareSessionLogin(), function
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
         'users' => (new UserDao($DATA['mysqlAdapter']))->select(),
+        'team' => (new TeamDao($DATA['mysqlAdapter']))->select(),
         'slider' => (new SliderDao($DATA['mysqlAdapter']))->select(),
         'contacts' => (new ContactDao($DATA['mysqlAdapter']))->select('contact'),
         'socials' => (new ContactDao($DATA['mysqlAdapter']))->select('social'),
         'qualities' => (new QualityDao($DATA['mysqlAdapter']))->select(),
+        'goals' => (new GoalDao($DATA['mysqlAdapter']))->select(),
         'customers' => (new CustomerDao($DATA['mysqlAdapter']))->select(),
         'services' => (new ServiceDao($DATA['mysqlAdapter']))->select(),
         'projects' => (new ProjectDao($DATA['mysqlAdapter']))->select(),

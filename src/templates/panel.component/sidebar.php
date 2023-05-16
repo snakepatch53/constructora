@@ -29,7 +29,7 @@
         </a>
 
         <a href="<?= $DATA['http_domain'] ?>panel/team" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "team") ? "shadow  active" : "" ?>">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user-friends"></i>
             <span class="ms-2">Team</span>
         </a>
 
