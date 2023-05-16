@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/fontawesome/css/all.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/library.general/bootstrap.min.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/config.css">
-<link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css">
+<!-- <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.general/theme1.css"> -->
+<?php include('./src/functions/loader_theme.php') ?>
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/adapter-theme.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/general.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/sidebar.css">

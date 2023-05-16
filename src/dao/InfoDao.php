@@ -6,13 +6,15 @@ class InfoDao
     {
         $this->mysqlAdapter = $mysqlAdapter;
     }
+
     public function getLastId()
     {
         return $this->mysqlAdapter->getLastId();
     }
+
     public function select()
     {
-        $result = $this->mysqlAdapter->query("SELECT * FROM info");
+        $result = $this->mysqlAdapter->query("SELECT * FROM info INNER JOIN themes ON info.theme_id = themes.theme_id");
         $row = mysqli_fetch_assoc($result);
         $mapa = $row['info_location'] ?? "";
         if (strpos($mapa, 'iframe') === false) {

@@ -21,6 +21,7 @@ require_once(__DIR__ . '/src/functions/middlewares.php');
 
 // cargamos los objetos de acceso a datos
 require_once('./src/dao/InfoDao.php');
+// require_once('./src/dao/ThemeDao.php');
 require_once('./src/dao/UserDao.php');
 require_once('./src/dao/TeamDao.php');
 require_once('./src/dao/SliderDao.php');
