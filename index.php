@@ -37,6 +37,7 @@ require_once('./src/dao/CustomerDao.php');
 // cargamos los servicios para el web service (WEB SERVICE)
 require_once('./src/services/info.service.php');
 require_once('./src/services/user.service.php');
+require_once('./src/services/team.service.php');
 require_once('./src/services/slider.service.php');
 require_once('./src/services/contact.service.php');
 require_once('./src/services/mailbox.service.php');

@@ -24,64 +24,58 @@ class TeamDao
         return $result;
     }
 
-    // public function selectById($user_id)
-    // {
-    //     $resultset = $this->mysqlAdapter->query("SELECT * FROM user WHERE user_id = $user_id");
-    //     $row = mysqli_fetch_assoc($resultset);
-    //     if (mysqli_num_rows($resultset) == 0) return [];
-    //     return $this->schematize($row);
-    // }
+    public function selectById($team_id)
+    {
+        $resultset = $this->mysqlAdapter->query("SELECT * FROM team WHERE team_id = $team_id");
+        $row = mysqli_fetch_assoc($resultset);
+        if (mysqli_num_rows($resultset) == 0) return [];
+        return $this->schematize($row);
+    }
 
-    // public function login($user_user, $user_pass)
-    // {
-    //     $resultset = $this->mysqlAdapter->query("
-    //         SELECT * FROM user 
-    //         WHERE user_user = '$user_user' AND user_pass = '$user_pass'
-    //     ");
-    //     if (mysqli_num_rows($resultset) == 0) return [];
-    //     $row = mysqli_fetch_assoc($resultset);
-    //     return $this->schematize($row);
-    // }
-    // public function insert(
-    //     $user_name,
-    //     $user_user,
-    //     $user_pass,
-    //     $user_photo
-    // ) {
-    //     $user_last = date('Y-m-d H:i:s');
-    //     $user_created = date('Y-m-d H:i:s');
-    //     return $this->mysqlAdapter->query("
-    //         INSERT INTO user SET 
-    //             user_name='$user_name', 
-    //             user_user='$user_user',
-    //             user_pass='$user_pass',
-    //             user_photo='$user_photo',
-    //             user_last='$user_last',
-    //             user_created='$user_created'
-    //     ");
-    // }
-    // public function update(
-    //     $user_name,
-    //     $user_user,
-    //     $user_pass,
-    //     $user_photo,
-    //     $user_id
-    // ) {
-    //     $user_last = date('Y-m-d H:i:s');
-    //     return $this->mysqlAdapter->query("
-    //         UPDATE user SET 
-    //             user_name='$user_name', 
-    //             user_user='$user_user',
-    //             user_pass='$user_pass',
-    //             user_photo='$user_photo',
-    //             user_last='$user_last'
-    //         WHERE user_id = $user_id 
-    //     ");
-    // }
-    // public function delete($user_id)
-    // {
-    //     return $this->mysqlAdapter->query("DELETE FROM user WHERE user_id = $user_id ");
-    // }
+    public function insert(
+        string $team_name,
+        string $team_position,
+        string $team_photo,
+        string $team_link
+    ) {
+        $team_last = date('Y-m-d H:i:s');
+        $team_created = date('Y-m-d H:i:s');
+        $resultset = $this->mysqlAdapter->query("
+            INSERT INTO team SET 
+                team_name='$team_name', 
+                team_position='$team_position',
+                team_photo='$team_photo',
+                team_link='$team_link',
+                team_last='$team_last',
+                team_created='$team_created'
+        ");
+        if ($resultset) return $this->mysqlAdapter->getLastId();
+        return false;
+    }
+
+    public function update(
+        string $team_name,
+        string $team_position,
+        string $team_photo,
+        string $team_link,
+        int $team_id
+    ) {
+        $team_last = date('Y-m-d H:i:s');
+        return $this->mysqlAdapter->query("
+            UPDATE team SET 
+                team_name='$team_name', 
+                team_position='$team_position',
+                team_photo='$team_photo',
+                team_link='$team_link',
+                team_last='$team_last'
+            WHERE team_id = $team_id 
+        ");
+    }
+
+    public function delete($team_id)
+    {
+        return $this->mysqlAdapter->query("DELETE FROM team WHERE team_id = $team_id ");
+    }
 
     private function schematize($row)
     {

@@ -28,6 +28,11 @@
             <span class="ms-2">Users</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/team" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "team") ? "shadow  active" : "" ?>">
+            <i class="fa-solid fa-user"></i>
+            <span class="ms-2">Team</span>
+        </a>
+
         <a href="<?= $DATA['http_domain'] ?>panel/slider" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "slider") ? "shadow  active" : "" ?>">
             <i class="fa-solid fa-image"></i>
             <span class="ms-2">Slider</span>

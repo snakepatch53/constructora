@@ -35,6 +35,12 @@ $radapter->getHTML('/panel/users', 'users', fn () => middlewareSessionLogin(), f
     ];
 });
 
+$radapter->getHTML('/panel/team', 'team', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
 $radapter->getHTML('/panel/slider', 'slider', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
