@@ -18,6 +18,11 @@
             <span class="ms-2">Home</span>
         </a>
 
+        <a href="<?= $DATA['http_domain'] ?>panel/themes" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "themes") ? "shadow  active" : "" ?>">
+            <i class="fa-solid fa-palette"></i>
+            <span class="ms-2">Themes</span>
+        </a>
+
         <a href="<?= $DATA['http_domain'] ?>panel/info" class="nav-option btn btn-outline-primary border-0 text-start p-3 mb-2 <?= ($DATA['name'] == "info") ? "shadow  active" : "" ?>">
             <i class="fa-solid fa-info"></i>
             <span class="ms-2">Information</span>

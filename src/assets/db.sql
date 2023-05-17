@@ -5,10 +5,11 @@ DROP TABLE IF EXISTS themes;
 CREATE TABLE themes (
     theme_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     theme_name VARCHAR(50),
-    theme_danger TEXT,
-    theme_info TEXT,
-    theme_warn TEXT,
-    theme_success TEXT,
+    -- light
+    theme_color_danger TEXT,
+    theme_color_info TEXT,
+    theme_color_warn TEXT,
+    theme_color_success TEXT,
     theme_color1 TEXT,
     theme_color1_translucent TEXT,
     theme_color1_text TEXT,
@@ -22,7 +23,6 @@ CREATE TABLE themes (
     theme_color2 TEXT,
     theme_color2_text TEXT,
     theme_color2_text2 TEXT,
-    theme_color3 TEXT,
     theme_color4 TEXT,
     theme_color4_text TEXT,
     theme_color4_text2 TEXT,
@@ -43,10 +43,11 @@ CREATE TABLE themes (
     theme_color6 TEXT,
     theme_color6_text TEXT,
     theme_color6_text2 TEXT,
-    theme_dark_danger TEXT,
-    theme_dark_info TEXT,
-    theme_dark_warn TEXT,
-    theme_dark_success TEXT,
+    -- dark
+    theme_dark_color_danger TEXT,
+    theme_dark_color_info TEXT,
+    theme_dark_color_warn TEXT,
+    theme_dark_color_success TEXT,
     theme_dark_color1 TEXT,
     theme_dark_color1_translucent TEXT,
     theme_dark_color1_text TEXT,
@@ -60,8 +61,6 @@ CREATE TABLE themes (
     theme_dark_color2 TEXT,
     theme_dark_color2_text TEXT,
     theme_dark_color2_text2 TEXT,
-    theme_dark_color3 TEXT,
-    theme_dark_color3_text TEXT,
     theme_dark_color4 TEXT,
     theme_dark_color4_text TEXT,
     theme_dark_color4_text2 TEXT,
@@ -81,7 +80,9 @@ CREATE TABLE themes (
     theme_dark_color5_btn_text TEXT,
     theme_dark_color6 TEXT,
     theme_dark_color6_text TEXT,
-    theme_dark_color6_text2 TEXT
+    theme_dark_color6_text2 TEXT,
+    theme_last VARCHAR(50),
+    theme_created VARCHAR(50)
 ) ENGINE INNODB;
 
 INSERT INTO
@@ -90,10 +91,10 @@ SET
     theme_id = 1,
     theme_name = 'Default',
     -- light
-    theme_danger = '#c71c22',
-    theme_info = '#2fa4e7',
-    theme_warn = '#eab518',
-    theme_success = '#73a839',
+    theme_color_danger = '#c71c22',
+    theme_color_info = '#2fa4e7',
+    theme_color_warn = '#eab518',
+    theme_color_success = '#73a839',
     theme_color1 = '#374d99',
     theme_color1_translucent = 'rgba(55, 77, 153, 0.85)',
     theme_color1_text = '#ffffff',
@@ -128,10 +129,10 @@ SET
     theme_color6_text = '#000000',
     theme_color6_text2 = '#ffffff',
     -- dark
-    theme_dark_danger = '#c71c22',
-    theme_dark_info = '#2fa4e7',
-    theme_dark_warn = '#eab518',
-    theme_dark_success = '#73a839',
+    theme_dark_color_danger = '#c71c22',
+    theme_dark_color_info = '#2fa4e7',
+    theme_dark_color_warn = '#eab518',
+    theme_dark_color_success = '#73a839',
     theme_dark_color1 = '#304486',
     theme_dark_color1_translucent = 'rgba(49, 68, 135, 0.85)',
     theme_dark_color1_text = '#ffffff',
@@ -164,7 +165,9 @@ SET
     theme_dark_color5_btn_text = '#000000',
     theme_dark_color6 = 'linear-gradient(rgba(44, 61, 122, 0.8), rgba(85, 72, 23, 0.8))',
     theme_dark_color6_text = '#000000',
-    theme_dark_color6_text2 = '#ffffff';
+    theme_dark_color6_text2 = '#ffffff',
+    theme_last = '2023-01-01 00:00:00',
+    theme_created = '2023-01-01 00:00:00';
 
 DROP TABLE IF EXISTS user;
 

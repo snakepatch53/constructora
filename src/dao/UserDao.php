@@ -40,6 +40,7 @@ class UserDao
         $row = mysqli_fetch_assoc($resultset);
         return $this->schematize($row);
     }
+
     public function insert(
         $user_name,
         $user_user,
@@ -48,7 +49,7 @@ class UserDao
     ) {
         $user_last = date('Y-m-d H:i:s');
         $user_created = date('Y-m-d H:i:s');
-        return $this->mysqlAdapter->query("
+        $result = $this->mysqlAdapter->query("
             INSERT INTO user SET 
                 user_name='$user_name', 
                 user_user='$user_user',
@@ -57,7 +58,10 @@ class UserDao
                 user_last='$user_last',
                 user_created='$user_created'
         ");
+        if ($result) return $this->mysqlAdapter->getLastId();
+        return false;
     }
+
     public function update(
         $user_name,
         $user_user,
@@ -76,10 +80,12 @@ class UserDao
             WHERE user_id = $user_id 
         ");
     }
+
     public function delete($user_id)
     {
         return $this->mysqlAdapter->query("DELETE FROM user WHERE user_id = $user_id ");
     }
+
     private function schematize($row)
     {
         $row['user_photo_url'] = $_ENV['HTTP_DOMAIN'] . "public/img.users/" . ($row['user_photo'] ? $row['user_photo'] : 'default.png') . "?date=" . $row['user_last'];

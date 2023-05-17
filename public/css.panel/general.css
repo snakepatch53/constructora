@@ -287,3 +287,22 @@ body.dark .header button.btn-darkmode {
 .color-important-svg * {
     color: var(--color) !important;
 }
+
+.template-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 2px;
+    background: #000000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.template-color .color {
+    flex: 1;
+    background: var(--color);
+    display: flex;
+    height: 100%;
+    padding: 1px;
+}

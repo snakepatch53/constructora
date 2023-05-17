@@ -25,6 +25,13 @@ $radapter->getHTML('/panel', 'home', fn () => middlewareSessionLogin(), function
     ];
 });
 
+$radapter->getHTML('/panel/themes', 'themes', fn () => middlewareSessionLogin(), function ($DATA) {
+    return [
+        'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'themes' => (new ThemeDao($DATA['mysqlAdapter']))->select(),
+    ];
+});
+
 $radapter->getHTML('/panel/info', 'info', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),

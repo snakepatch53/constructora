@@ -14,6 +14,13 @@ $radapter->post('/services/user/insert', fn () => middlewareSessionServicesLogin
 $radapter->post('/services/user/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => UserService::update(...$args));
 $radapter->post('/services/user/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => UserService::delete(...$args));
 
+// THEME
+$radapter->post('/services/theme/select', fn (...$args) => ThemeService::select(...$args));
+// need to be logged
+$radapter->post('/services/theme/insert', fn () => middlewareSessionServicesLogin(), fn (...$args) => ThemeService::insert(...$args));
+$radapter->post('/services/theme/update', fn () => middlewareSessionServicesLogin(), fn (...$args) => ThemeService::update(...$args));
+$radapter->post('/services/theme/delete', fn () => middlewareSessionServicesLogin(), fn (...$args) => ThemeService::delete(...$args));
+
 // TEAM
 $radapter->post('/services/team/select', fn (...$args) => TeamService::select(...$args));
 // need to be logged

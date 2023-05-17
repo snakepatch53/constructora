@@ -1,9 +1,9 @@
 <style>
     :root {
-        --danger: <?= $DATA['info']['theme_danger'] ?>;
-        --info: <?= $DATA['info']['theme_info'] ?>;
-        --warn: <?= $DATA['info']['theme_warn'] ?>;
-        --success: <?= $DATA['info']['theme_success'] ?>;
+        --danger: <?= $DATA['info']['theme_color_danger'] ?>;
+        --info: <?= $DATA['info']['theme_color_info'] ?>;
+        --warn: <?= $DATA['info']['theme_color_warn'] ?>;
+        --success: <?= $DATA['info']['theme_color_success'] ?>;
         --color1: <?= $DATA['info']['theme_color1'] ?>;
         --color1-translucent: <?= $DATA['info']['theme_color1_translucent'] ?>;
         --color1-text: <?= $DATA['info']['theme_color1_text'] ?>;
@@ -40,10 +40,10 @@
     }
 
     body.dark {
-        --danger: <?= $DATA['info']['theme_dark_danger'] ?>;
-        --info: <?= $DATA['info']['theme_dark_info'] ?>;
-        --warn: <?= $DATA['info']['theme_dark_warn'] ?>;
-        --success: <?= $DATA['info']['theme_dark_success'] ?>;
+        --danger: <?= $DATA['info']['theme_dark_color_danger'] ?>;
+        --info: <?= $DATA['info']['theme_dark_color_info'] ?>;
+        --warn: <?= $DATA['info']['theme_dark_color_warn'] ?>;
+        --success: <?= $DATA['info']['theme_dark_color_success'] ?>;
         --color1: <?= $DATA['info']['theme_dark_color1'] ?>;
         --color1-translucent: <?= $DATA['info']['theme_dark_color1_translucent'] ?>;
         --color1-text: <?= $DATA['info']['theme_dark_color1_text'] ?>;
@@ -57,8 +57,6 @@
         --color2: <?= $DATA['info']['theme_dark_color2'] ?>;
         --color2-text: <?= $DATA['info']['theme_dark_color2_text'] ?>;
         --color2-text2: <?= $DATA['info']['theme_dark_color2_text2'] ?>;
-        --color3: <?= $DATA['info']['theme_dark_color3'] ?>;
-        --color3-text: <?= $DATA['info']['theme_dark_color3_text'] ?>;
         --color4: <?= $DATA['info']['theme_dark_color4'] ?>;
         --color4-text: <?= $DATA['info']['theme_dark_color4_text'] ?>;
         --color4-text2: <?= $DATA['info']['theme_dark_color4_text2'] ?>;
