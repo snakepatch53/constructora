@@ -66,6 +66,14 @@ footer .item .logo svg {
     --s3: var(--sec1-bg-logo-s3);
 }
 
+footer .item .logo img {
+    width: 100%;
+    max-width: 90px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 footer .item .logo span {
     display: block;
     font-family: logo;

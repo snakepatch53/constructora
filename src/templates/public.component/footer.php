@@ -3,7 +3,7 @@
         <div class="items">
             <div class="item item-logo">
                 <a href="<?= $DATA['http_domain'] ?>" class="logo">
-                    <?php include('./public/img/logo.svg'); ?>
+                    <?= getLogo($DATA['info']['info_logo_url'], "alt='Logo " . $DATA['info']['info_name'] . "'") ?>
                     <span><?= $DATA['info']['info_name'] ?></span>
                 </a>
             </div>

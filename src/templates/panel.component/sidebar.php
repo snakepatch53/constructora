@@ -7,8 +7,7 @@
         <h4 class="text-truncate p-2"><?= $DATA['info']['info_name'] ?></h4>
     </div>
     <div class="logo">
-        <?php include('./public/img/logo.svg'); ?>
-        <!-- <img class="p-2" src="<?= $DATA['http_domain'] ?>public/img/logo.svg?last=<?= $DATA['info']['info_last'] ?>" alt="Logo"> -->
+        <?= getLogo($DATA['info']['info_logo_url'], "alt='Logo " . $DATA['info']['info_name'] . "'") ?>
     </div>
     <!-- List | ini -->
     <ul class="list-group rounded-0 p-2 border-0">

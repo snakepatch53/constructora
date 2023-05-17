@@ -27,7 +27,7 @@
             <div class="container">
                 <form id="element-loginform" onsubmit="return false">
                     <a href="<?= $DATA['http_domain'] ?>" class="logo">
-                        <?php include('./public/img/logo.svg') ?>
+                        <?= getLogo($DATA['info']['info_logo_url'], "alt='Logo " . $DATA['info']['info_name'] . "'") ?>
                         <h1><?= $DATA['info']['info_name'] ?></h1>
                     </a>
                     <div class="input">

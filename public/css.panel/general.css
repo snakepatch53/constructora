@@ -306,3 +306,13 @@ body.dark .header button.btn-darkmode {
     height: 100%;
     padding: 1px;
 }
+
+main .card-body .logo {
+    width: 100%;
+    height: 100%;
+}
+    
+main .card-body .logo svg {
+    width: 100%;
+    height: 100%;
+}

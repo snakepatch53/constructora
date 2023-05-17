@@ -35,6 +35,7 @@ $radapter->getHTML('/panel/themes', 'themes', fn () => middlewareSessionLogin(),
 $radapter->getHTML('/panel/info', 'info', fn () => middlewareSessionLogin(), function ($DATA) {
     return [
         'info' => (new InfoDao($DATA['mysqlAdapter']))->select(),
+        'themes' => (new ThemeDao($DATA['mysqlAdapter']))->select(),
     ];
 });
 

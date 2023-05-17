@@ -160,7 +160,7 @@ class RAdapter
             if ($DATA['autorized'] == false) {
                 echo json_encode([
                     "status" => "error",
-                    "message" => "No estas autorizado",
+                    "message" => "Don't have permission to access this resource",
                     "response" => false,
                     "data" => []
                 ]);

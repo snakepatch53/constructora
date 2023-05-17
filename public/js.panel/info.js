@@ -1,6 +1,6 @@
 const $form = document.getElementById("element-form");
 const $btn_submit = document.getElementById("btn-submit");
-const $inputs = document.querySelectorAll("input, textarea");
+const $inputs = document.querySelectorAll("input, textarea, select");
 
 async function main() {
     $form.addEventListener(
@@ -62,9 +62,9 @@ const crudFunction = {
     update: function () {
         const formData = new FormData($form);
         fetch_query(formData, "info", "update").then((res) => {
-            console.log(res);
             uiFunction.refresh(res);
             handleFunction.changeMode(false);
+            window.location.reload();
         });
     },
 };

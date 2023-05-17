@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/header.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/contact.component.css">
-<link rel="icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg" />
+<link rel="icon" href="<?= $DATA['info']['info_icon_url2'] ?>" />
 <title><?= $DATA['info']['info_name'] ?> - <?= $DATA['title'] ?></title>
 
 <script>

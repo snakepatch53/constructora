@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/general.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/sidebar.css">
 
-<link rel="shortcut icon" href="<?= $DATA['http_domain'] ?>public/img/icon.svg?last=<?= $DATA['info']['info_last'] ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?= $DATA['info']['info_icon_url2'] ?>" type="image/x-icon">
 <title><?= $DATA['info']['info_name'] ?> ⚙️ Panel <?= $DATA['title'] ?></title>
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';

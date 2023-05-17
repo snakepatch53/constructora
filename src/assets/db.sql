@@ -182,11 +182,29 @@ CREATE TABLE info (
     info_desc TEXT,
     info_mision TEXT,
     info_vision TEXT,
+    info_logo VARCHAR(50) DEFAULT '',
+    info_icon VARCHAR(50) DEFAULT '',
     -- information of sdk facebook api
-    info_fb_app_id TEXT,
-    info_fb_app_secret TEXT,
-    info_fb_page_id TEXT,
-    info_fb_access_token TEXT,
+    info_fb_app_id TEXT DEFAULT '',
+    info_fb_app_secret TEXT DEFAULT '',
+    info_fb_page_id TEXT DEFAULT '',
+    info_fb_access_token TEXT DEFAULT '',
+    -- page home
+    info_home_title VARCHAR(100),
+    info_home_subtitle VARCHAR(100),
+    -- page services
+    info_services_title VARCHAR(100),
+    info_services_subtitle VARCHAR(100),
+    info_services_image VARCHAR(50) DEFAULT '',
+    -- page portfolio
+    info_portfolio_title VARCHAR(100),
+    info_portfolio_subtitle VARCHAR(100),
+    info_portfolio_image VARCHAR(50) DEFAULT '',
+    -- page about
+    info_about_title VARCHAR(100),
+    info_about_subtitle VARCHAR(100),
+    info_about_image VARCHAR(50) DEFAULT '',
+    -- others
     theme_id INT,
     info_last VARCHAR(50),
     info_created VARCHAR(50),
@@ -195,26 +213,28 @@ CREATE TABLE info (
 
 INSERT INTO
     info
-VALUES
-    (
-        1,
-        'Erazo Brothers',
-        'United States',
-        'New York',
-        'Newburgh, NY',
-        '+1 845-219-3871',
-        '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.054286150355!2d-74.02387432310792!3d41.50309838880862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3203a0e548c9%3A0xda06f18ce34c05f4!2s322%201st%20St%2C%20Newburgh%2C%20NY%2012550%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1683904817084!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-        'Our experienced team is here to help with the entire process, from initial idea to commissioning, we are here to help you get the design and work you need.',
-        "Erazo Brothers is a construction company committed to building high-quality, innovative and sustainable projects, exceeding our clients' expectations. Our mission is to contribute to the growth and development of our community, providing our clients with the best possible construction experience through excellent customer service, professionalism and a commitment to safety and environmental responsibility.",
-        "Our vision at Erazo Brothers is to be recognized as a leader in the construction industry, delivering exceptional quality, innovative solutions, and unparalleled customer service. We strive to exceed our clients' expectations by constantly improving our processes, utilizing cutting-edge technology, and fostering a culture of excellence and collaboration among our team members.",
-        '',
-        '',
-        '',
-        '',
-        1,
-        '2023-01-01 00:00:00',
-        '2023-01-01 00:00:00'
-    );
+SET
+    info_id = 1,
+    info_name = 'Erazo Brothers',
+    info_country = 'United States',
+    info_state = 'New York',
+    info_city = 'Newburgh, NY',
+    info_whatsapp = '+1 845-219-3871',
+    info_location = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.054286150355!2d-74.02387432310792!3d41.50309838880862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3203a0e548c9%3A0xda06f18ce34c05f4!2s322%201st%20St%2C%20Newburgh%2C%20NY%2012550%2C%20EE.%20UU.!5e0!3m2!1ses!2sec!4v1683904817084!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+    info_desc = 'Our experienced team is here to help with the entire process, from initial idea to commissioning, we are here to help you get the design and work you need.',
+    info_mision = "Erazo Brothers is a construction company committed to building high-quality, innovative and sustainable projects, exceeding our clients' expectations. Our mission is to contribute to the growth and development of our community, providing our clients with the best possible construction experience through excellent customer service, professionalism and a commitment to safety and environmental responsibility.",
+    info_vision = "Our vision at Erazo Brothers is to be recognized as a leader in the construction industry, delivering exceptional quality, innovative solutions, and unparalleled customer service. We strive to exceed our clients' expectations by constantly improving our processes, utilizing cutting-edge technology, and fostering a culture of excellence and collaboration among our team members.",
+    info_home_title = 'Quality work in every home',
+    info_home_subtitle = 'Quality work in every home',
+    info_services_title = 'You are closer, how can we help you?',
+    info_services_subtitle = 'Find the service you need',
+    info_portfolio_title = 'Here is a collection of our work',
+    info_portfolio_subtitle = 'Here is a collection of our work',
+    info_about_title = 'Our brand, our company, our ideaology',
+    info_about_subtitle = 'Our brand, our company, our ideaology',
+    theme_id = 1,
+    info_last = '2023-01-01 00:00:00',
+    info_created = '2023-01-01 00:00:00';
 
 CREATE TABLE user (
     user_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -751,33 +771,33 @@ INSERT INTO
 VALUES
     (
         1,
-        'Moronanet',
-        'https://moronanet.com/',
-        '1.png',
+        'Customer 1',
+        '#',
+        'default.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         2,
-        'Learnidea',
-        'https://ideasoft.learnidea.site/',
-        '2.png',
+        'Customer 2',
+        '#',
+        'default.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         3,
-        'Ideasoft',
-        'https://ideasoft.site/',
-        '3.png',
+        'Customer 3',
+        '#',
+        'default.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
     ),
     (
         4,
-        'Leap Estudio',
-        'https://leapestudio.com/',
-        '4.png',
+        'Customer 4',
+        '#',
+        'default.png',
         '2023-01-01 00:00:00',
         '2023-01-01 00:00:00'
-    )
+    );
