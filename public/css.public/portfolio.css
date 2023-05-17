@@ -1,3 +1,19 @@
+/*DETAILS ADDED LAST TIME | INI*/
+header {
+    position: sticky;
+}
+
+header .header {
+    background-color: var(--color1);
+}
+
+.frontpage {
+    display: none !important;
+}
+
+/*DETAILS ADDED LAST TIME | END*/
+
+
 .frontpage {
     --bg: var(--color6);
     --txt1: var(--color6-text);

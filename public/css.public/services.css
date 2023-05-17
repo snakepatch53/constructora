@@ -1,7 +1,17 @@
+/*DETAILS ADDED LAST TIME | INI*/
 header {
-    /*    background-color: var(--bg-float);*/
-    /*    position: sticky;*/
+    position: sticky;
 }
+
+header .header {
+    background-color: var(--color1);
+}
+
+.frontpage {
+    display: none !important;
+}
+
+/*DETAILS ADDED LAST TIME | END*/
 
 
 /*SECTION 1*/
@@ -294,7 +304,7 @@ header {
 
 /* SECTION 2 */
 .section3 {
-/*
+    /*
     --c1-bg: var(--color2);
     --c1-txt: var(--color2-text);
     --c1-txt2: var(--color2-text2);
@@ -363,7 +373,7 @@ header {
         font-size: 2rem;
         max-width: 380px;
     }
-    
+
     .section3 h4 {
         font-size: 1.5rem;
     }
@@ -376,6 +386,7 @@ header {
 }
 
 @media (max-width: 600px) {
+
     .section3 h3:before,
     .section3 h3:after {
         display: none;
