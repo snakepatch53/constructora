@@ -17,8 +17,6 @@
         --color2: <?= $DATA['info']['theme_color2'] ?>;
         --color2-text: <?= $DATA['info']['theme_color2_text'] ?>;
         --color2-text2: <?= $DATA['info']['theme_color2_text2'] ?>;
-        --color3: <?= $DATA['info']['theme_color3'] ?>;
-        --color3-text: <?= $DATA['info']['theme_color3_text'] ?>;
         --color4: <?= $DATA['info']['theme_color4'] ?>;
         --color4-text: <?= $DATA['info']['theme_color4_text'] ?>;
         --color4-text2: <?= $DATA['info']['theme_color4_text2'] ?>;

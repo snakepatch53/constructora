@@ -3,7 +3,6 @@
     --info: #2fa4e7;
     --warn: #eab518;
     --success: #73a839;
-
     --color1: #374d99;
     --color1-translucent: rgba(55, 77, 153, 0.85);
     --color1-text: #ffffff;
@@ -14,14 +13,9 @@
     --color1-logo-text: #ffffff;
     --color1-btn: #e6c43e;
     --color1-btn-text: #000000;
-
     --color2: #e6c43e;
     --color2-text: #000000;
     --color2-text2: #ffffff;
-
-    --color3: #8ce6a1;
-    --color3-text: #5a5a5a;
-
     --color4: #ffffff;
     --color4-text: #000000;
     --color4-text2: #363636;
@@ -30,7 +24,6 @@
     --color4-logo-s2: #fbaa2d;
     --color4-logo-s3: #384e9a;
     --color4-logo-text: #384e9a;
-
     --color5: #363636;
     --color5-text: #ffffff;
     --color5-text2: #a7a7a7;
@@ -40,19 +33,18 @@
     --color5-logo-text: #ffffff;
     --color5-btn: #e6c43e;
     --color5-btn-text: #000000;
-
     --color6: linear-gradient(rgba(55, 77, 153, 0.87), rgba(230, 196, 62, 0.63));
     --color6-text: #000000;
     --color6-text2: #ffffff;
 }
 
 body.dark {
-    --danger: #d26158;
-    --info: #2c74dc;
+    --danger: #c71c22;
+    --info: #2fa4e7;
     --warn: #eab518;
-
-    --color1: #1e337c;
-    --color1-translucent: rgba(55, 77, 153, 0.77);
+    --success: #73a839;
+    --color1: #304486;
+    --color1-translucent: rgba(49, 68, 135, 0.85);
     --color1-text: #ffffff;
     --color1-text2: #e6c43e;
     --color1-logo-s1: #e6c43f;
@@ -61,35 +53,29 @@ body.dark {
     --color1-logo-text: #ffffff;
     --color1-btn: #e6c43e;
     --color1-btn-text: #000000;
-
-    --color2: #816d1f;
-    --color2-text: #171717;
-    --color2-text2: #cbcbcb;
-
-    --color3: #8ce6a1;
-    --color3-text: #5a5a5a;
-
-    --color4: #334a58;
-    --color4-text: #d1d1d1;
-    --color4-text2: #b2b2b2;
-    --color4-text3: #a1a7ba;
+    --color2: #e6c43e;
+    --color2-text: #000000;
+    --color2-text2: #ffffff;
+    --color4: #263844;
+    --color4-text: #ffffff;
+    --color4-text2: #9a9a9a;
+    --color4-text3: #384e9a;
     --color4-logo-s1: #e6c43f;
     --color4-logo-s2: #fbaa2d;
-    --color4-logo-s3: #FFFFFF;
-    --color4-logo-text: #FFFFFF;
-
-    --color5: #363636;
+    --color4-logo-s3: #384e9a;
+    --color4-logo-text: #384e9a;
+    --color5: #192229;
     --color5-text: #ffffff;
-    --color5-text: #ffffff;
+    --color5-text2: #a7a7a7;
     --color5-logo-s1: #ffffff;
     --color5-logo-s2: #fbaa2d;
     --color5-logo-s3: #5265a7;
     --color5-logo-text: #ffffff;
     --color5-btn: #e6c43e;
     --color5-btn-text: #000000;
-
-    --color6: linear-gradient(rgba(23, 33, 67, 0.87), rgba(150, 126, 32, 0.63));
+    --color6: linear-gradient(rgba(44, 61, 122, 0.8), rgba(85, 72, 23, 0.8));
     --color6-text: #000000;
+    --color6-text2: #ffffff;
 }
 
 /* Media query para dark mode */

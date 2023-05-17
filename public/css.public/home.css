@@ -142,7 +142,8 @@
 
     --card-bg: var(--color4);
     --card-txt: var(--color4-text);
-    --card-txt2: var(--color4-text3);
+    --card-txt2: var(--color4-text2);
+    --card-txt3: var(--color4-text3);
 
     display: flex;
     justify-content: center;
@@ -249,11 +250,11 @@
     --s3-bg: transparent;
     --s4-bg: transparent;
     --s5-bg: transparent;
-    --s1-st: var(--card-txt2);
-    --s2-st: var(--card-txt2);
-    --s3-st: var(--card-txt2);
-    --s4-st: var(--card-txt2);
-    --s5-st: var(--card-txt2);
+    --s1-st: var(--card-txt3);
+    --s2-st: var(--card-txt3);
+    --s3-st: var(--card-txt3);
+    --s4-st: var(--card-txt3);
+    --s5-st: var(--card-txt3);
 }
 
 .section-2 .item h3 {
@@ -268,6 +269,7 @@
     letter-spacing: 1px;
     font-family: contenido;
     text-align: center;
+    color: var(--card-txt2);
 }
 
 @media (max-width: 900px) {
@@ -288,7 +290,8 @@
 /*SECTION 3*/
 .section-3 {
     --bg: var(--color4);
-    --txt: var(--color5) display: flex;
+    --txt: var(--color4-text); 
+    display: flex;
 
 
 
@@ -332,6 +335,7 @@
     font-size: 3rem;
     text-align: center;
     padding: 10px;
+    color: var(--txt);
 }
 
 .section-3 .container .item .img {
@@ -361,6 +365,7 @@
     font-family: titulo;
     font-size: 1.4rem;
     text-align: center;
+    color: var(--txt);
 }
 
 @media (max-width: 900px) {
