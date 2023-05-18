@@ -69,7 +69,7 @@
 
                             <div class="col-md-6">
                                 <label class="form-label">Subject</label>
-                                <p class="form-control" id="form_mail_affair"></p>
+                                <p class="form-control" id="form_mail_subject"></p>
                             </div>
 
                             <div class="col-md-12">

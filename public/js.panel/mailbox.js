@@ -41,7 +41,7 @@ const handleFunction = {
         const register = uiFunction.database.find((el) => el["mail_id"] == $register_id);
         setValuesForm(register, $form);
         $form.querySelector("#form_mail_name").innerText = register["mail_name"];
-        $form.querySelector("#form_mail_affair").innerText = register["mail_affair"];
+        $form.querySelector("#form_mail_subject").innerText = register["mail_subject"];
         $form.querySelector("#form_mail_phone").innerText = register["mail_phone"];
         $form.querySelector("#form_mail_location").innerText = register["mail_location"];
         $form.querySelector("#form_mail_email").innerText = register["mail_email"];
