@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/footer.css">
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.public/contact.component.css">
 <link rel="icon" href="<?= $DATA['info']['info_icon_url2'] ?>" />
-<meta property="og:image" content="<?= $DATA['info']['info_icon_url2'] ?>">
+<meta property="og:image" content="<?= $DATA['info']['info_logo_url'] ?>">
 <title><?= $DATA['info']['info_name'] ?> - <?= $DATA['title'] ?></title>
 
 <script>
