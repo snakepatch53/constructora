@@ -117,6 +117,8 @@ class InfoDao
         // case logo
         $row['info_logo_url'] = $this->getContent('logo.svg');
         if ($row['info_logo'] != '' && $row['info_logo'] != null) $row['info_logo_url'] = $PATH_FILES . $row['info_logo'] . "?last=" . $row['info_last'];
+        $row['info_logo_url2'] = $PATH_DEFAULT . 'logo.svg';
+        if ($row['info_logo'] != '' && $row['info_logo'] != null) $row['info_logo_url2'] = $PATH_FILES . $row['info_logo'] . "?last=" . $row['info_last'];
 
 
         // case icon
