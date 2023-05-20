@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="<?= $DATA['http_domain'] ?>public/css.panel/sidebar.css">
 <link rel="shortcut icon" href="<?= $DATA['info']['info_icon_url2'] ?>" type="image/x-icon">
 <meta property="og:image" content="<?= $DATA['info']['info_logo_url2'] ?>">
+<link rel="image_src" href="<?= $DATA['info']['info_logo_url2'] ?>" />
 <title><?= $DATA['info']['info_name'] ?> ⚙️ Panel <?= $DATA['title'] ?></title>
 <script>
     const http_domain = '<?= $DATA['http_domain'] ?>';
