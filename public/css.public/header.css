@@ -162,6 +162,8 @@ header nav li .btn:hover {
 }
 
 header .burger-toggle {
+    position: relative;
+    z-index: 100000;
     display: none;
     margin-left: auto;
     background-color: transparent;
@@ -240,7 +242,7 @@ header .contact-component-modal {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 10000;
+    z-index: 100000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,7 +250,6 @@ header .contact-component-modal {
     max-width: 0;
     height: 100vh;
     max-height: 0;
-    padding: ;
     margin: auto;
     background: transparent;
     backdrop-filter: blur(0px);
@@ -281,8 +282,8 @@ header .contact-component-modal .container .close-btn {
     position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 100;
-    display: flex;
+    z-index: 1;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 50px;
@@ -292,6 +293,10 @@ header .contact-component-modal .container .close-btn {
     cursor: pointer;
     opacity: 0.6;
     transition: all 0.2s ease;
+}
+
+header .contact-component-modal.open .container .close-btn {
+    display: flex;
 }
 
 header .contact-component-modal .container .close-btn:hover {
